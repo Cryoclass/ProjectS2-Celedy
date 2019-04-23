@@ -60,6 +60,7 @@ MonoBehaviour:
   SBW: 18.9
   Floors:
   - {fileID: 742422144567552004, guid: 93c2bb7d75067e34faf9bf642bc4a2e4, type: 3}
+  - {fileID: 354769259628670800, guid: d1fae0ce6f670d646b8e8788910c45ca, type: 3}
   EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
     type: 3}
   EntryClose: {fileID: 4193716526659249026, guid: 2a76531495469264dabaa4b4c5d99d18,

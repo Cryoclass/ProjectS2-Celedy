@@ -58,23 +58,9 @@ public class  YaMoove : MonoBehaviour
         anim.SetFloat("LastMoveY", LastMove.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * Speed * Time.deltaTime, 0f);
-            Debug.Log("j'existe aussi");
-        }
-    }
+    
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * Speed * Time.deltaTime, 0f);
-            Debug.Log("j'existe");
-        }
-    }
+    
 
     public void Teleport(int x,int y)
     {

@@ -115,19 +115,43 @@ public class Portal_Open : MonoBehaviour
             case PortSens.Bot:
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)-deply * 1 / 2);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)-deply);
-                GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(0, -1);
+                try
+                {
+                    GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(0, -1);
+                }
+                catch (Exception)
+                {
+
+                    
+                }                
                 break;
 
             case PortSens.Top:
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)deply * 1 / 2);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)deply);
-                GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(0, 1);
+                try
+                {
+                    GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(0, 1);
+                }
+                catch (Exception)
+                {
+
+                    
+                }                
                 break;
 
             case PortSens.Right:
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(deplx * 1 / 3), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)deplx, 0);
-                GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(1, 0);
+                try
+                {
+                    GameObject.FindGameObjectWithTag("MiniMap").GetComponent<MiniMap>().ChangeCol(1, 0);
+                }
+                catch (Exception)
+                {
+
+                    
+                }                
                 break;
 
             default:
