@@ -403,6 +403,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 412717365}
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &443920405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +478,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58be04731074c8f4fa7313d9c421bced, type: 3}
+=======
+>>>>>>> a65647d212d32896e5b3a500c87f7daa9250fc84
 =======
 >>>>>>> a65647d212d32896e5b3a500c87f7daa9250fc84
 --- !u!1 &519420028
@@ -1251,6 +1254,7 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1451191598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1325,6 +1329,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbc24ad39c1a66418faaa575afc6d88, type: 3}
+=======
+>>>>>>> a65647d212d32896e5b3a500c87f7daa9250fc84
 =======
 >>>>>>> a65647d212d32896e5b3a500c87f7daa9250fc84
 --- !u!1 &1790897406
