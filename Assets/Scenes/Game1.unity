@@ -313,6 +313,11 @@ PrefabInstance:
       propertyPath: ActivatingCanvas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5990882140600772430, guid: 58be04731074c8f4fa7313d9c421bced,
+        type: 3}
+      propertyPath: Speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1576610356201179439, guid: 58be04731074c8f4fa7313d9c421bced,
         type: 3}
       propertyPath: m_IsTrigger
