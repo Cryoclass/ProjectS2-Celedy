@@ -14,7 +14,7 @@ public class TransitionScenesMusic : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        
-        DontDestroyOnLoad(transform.gameObject);
+
+
     }
 }

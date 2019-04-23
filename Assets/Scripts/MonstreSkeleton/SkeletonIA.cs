@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SkeletonIA : MonoBehaviour
 {
+    public float Life;
+
+    public Animator anim;
+
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -14,6 +18,7 @@ public class SkeletonIA : MonoBehaviour
     public GameObject ShootPoint;
     private Vector3 VectOfShoot;
 
+    private bool MooveThisF;
     public float Offset;
     public GameObject ToRotate;
     public GameObject projectile;
@@ -28,21 +33,29 @@ public class SkeletonIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MooveThisF = false;
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            MooveThisF = true;
         }
-        else if ((Vector2.Distance(transform.position, player.position) > stoppingDistance) && (Vector2.Distance(transform.position, player.position) > retreatDistance))
-        {
-            transform.position = this.transform.position;
-        }
+        
         else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-
+            MooveThisF = true;
         }
 
+        if (transform.position.x > player.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180, 0f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
 
+        anim.SetBool("Mooving", MooveThisF);
 
         if (TimeBtwShots <= 0)
         {
@@ -53,6 +66,7 @@ public class SkeletonIA : MonoBehaviour
         {
             TimeBtwShots -= Time.deltaTime;
         }
+        anim.SetFloat("Shooting", TimeBtwShots);
     }
 
     private void Shooting()
