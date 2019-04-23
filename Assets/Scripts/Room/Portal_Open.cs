@@ -99,7 +99,7 @@ public class Portal_Open : MonoBehaviour
         switch (sens)
         {
             case PortSens.Left:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(-deplx * 1 / 3), 0);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(-deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)-deplx, 0);
                 try
                 {
@@ -113,7 +113,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Bot:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)-deply * 1 / 2);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)(-deply * 1 / 1.5));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)-deply);
                 try
                 {
@@ -127,7 +127,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Top:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)deply * 1 / 2);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)(deply * 1 / 1.5f));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)deply);
                 try
                 {
@@ -141,7 +141,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Right:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(deplx * 1 / 3), 0);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)deplx, 0);
                 try
                 {
@@ -149,7 +149,6 @@ public class Portal_Open : MonoBehaviour
                 }
                 catch (Exception)
                 {
-
                     
                 }                
                 break;
