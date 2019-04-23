@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SkeletonIA : MonoBehaviour
 {
+    public Animator anim;
+
+    private bool moovedthisframe;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -28,31 +31,31 @@ public class SkeletonIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moovedthisframe = false;
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-        else if ((Vector2.Distance(transform.position, player.position) > stoppingDistance) && (Vector2.Distance(transform.position, player.position) > retreatDistance))
-        {
-            transform.position = this.transform.position;
-        }
+            moovedthisframe = true;
+        }        
         else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-
+            moovedthisframe = true;
         }
-
+        anim.SetBool("Mooving", moovedthisframe);
+        
 
 
         if (TimeBtwShots <= 0)
         {
             Shooting();
-            TimeBtwShots = StartTimeBtwShot;
+            TimeBtwShots = StartTimeBtwShot;            
         }
         else
         {
             TimeBtwShots -= Time.deltaTime;
         }
+        anim.SetFloat("Shoot", TimeBtwShots);
     }
 
     private void Shooting()
@@ -60,6 +63,7 @@ public class SkeletonIA : MonoBehaviour
         VectOfShoot = player.position - transform.position;
         float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
         ToRotate.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+        
         Instantiate(projectile, ShootPoint.transform.position, Quaternion.Euler(0f,0f,rotZ+ Offset));
     }
 }
