@@ -18,7 +18,7 @@ public class BirdPNJ : MonoBehaviour
     }
 
     private void OnCollisionStay2D(Collision2D collision)
-    {        
+    {
         if (collision.gameObject.tag == "Player")
         {
             if(Input.GetKeyDown(KeyCode.A))
