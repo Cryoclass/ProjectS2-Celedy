@@ -1,0 +1,48 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PickUp : MonoBehaviour
+{
+    private Inventory inventory;
+    private GameObject player;
+    public GameObject itemButton;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        inventory = player.GetComponent<Inventory>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false)
+                {
+                    inventory.isFull[i] = true;
+                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    Destroy(gameObject);
+                    break;
+                }
+            }
+        }
+        
+    }
+
+    public void HealthPotion()
+    {
+        player.GetComponent<Ya_Health>().CurrentHealth += 2;
+        Destroy(gameObject);
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}

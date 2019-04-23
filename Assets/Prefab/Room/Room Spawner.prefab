@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2551912640309075875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548131347486973788}
+  - component: {fileID: 7899724811055781694}
+  m_Layer: 0
+  m_Name: Room Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1548131347486973788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551912640309075875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.510353, y: 35, z: -0.53265095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7899724811055781694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551912640309075875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3306a71e0017aeb4a8282ccee358900e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Largeur: 19
+  Hauteur: 9
+  T_Wall: {fileID: 104891082420038203, guid: c38b5f42fb9ff1a4180999996b9b5e5e, type: 3}
+  B_Wall: {fileID: 3566496091998171924, guid: 11b4125c079acf84f9d78f6225bced39, type: 3}
+  L_Wall: {fileID: 3227732301884399029, guid: 55fc411ec6c695d4b9d8bffced65e36e, type: 3}
+  R_Wall: {fileID: 5438904746525908647, guid: 145932763da513947a6e88d5b78ea347, type: 3}
+  T_L_Corner: {fileID: 7981474171631788166, guid: 0ea376b459c429f4d9ec81743603f407,
+    type: 3}
+  T_R_Corner: {fileID: 3935772476782667514, guid: f477afa9cf263454b945265406e55869,
+    type: 3}
+  B_L_Corner: {fileID: 1993609906529229505, guid: 1ae97797e67ef3240b6693bef1803005,
+    type: 3}
+  B_R_Corner: {fileID: 3567830812425757464, guid: 7061cf14238c5154dbc1bfe172189025,
+    type: 3}
+  SBW: 18.9
+  Floors:
+  - {fileID: 742422144567552004, guid: 93c2bb7d75067e34faf9bf642bc4a2e4, type: 3}
+  EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
+    type: 3}
+  EntryClose: {fileID: 4193716526659249026, guid: 2a76531495469264dabaa4b4c5d99d18,
+    type: 3}
+  TopEntry: 0
+  BotEntry: 0
+  LeftEntry: 1
+  RightEntry: 0
