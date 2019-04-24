@@ -23,7 +23,6 @@
             <e p="FreezerEffect.cs" t="Include" />
             <e p="HealthPotion.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
-            <e p="MiniMap.cs" t="Include" />
             <e p="PickUp.cs" t="Include" />
             <e p="Slot.cs" t="Include" />
           </e>
@@ -38,13 +37,18 @@
             </e>
           </e>
           <e p="MonstreSkeleton" t="Include">
+            <e p="MonsterLife.cs" t="Include" />
             <e p="SkeletonIA.cs" t="Include" />
-            <e p="SkeletonShoot.cs" t="Include" />
+          </e>
+          <e p="Mouvement 1" t="Include">
+            <e p="DeplacementYa.cs" t="Include" />
+            <e p="GereurMvt1.cs" t="Include" />
           </e>
           <e p="Room" t="Include">
             <e p="Laser_Port.cs" t="Include" />
             <e p="LevelGen.cs" t="Include" />
             <e p="MainCam.cs" t="Include" />
+            <e p="MiniMap.cs" t="Include" />
             <e p="Portal_Open.cs" t="Include" />
             <e p="RoomScript.cs" t="Include" />
             <e p="RoomSpawner.cs" t="Include" />
