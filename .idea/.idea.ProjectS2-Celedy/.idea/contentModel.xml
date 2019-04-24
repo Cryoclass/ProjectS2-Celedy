@@ -11,7 +11,6 @@
             <e p="BirdPNJ.cs" t="Include" />
           </e>
           <e p="Dialogue" t="Include">
-            <e p="Dialogue.cs" t="Include" />
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
           </e>
@@ -20,6 +19,8 @@
             <e p="HpbarDrk.cs" t="Include" />
           </e>
           <e p="Inventory" t="Include">
+            <e p="FreezeItem.cs" t="Include" />
+            <e p="FreezerEffect.cs" t="Include" />
             <e p="HealthPotion.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="MiniMap.cs" t="Include" />
@@ -36,6 +37,10 @@
               <e p="PauseMenu.cs" t="Include" />
             </e>
           </e>
+          <e p="MonstreSkeleton" t="Include">
+            <e p="SkeletonIA.cs" t="Include" />
+            <e p="SkeletonShoot.cs" t="Include" />
+          </e>
           <e p="Room" t="Include">
             <e p="Laser_Port.cs" t="Include" />
             <e p="LevelGen.cs" t="Include" />
@@ -47,6 +52,7 @@
           <e p="Spells" t="Include">
             <e p="ExplosionObj.cs" t="Include" />
             <e p="SpellArchetype.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Yaelle" t="Include">
             <e p="Ya_Health.cs" t="Include" />

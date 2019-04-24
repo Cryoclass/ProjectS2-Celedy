@@ -22,6 +22,10 @@ public class SkeletonIA : MonoBehaviour
     public GameObject projectile;
     private Transform player;
 
+
+    //Test pour l'effet de gel
+    public bool CanShoot = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,16 +59,24 @@ public class SkeletonIA : MonoBehaviour
 
         anim.SetBool("Mooving", MooveThisF);
 
-        if (TimeBtwShots <= 0)
+        if (CanShoot)
         {
-            Shooting();
-            TimeBtwShots = StartTimeBtwShot;
+            if (TimeBtwShots <= 0)
+            {
+                Shooting();
+                TimeBtwShots = StartTimeBtwShot;
+            }
+            else
+            {
+                TimeBtwShots -= Time.deltaTime;
+            }
+
+            anim.SetFloat("Shooting", TimeBtwShots);
         }
         else
         {
-            TimeBtwShots -= Time.deltaTime;
+            anim.SetBool("Mooving",false);
         }
-        anim.SetFloat("Shooting", TimeBtwShots);
     }
 
     private void Shooting()
@@ -72,6 +84,6 @@ public class SkeletonIA : MonoBehaviour
         VectOfShoot = player.position - transform.position;
         float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
         ToRotate.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
-        Instantiate(projectile, ShootPoint.transform.position, Quaternion.Euler(0f,0f,rotZ+ Offset));
+        Instantiate(projectile, ShootPoint.transform.position, Quaternion.Euler(0f, 0f, rotZ + Offset));
     }
 }

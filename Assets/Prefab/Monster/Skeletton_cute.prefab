@@ -355,8 +355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 2371138828281693855}
   speed: 15
-  stoppingDistance: 20
-  retreatDistance: 18
+  stoppingDistance: 40
+  retreatDistance: 35
   StartTimeBtwShot: 2
   ShootPoint: {fileID: 1797642401375203157}
   Offset: -90

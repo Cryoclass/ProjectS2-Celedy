@@ -22,14 +22,25 @@ public class Portal_Open : MonoBehaviour
     public bool TpLaunched;
     public float deplx;
     public float deply;
+    public bool isopen = false;
+
+    public int CoordX;
+    public int CoordY;
+
+    public GameObject LevelGenerator;
+
+    public Sprite open;
+    public Sprite close;
 
     public float countingCD;
 
     void Start()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = close;
         TpLaunched = false;
-        deplx = GameObject.FindGameObjectWithTag("LevelGen").GetComponent<LevelGen>().spacedx;
-        deply = GameObject.FindGameObjectWithTag("LevelGen").GetComponent<LevelGen>().spacedy;
+        LevelGenerator = GameObject.FindGameObjectWithTag("LevelGen");
+        deplx = LevelGenerator.GetComponent<LevelGen>().spacedx;
+        deply = LevelGenerator.GetComponent<LevelGen>().spacedy;
     }
 
     // Update is called once per frame
@@ -39,25 +50,28 @@ public class Portal_Open : MonoBehaviour
             CancelInvoke("MakeInvisible");
 
         if (countingCD >= 0)
+        {
             countingCD -= Time.deltaTime;
+        }
         else if (TpLaunched)
         {
             TpLaunched = false;
             InviIteration = 0;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ya_Foot")
+        if (collision.gameObject.tag == "Ya_Foot" && isopen)
         {
             Instantiate(Laser, transform.position,transform.rotation);
             InvokeRepeating("MakeInvisible",0,0.2f);
             if (!TpLaunched)
             {
-                countingCD = 3;
+                countingCD = 2;
                 TpLaunched = true;
-                Invoke("Tplauncher", 2);
+                Invoke("Tplauncher", 1);
                 /*
                 Task.Run(() =>
                 {
@@ -99,6 +113,7 @@ public class Portal_Open : MonoBehaviour
         switch (sens)
         {
             case PortSens.Left:
+                LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX - 1, CoordY);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(-deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)-deplx, 0);
                 try
@@ -113,6 +128,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Bot:
+                LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX, CoordY - 1);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)(-deply * 1 / 1.5));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)-deply);
                 try
@@ -127,6 +143,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Top:
+                LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX, CoordY + 1);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport(0, (int)(deply * 1 / 1.5f));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)deply);
                 try
@@ -141,6 +158,7 @@ public class Portal_Open : MonoBehaviour
                 break;
 
             case PortSens.Right:
+                LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX + 1, CoordY);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<YaMoove>().Teleport((int)(deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)deplx, 0);
                 try
@@ -163,5 +181,24 @@ public class Portal_Open : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
         InviIteration++;
+    }
+
+    public void OpenIt()
+    {
+        if (!isopen)
+        {
+            Debug.Log("OpenIt + IsOpen = false");
+            gameObject.GetComponent<SpriteRenderer>().sprite = open;
+            isopen = true;
+        }
+    }
+    public void CloseIt()
+    {
+        if (isopen)
+        {
+            Debug.Log("CloseIt + IsOpen = true");
+            gameObject.GetComponent<SpriteRenderer>().sprite = close;
+            isopen = false;
+        }
     }
 }

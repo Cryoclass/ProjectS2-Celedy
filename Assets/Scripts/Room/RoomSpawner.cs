@@ -5,8 +5,10 @@ using UnityEngine;
 public class RoomSpawner : MonoBehaviour
 {
     public int Largeur;
-
     public int Hauteur;
+
+    public int Coordx;
+    public int Coordy;
 
     public GameObject T_Wall;
     public GameObject B_Wall;
@@ -21,7 +23,6 @@ public class RoomSpawner : MonoBehaviour
     public float SBW = 20.58f;
     public GameObject[] Floors;
     public GameObject EntryOpen;
-    public GameObject EntryClose;
 
     public bool TopEntry;
     public bool BotEntry;
@@ -33,10 +34,12 @@ public class RoomSpawner : MonoBehaviour
     private Vector3 Coord;
 
     private GameObject[] enemys;
+    private List<GameObject> PortalList;
 
     // Start is called before the first frame update
     void Start()
     {
+        PortalList = new List<GameObject>();
         Coord = transform.position;
         int len = Floors.Length;
         int pos;
@@ -57,9 +60,42 @@ public class RoomSpawner : MonoBehaviour
             Coord += new Vector3(SBW * 3 / 4, 0);
             for (int i = 0; i < Largeur; i++)
             {
-                if ((j == 0 && TopEntry && i == Largeur / 2) || (j == Hauteur / 2 && LeftEntry && i == 0) || (j == Hauteur - 1 && BotEntry && i == Largeur / 2) || (j == Hauteur / 2 && RightEntry && i == Largeur - 1))
+                if (j == 0 && TopEntry && i == Largeur / 2)
                 {
-                    Instantiate(EntryClose, Coord, transform.rotation, transform);
+                    GameObject port;
+                    port = EntryOpen;
+                    port.GetComponent<Portal_Open>().sens = PortSens.Top;
+                    port.GetComponent<Portal_Open>().CoordX = this.Coordx;
+                    port.GetComponent<Portal_Open>().CoordY = this.Coordy;
+                    PortalList.Add(Instantiate(port, Coord, transform.rotation, transform));
+
+                }                                  
+                else if (j == Hauteur / 2 && LeftEntry && i == 0)
+                {
+                    GameObject port;
+                    port = EntryOpen;
+                    port.GetComponent<Portal_Open>().sens = PortSens.Left;
+                    port.GetComponent<Portal_Open>().CoordX = this.Coordx;
+                    port.GetComponent<Portal_Open>().CoordY = this.Coordy;
+                    PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW * 3 / 4, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform));
+                }
+                else if (j == Hauteur - 1 && BotEntry && i == Largeur / 2)
+                {
+                    GameObject port;
+                    port = EntryOpen;
+                    port.GetComponent<Portal_Open>().sens = PortSens.Bot;
+                    port.GetComponent<Portal_Open>().CoordX = this.Coordx;
+                    port.GetComponent<Portal_Open>().CoordY = this.Coordy;
+                    PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * 3 / 4 - (Hauteur - 1) * SBW / 2), transform.rotation, transform));
+                }
+                else if (j == Hauteur / 2 && RightEntry && i == Largeur - 1)
+                {
+                    GameObject port;
+                    port = EntryOpen;
+                    port.GetComponent<Portal_Open>().sens = PortSens.Right;
+                    port.GetComponent<Portal_Open>().CoordX = this.Coordx;
+                    port.GetComponent<Portal_Open>().CoordY = this.Coordy;
+                    PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW * 3 / 4 + SBW / 2 * (Largeur - 1), -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform));
                 }
                 else
                 {
@@ -83,47 +119,32 @@ public class RoomSpawner : MonoBehaviour
         }
         Coord += new Vector3(SBW * 1 / 4, 0);
         Instantiate(B_R_Corner, Coord, transform.rotation, transform);
+
+
+
+
+
+
+
+
     }
 
     private void Update()
     {
-        
-        if ( !AreEntryOpen)
+        enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemys.Length == 0)
         {
-            enemys = GameObject.FindGameObjectsWithTag("Enemy");
-            if (enemys.Length == 0)
+            foreach (GameObject portal in PortalList)
             {
-                GameObject port;
-                if (TopEntry)
-                {
-                    port = EntryOpen;
-                    port.GetComponent<Portal_Open>().sens = PortSens.Top;
-                    Instantiate(port, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * 3 / 4), transform.rotation, transform);
-                }
-
-                if (BotEntry)
-                {
-                    port = EntryOpen;
-                    port.GetComponent<Portal_Open>().sens = PortSens.Bot;
-                    Instantiate(port, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * 3 / 4 - (Hauteur - 1) * SBW / 2), transform.rotation, transform);
-                }
-
-                if (LeftEntry)
-                {
-                    port = EntryOpen;
-                    port.GetComponent<Portal_Open>().sens = PortSens.Left;
-                    Instantiate(port, transform.position + new Vector3(SBW * 3 / 4, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
-                }
-
-                if (RightEntry)
-                {
-                    port = EntryOpen;
-                    port.GetComponent<Portal_Open>().sens = PortSens.Right;
-                    Instantiate(port, transform.position + new Vector3(SBW * 3 / 4 + SBW / 2 * (Largeur - 1), -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
-                }
-
-                AreEntryOpen = true;
-            }           
+                portal.GetComponent<Portal_Open>().OpenIt();
+            }
+        }
+        else
+        {
+            foreach (GameObject portal in PortalList)
+            {
+                portal.GetComponent<Portal_Open>().CloseIt();
+            }
         }
     }
 

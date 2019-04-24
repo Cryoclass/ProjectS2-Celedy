@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9002470762039848777}
   - component: {fileID: 9002470762039848782}
   m_Layer: 0
-  m_Name: Bone
+  m_Name: FireBall
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85c4b84eb2c22146a975b1cffe029db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+<<<<<<< HEAD:Assets/Prefab/Bullet/Bone.prefab
+  speed: 60
+=======
+  speed: 40
+>>>>>>> 89565d3e1eba669a3076107be81ebd5922f4fdb9:Assets/Prefab/Bullet/FireBall.prefab
   Duration: 2
   rb: {fileID: 9002470762039848782}
   damage: 40

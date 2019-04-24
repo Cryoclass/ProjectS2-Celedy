@@ -1161,7 +1161,7 @@ MonoBehaviour:
   - {fileID: 1164809952794250918}
   - {fileID: 1000176349516758836}
   - {fileID: 155683679268085996}
-  Cooldown: 2
+  Cooldown: 1
 --- !u!114 &4102828122266073840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99e6527a10902746bd248364046e9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
+  Speed: 30
 --- !u!1 &5990882140604955508
 GameObject:
   m_ObjectHideFlags: 0
