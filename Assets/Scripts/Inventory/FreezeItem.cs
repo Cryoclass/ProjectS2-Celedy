@@ -15,14 +15,11 @@ public class FreezeItem : MonoBehaviour
     private float Defspeed;
     private bool DefShootCd;
     
-
-    private SkeletonShoot _skeletonShoot;
     private SkeletonIA _skeletonIa;
 
 
     void Awake()
     {
-        _skeletonShoot = GetComponent<SkeletonShoot>();
         _skeletonIa = GameObject.FindGameObjectWithTag("Enemy").GetComponent<SkeletonIA>();
     }
     
