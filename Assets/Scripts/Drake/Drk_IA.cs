@@ -20,7 +20,6 @@ public class Drk_IA : MonoBehaviour
 
     private float CD;
     public float ReloadTime;
-    public float PV = 100;
     public float speed;
 
     public List<GameObject> Drops;
@@ -41,7 +40,7 @@ public class Drk_IA : MonoBehaviour
     void Update()
     {
 
-        HealthBar.value = PV;
+        HealthBar.value = transform.GetComponent<MonsterLife>().Life;
 
         Was_Moving = false;
         x = 0;
@@ -151,13 +150,13 @@ public class Drk_IA : MonoBehaviour
         anim.SetFloat("LastMoveX", LastMove.y);
         anim.SetFloat("LastMoveY", LastMove.x);
 
-        CD -= 10 * Time.deltaTime;
-        if (PV <= 0)
-        {
-            if (Drops != null && Random.Range(0, 100) > RateDrop)
-                Instantiate(Drops[Random.Range(0, Drops.Count)], transform.position, transform.rotation);
+        CD -= 10 * Time.deltaTime;      
+                    
+    }
 
-            Destroy(gameObject);
-        }
+    private void OnDestroy()
+    {
+        if (Drops != null && Random.Range(0, 100) > RateDrop)
+            Instantiate(Drops[Random.Range(0, Drops.Count)], transform.position, transform.rotation);
     }
 }

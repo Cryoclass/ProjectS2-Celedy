@@ -30,7 +30,6 @@ public class DialogueManager : MonoBehaviour
                 sentences.Add(a);
             }
         }
-        Debug.Log(sentences.Count);
         Changed(1);
         canvas.SetActive(false);
 

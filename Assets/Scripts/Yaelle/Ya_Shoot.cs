@@ -29,17 +29,14 @@ public class Ya_Shoot : MonoBehaviour
 
         }
         else if (Input.GetKey(KeyCode.Q) && actuCD < 0)
-        {
-            Debug.Log(transform.rotation.y);
+        {            
             if (transform.rotation.y != 0)
             {
-                Instantiate(Bullets[ActualBullet], FirePoint[3].transform.position, Quaternion.Euler(0, 0, 90));
-                Debug.Log("ca marche");
+                Instantiate(Bullets[ActualBullet], FirePoint[3].transform.position, Quaternion.Euler(0, 0, 90));                
             }
             else
             {
-                Instantiate(Bullets[ActualBullet], FirePoint[1].transform.position, Quaternion.Euler(0, 0, 90));
-                Debug.Log("pas de ouf");
+                Instantiate(Bullets[ActualBullet], FirePoint[1].transform.position, Quaternion.Euler(0, 0, 90));                
             }
             actuCD = Cooldown;
         }

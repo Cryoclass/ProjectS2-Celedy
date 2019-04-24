@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SkeletonIA : MonoBehaviour
 {
-    public float Life;
-
     public Animator anim;
 
     public float speed;

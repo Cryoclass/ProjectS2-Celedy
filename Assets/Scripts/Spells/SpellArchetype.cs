@@ -7,6 +7,7 @@ public class SpellArchetype : MonoBehaviour
     public float speed;
     public float Duration;
     public Rigidbody2D rb;
+    public int damage;
 
     public float rotate;
 
@@ -29,22 +30,22 @@ public class SpellArchetype : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Ya_Health>().CurrentHealth += -1;
-            Destroy(gameObject);
+            DestroyProjectile();
         }
         else if (collision.gameObject.tag == "Wall")
         {
-            Destroy(gameObject);
+            DestroyProjectile();
         }
         else if (collision.gameObject.tag == "Enemy")
         {
-            collision.GetComponent<Drk_IA>().PV -= 50;
-            Destroy(gameObject);
+            collision.GetComponent<MonsterLife>().damaged(damage);
+            DestroyProjectile();
         }
     }
 
     private void DestroyProjectile()
     {
-        Instantiate(Expl, transform.position, transform.rotation);
+        //Instantiate(Expl, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

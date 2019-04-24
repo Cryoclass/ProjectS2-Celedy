@@ -10,8 +10,11 @@ public class LevelGen : MonoBehaviour
     public float spacedx;
     public float spacedy;
 
-    public GameObject ASpawn;
+    
     public List<int[]> PossNeigh;
+    public int[,] visited;
+
+    public GameObject ASpawn;
 
     public GameObject Minimap;
 
@@ -27,8 +30,10 @@ public class LevelGen : MonoBehaviour
         RoomScript Rob = new RoomScript();
         Rob.x = 5;
         Rob.y = 5;
-        rooms[5, 5] = Rob;
+        rooms[5, 5] = Rob;       
         
+        
+
         int rng;
 
         for (int i = 1;i<NbMaxRooms;i++)
@@ -106,24 +111,35 @@ public class LevelGen : MonoBehaviour
             rooms[nextX, nextY] = Rob;
         }
 
+        
+        
 
-        int counted = 0;
-        foreach(RoomScript room in rooms)
-        {            
-            if (room != null)
+        visited = new int[11, 11];
+        for (int i = 0; i < 11; i++)
+        {
+            for (int y = 0; y < 11; y++)
             {
-                ASpawn.GetComponent<RoomSpawner>().ChangeTop(room.IsTop());
-                ASpawn.GetComponent<RoomSpawner>().ChangeBot(room.IsBot());
-                ASpawn.GetComponent<RoomSpawner>().ChangeRight(room.IsRight());
-                ASpawn.GetComponent<RoomSpawner>().ChangeLeft(room.IsLeft());
-                
-                Instantiate(ASpawn, transform.position + new Vector3(room.x*spacedx, room.y*spacedy), transform.rotation, transform);
-                
-                counted++;
-            }                
+                if (rooms[i, y] != null)
+                {
+                    visited[i, y] = 0;
+                }
+                else
+                {
+                    visited[i, y] = 2;
+                }
+            }
         }
 
-        Instantiate(Minimap,transform.position,transform.rotation);
+        visited[5, 5] = 1;
+        ASpawn.GetComponent<RoomSpawner>().ChangeTop(rooms[5, 5].IsTop());
+        ASpawn.GetComponent<RoomSpawner>().ChangeBot(rooms[5, 5].IsBot());
+        ASpawn.GetComponent<RoomSpawner>().ChangeRight(rooms[5, 5].IsRight());
+        ASpawn.GetComponent<RoomSpawner>().ChangeLeft(rooms[5, 5].IsLeft());
+        ASpawn.GetComponent<RoomSpawner>().Coordx = 5;
+        ASpawn.GetComponent<RoomSpawner>().Coordy = 5;
+
+        Instantiate(ASpawn, transform.position + new Vector3(5 * spacedx, 5 * spacedy), transform.rotation,transform);
+        // Instantiate(Minimap,transform.position,transform.rotation);
     }
 
     private int NbNeighf(int x, int y)
@@ -197,6 +213,23 @@ public class LevelGen : MonoBehaviour
     {
         return rooms;
     }
+
+    public void Instantiater(int x, int y)
+    {
+        if(visited[x,y]==0)
+        {      
+            ASpawn.GetComponent<RoomSpawner>().ChangeTop(rooms[x, y].IsTop());
+            ASpawn.GetComponent<RoomSpawner>().ChangeBot(rooms[x, y].IsBot());
+            ASpawn.GetComponent<RoomSpawner>().ChangeRight(rooms[x, y].IsRight());
+            ASpawn.GetComponent<RoomSpawner>().ChangeLeft(rooms[x, y].IsLeft());
+            ASpawn.GetComponent<RoomSpawner>().Coordx = x;
+            ASpawn.GetComponent<RoomSpawner>().Coordy = y;
+
+            Instantiate(ASpawn, transform.position + new Vector3(x * spacedx, y * spacedy), transform.rotation,transform);
+            visited[x, y] = 1;
+        }
+    }
+
 
     // Update is called once per frame
     void Update()

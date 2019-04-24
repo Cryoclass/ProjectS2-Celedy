@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797642401375203157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.24, y: -0.09, z: 0.032497622}
+  m_LocalPosition: {x: 8.75, y: 0, z: 0.032497622}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 7825644857699357783}
@@ -291,9 +291,12 @@ GameObject:
   - component: {fileID: 7473628266774459339}
   - component: {fileID: 2371138828281693855}
   - component: {fileID: 7880931143848057118}
+  - component: {fileID: 1287938393490083602}
+  - component: {fileID: 4142971504998179220}
+  - component: {fileID: 5335525433178929845}
   m_Layer: 0
   m_Name: Skeletton_cute
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,17 +353,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0450103fb033a4c8da9966698ddbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 0
   anim: {fileID: 2371138828281693855}
   speed: 15
-  stoppingDistance: 20
-  retreatDistance: 18
+  stoppingDistance: 40
+  retreatDistance: 35
   StartTimeBtwShot: 2
   ShootPoint: {fileID: 1797642401375203157}
   Offset: -90
   ToRotate: {fileID: 6856977017987334865}
   projectile: {fileID: 4937086729925649656, guid: 12a19e81d041a354db01be41899dc38f,
     type: 3}
+--- !u!114 &1287938393490083602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700665327944631814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118bc47fb622e7b44979dcaa3b75c58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 100
+--- !u!61 &4142971504998179220
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700665327944631814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.7}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5.5}
+  m_EdgeRadius: 0
+--- !u!50 &5335525433178929845
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700665327944631814}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5691134422691327013
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6856977017987334865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.02, z: -0.032497622}
+  m_LocalPosition: {x: 0, y: 0, z: -0.032497622}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 984471014371844052}
