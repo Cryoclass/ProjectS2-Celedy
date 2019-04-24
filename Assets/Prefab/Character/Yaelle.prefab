@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullets:
-  - {fileID: 9002470762039848781, guid: 686d493d72f87e44288620e2dd12b37f, type: 3}
+  - {fileID: 1177768238139559128, guid: 8b1a7ce49f7f7d541a2e14f65a3d88ce, type: 3}
   FirePoint:
   - {fileID: 2671659495169180644}
   - {fileID: 1164809952794250918}
