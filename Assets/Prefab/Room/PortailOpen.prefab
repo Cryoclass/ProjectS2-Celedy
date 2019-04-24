@@ -110,3 +110,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Laser: {fileID: 7594959407485007424, guid: a7a59c329e7731844a4d543cce2e25ac, type: 3}
+  sens: 0
+  TpLaunched: 0
+  deplx: 0
+  deply: 0
+  isopen: 0
+  CoordX: 0
+  CoordY: 0
+  LevelGenerator: {fileID: 0}
+  open: {fileID: 21300004, guid: eef323a9ad131184ab460980dfd2db32, type: 3}
+  close: {fileID: 21300010, guid: eef323a9ad131184ab460980dfd2db32, type: 3}
+  countingCD: 0
