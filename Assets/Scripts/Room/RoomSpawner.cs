@@ -33,12 +33,16 @@ public class RoomSpawner : MonoBehaviour
 
     private Vector3 Coord;
 
+    private List<int[]> PossibleSpawn;
+
     private GameObject[] enemys;
     private List<GameObject> PortalList;
 
     // Start is called before the first frame update
     void Start()
     {
+        PossSpawnCreat();
+
         PortalList = new List<GameObject>();
         Coord = transform.position;
         int len = Floors.Length;
@@ -107,6 +111,7 @@ public class RoomSpawner : MonoBehaviour
             Coord += new Vector3(SBW * 1 / 4, 0);
             Instantiate(R_Wall, Coord, transform.rotation, transform);
             Coord = transform.position - new Vector3(0, SBW * j / 2 + SBW * 5 / 4);
+
         }
 
         Coord -= new Vector3(0, SBW / 4);
@@ -166,5 +171,42 @@ public class RoomSpawner : MonoBehaviour
     public void ChangeRight(bool caca)
     {
         RightEntry = caca;
+    }
+
+    private void PossSpawnCreat()
+    {
+        PossibleSpawn = new List<int[]>();
+        PossibleSpawn.Add(new int[2] {2,0 });
+        PossibleSpawn.Add(new int[2] { 3, 0 });
+        PossibleSpawn.Add(new int[2] { 4, 0 });
+        PossibleSpawn.Add(new int[2] { 14, 0 });
+        PossibleSpawn.Add(new int[2] { 15, 0 });
+        PossibleSpawn.Add(new int[2] { 16, 0 });
+        PossibleSpawn.Add(new int[2] { 3, 1 });
+        PossibleSpawn.Add(new int[2] { 4, 1 });
+        PossibleSpawn.Add(new int[2] { 5, 1 });
+        PossibleSpawn.Add(new int[2] { 13, 1 });
+        PossibleSpawn.Add(new int[2] { 14, 1 });
+        PossibleSpawn.Add(new int[2] { 15, 1 });
+        PossibleSpawn.Add(new int[2] { 4, 2 });
+        PossibleSpawn.Add(new int[2] { 5, 2 });
+        PossibleSpawn.Add(new int[2] { 13, 2 });
+        PossibleSpawn.Add(new int[2] { 14, 2 });
+        PossibleSpawn.Add(new int[2] { 4, 3 });
+        PossibleSpawn.Add(new int[2] { 5, 3 });
+        PossibleSpawn.Add(new int[2] { 6, 3 });
+        PossibleSpawn.Add(new int[2] { 7, 3 });
+        PossibleSpawn.Add(new int[2] { 11, 3 });
+        PossibleSpawn.Add(new int[2] { 12, 3 });
+        PossibleSpawn.Add(new int[2] { 13, 3 });
+        PossibleSpawn.Add(new int[2] { 14, 3 });
+        PossibleSpawn.Add(new int[2] { 5, 4 });
+        PossibleSpawn.Add(new int[2] { 6, 4 });
+        PossibleSpawn.Add(new int[2] { 7, 4 });
+        PossibleSpawn.Add(new int[2] { 8, 4 });
+        PossibleSpawn.Add(new int[2] { 9, 4 });
+        PossibleSpawn.Add(new int[2] { 10, 4 });
+        PossibleSpawn.Add(new int[2] { 11, 4 });
+        PossibleSpawn.Add(new int[2] { 5, 4 });
     }
 }
