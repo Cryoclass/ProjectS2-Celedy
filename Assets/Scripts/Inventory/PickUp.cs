@@ -39,6 +39,11 @@ public class PickUp : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void FreezeItem()
+    {
+        Time.timeScale = 0f;
+    }
+
 
     // Update is called once per frame
     void Update()

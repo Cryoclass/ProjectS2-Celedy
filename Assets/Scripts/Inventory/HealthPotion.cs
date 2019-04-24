@@ -16,6 +16,7 @@ public class HealthPotion : MonoBehaviour
     // Update is called once per frame
     public void Use()
     {
+        
         player.GetComponent<Ya_Health>().CurrentHealth += 2;
         Destroy(gameObject);
     }

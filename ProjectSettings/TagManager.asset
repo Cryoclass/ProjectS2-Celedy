@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - LevelGen
   - MiniMap
+  - FreezeEffect
   layers:
   - Default
   - TransparentFX
