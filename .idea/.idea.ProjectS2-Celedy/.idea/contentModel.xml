@@ -29,7 +29,6 @@
           <e p="Menu" t="Include">
             <e p="MainMenu" t="Include">
               <e p="MainMenu.cs" t="Include" />
-              <e p="SettingsMenu.cs" t="Include" />
               <e p="TransitionScenesMusic.cs" t="Include" />
               <e p="Volume.cs" t="Include" />
             </e>
