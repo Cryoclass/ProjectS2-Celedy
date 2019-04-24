@@ -45,6 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Largeur: 19
   Hauteur: 9
+  Coordx: 0
+  Coordy: 0
+  Monsters:
+  - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
   T_Wall: {fileID: 104891082420038203, guid: c38b5f42fb9ff1a4180999996b9b5e5e, type: 3}
   B_Wall: {fileID: 3566496091998171924, guid: 11b4125c079acf84f9d78f6225bced39, type: 3}
   L_Wall: {fileID: 3227732301884399029, guid: 55fc411ec6c695d4b9d8bffced65e36e, type: 3}
@@ -63,9 +67,9 @@ MonoBehaviour:
   - {fileID: 354769259628670800, guid: d1fae0ce6f670d646b8e8788910c45ca, type: 3}
   EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
     type: 3}
-  EntryClose: {fileID: 4193716526659249026, guid: 2a76531495469264dabaa4b4c5d99d18,
-    type: 3}
   TopEntry: 0
   BotEntry: 0
   LeftEntry: 1
   RightEntry: 0
+  NbMinEnemy: 3
+  NbMaxenemy: 5
