@@ -97,7 +97,7 @@ MonoBehaviour:
   speed: 40
   Duration: 5
   rb: {fileID: 187092360208984153}
-  damage: 30
+  damage: 100
   rotate: 0
   Expl: {fileID: 0}
 --- !u!50 &187092360208984153

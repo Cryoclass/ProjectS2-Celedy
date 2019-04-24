@@ -10,6 +10,8 @@ public class LevelGen : MonoBehaviour
     public float spacedx;
     public float spacedy;
 
+    public int NbMinEnemy;
+    public int NbMaxEnemy;
     
     public List<int[]> PossNeigh;
     public int[,] visited;
@@ -17,6 +19,8 @@ public class LevelGen : MonoBehaviour
     public GameObject ASpawn;
 
     public GameObject Minimap;
+
+    private List<int[]> CoordNeigh;
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +108,29 @@ public class LevelGen : MonoBehaviour
             //Rob a ses coordonnées
 
             Rob.Neightboors.Add(ActualR[rng]);
+            Around(nextX,nextY);
+            foreach(int[] PotenVois in CoordNeigh)
+            {
+                bool existing = false;
+                foreach(int[] existi in Rob.Neightboors)
+                {
+                    if(!existing)
+                    {
+                        if(existi[0] == PotenVois[0] && existi[1] == PotenVois[1])
+                        {
+                            existing = true;
+                        }
+                    }
+                }
+                if(!existing)
+                {
+                    if(Random.Range(0,100) > 40)
+                    {
+                        Rob.Neightboors.Add(PotenVois);
+                        rooms[PotenVois[0], PotenVois[1]].Neightboors.Add(new int[2] { nextX, nextY });
+                    }
+                }
+            }
 
 
             ActualR.Add(new int[2] { nextX, nextY });
@@ -131,6 +158,10 @@ public class LevelGen : MonoBehaviour
         }
 
         visited[5, 5] = 1;
+
+        ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = this.NbMaxEnemy;
+        ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = this.NbMinEnemy;
+
         ASpawn.GetComponent<RoomSpawner>().ChangeTop(rooms[5, 5].IsTop());
         ASpawn.GetComponent<RoomSpawner>().ChangeBot(rooms[5, 5].IsBot());
         ASpawn.GetComponent<RoomSpawner>().ChangeRight(rooms[5, 5].IsRight());
@@ -141,6 +172,43 @@ public class LevelGen : MonoBehaviour
         Instantiate(ASpawn, transform.position + new Vector3(5 * spacedx, 5 * spacedy), transform.rotation,transform);
         // Instantiate(Minimap,transform.position,transform.rotation);
     }
+
+    private void Around(int x, int y)
+    {
+        CoordNeigh = new List<int[]>();
+        if (y + 1 <= 10)
+        {
+            if (rooms[x, y + 1] != null)
+            {
+                CoordNeigh.Add(new int[2] { x, y + 1 });
+            }            
+        }
+
+        if (y - 1 >= 0)
+        {
+            if (rooms[x, y - 1] != null)
+            {
+                CoordNeigh.Add(new int[2] { x, y - 1 });
+            }            
+        }
+
+        if (x - 1 >= 0)
+        {
+            if (rooms[x - 1, y] != null)
+            {
+                CoordNeigh.Add(new int[2] { x - 1, y });
+            }                                     
+        }
+
+        if (x + 1 <= 10)
+        {
+            if (rooms[x + 1, y] != null)
+            {
+               CoordNeigh.Add(new int[2] { x + 1, y });
+            }            
+        }                 
+    }
+
 
     private int NbNeighf(int x, int y)
     {

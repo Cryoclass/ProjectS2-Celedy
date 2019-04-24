@@ -4,34 +4,42 @@ using UnityEngine;
 
 public class DeplacementYa : MonoBehaviour
 {
-    private float EachX;
-    private float EachY;
-
+    
+    private bool MoveLaunched = false;
+    public GameObject Gereur;
     public Rigidbody2D rb;
-    private float k1;
-    private float k2;
-
-    private float CD = 0;
+    private int TimeCalled = 0;
+    
+    public float CD = 0;
 
     private void Update()
     {
-        if (CD > 0)
+        if(MoveLaunched)
         {
-            CD -= Time.deltaTime;
+            if (CD > 0)
+            {
+                CD -= Time.deltaTime*2;
+            }
+            else
+            {
+                rb.velocity = new Vector3(0,0,0);
+                MoveLaunched = false;
+                if (TimeCalled == 1)
+                {
+                    Gereur.GetComponent<GereurMvt1>().Declencheur();
+                }
+            }
         }
-        else
-            CancelInvoke();
-
     }
 
     public void Depl(int x, int y)
     {
-        rb.velocity = transform.up;
-
+        TimeCalled += 1;
+        MoveLaunched = true;
+        CD = Mathf.Max(Mathf.Abs(x), Mathf.Abs(y)) / 10f;
+        Debug.Log(CD);
+        rb.velocity = (transform.up * (y / CD) + (transform.right * (x / CD))) * 2;
     }
     
-    private void Mvmt()
-    {
-        transform.position += new Vector3(EachX, EachY, 0f);
-    }
+   
 }
