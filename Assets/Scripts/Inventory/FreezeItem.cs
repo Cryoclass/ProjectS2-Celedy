@@ -15,7 +15,6 @@ public class FreezeItem : MonoBehaviour
     private float Defspeed;
     private bool DefShootCd;
     
-
     private SkeletonIA _skeletonIa;
 
 

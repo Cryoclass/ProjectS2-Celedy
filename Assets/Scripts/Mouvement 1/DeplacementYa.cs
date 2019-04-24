@@ -7,7 +7,6 @@ public class DeplacementYa : MonoBehaviour
     private float EachX;
     private float EachY;
 
-    private bool LaunchedMove;
     public Rigidbody2D rb;
     private float k1;
     private float k2;
@@ -16,29 +15,23 @@ public class DeplacementYa : MonoBehaviour
 
     private void Update()
     {
-        if (LaunchedMove)
+        if (CD > 0)
         {
-            if (CD > 0)
-            {
-                CD -= Time.deltaTime;
-            }
-            else
-            {
-                Stoping();
-            }
-        }      
+            CD -= Time.deltaTime;
+        }
+        else
+            CancelInvoke();
+
     }
 
     public void Depl(int x, int y)
     {
-        LaunchedMove = true;
-        CD = Mathf.Max(Mathf.Abs(x), Mathf.Abs(y))/10;
-        rb.velocity = transform.up*(y/CD) + transform.right*(x/CD);
+        rb.velocity = transform.up;
+
     }
     
-    private void Stoping()
+    private void Mvmt()
     {
-        LaunchedMove = false;
-        rb.velocity = new Vector3(0,0,0);
+        transform.position += new Vector3(EachX, EachY, 0f);
     }
 }
