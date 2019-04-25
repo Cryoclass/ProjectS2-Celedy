@@ -13,6 +13,7 @@ TagManager:
   - LevelGen
   - MiniMap
   - FreezeEffect
+  - Boss
   layers:
   - Default
   - TransparentFX
