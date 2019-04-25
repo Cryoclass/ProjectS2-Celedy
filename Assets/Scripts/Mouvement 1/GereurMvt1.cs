@@ -7,31 +7,44 @@ public class GereurMvt1 : MonoBehaviour
 {
     public GameObject Yaelle;
     private Queue<int[]> Actions;
+    public GameObject DialogueManager;
+    private bool DialogueLaunched;
+    public GameObject ButtonContinue;
 
     // Start is called before the first frame update
     void Start()
     {
+        ButtonContinue.SetActive(true);
+        DialogueLaunched = false;
+        DialogueManager.SetActive(false);
         Actions = new Queue<int[]>();
-        Actions.Enqueue(new int[2] { 0, -25 });
-        Actions.Enqueue(new int[2] { -30, 0 });
-        Actions.Enqueue(new int[2] { 100, 45 });
+        Actions.Enqueue(new int[2] { 0, -37 });
+        Actions.Enqueue(new int[2] { -25, 0 });
+        Actions.Enqueue(new int[2] { 150, 0 });
     }
 
     public void Declencheur()
     {
-        if(Actions.Count !=0 )
+        if(Actions.Count == 1 && !DialogueLaunched)
         {
-            int[] nextMoove = Actions.Dequeue();
-            Yaelle.GetComponent<DeplacementYa>().Depl(nextMoove[0], nextMoove[1]);
+            ButtonContinue.SetActive(false);
+            DialogueLaunched = true;
+            DialogueManager.SetActive(true);
+            DialogueManager.GetComponent<ParolesYa>().Speaking();
+        }
+        else if(Actions.Count != 0)
+        {
+            ButtonContinue.SetActive(true);
+            DialogueManager.SetActive(false);
+            int[] NextMove = Actions.Dequeue();
+            Yaelle.GetComponent<DeplacementYa>().Depl(NextMove[0], NextMove[1]);
         }
         else
         {
             SceneManager.LoadScene("Game1");
-
         }
+            
     }
-
-        
 
     // Update is called once per frame
     void Update()

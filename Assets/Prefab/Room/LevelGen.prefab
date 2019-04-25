@@ -46,5 +46,7 @@ MonoBehaviour:
   NbMaxRooms: 20
   spacedx: 250
   spacedy: 140
+  NbMinEnemy: 3
+  NbMaxEnemy: 5
   ASpawn: {fileID: 2551912640309075875, guid: f6ebd9851e8b4874d8bdaf170d87ece0, type: 3}
   Minimap: {fileID: 8037643761183106293, guid: 08d93b4b952323346a36f1f885c2d25b, type: 3}

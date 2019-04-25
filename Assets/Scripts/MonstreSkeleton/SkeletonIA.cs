@@ -9,9 +9,14 @@ public class SkeletonIA : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
+    public float randStop;
+    public float randRetreat;
+
 
     private float TimeBtwShots;
     public float StartTimeBtwShot;
+    
+    
 
     public GameObject ShootPoint;
     private Vector3 VectOfShoot;
@@ -30,6 +35,10 @@ public class SkeletonIA : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        TimeBtwShots = Random.Range(StartTimeBtwShot*0.5f, StartTimeBtwShot*1.5f);
+        retreatDistance = Random.Range(retreatDistance,randRetreat);
+        stoppingDistance = Random.Range(stoppingDistance,randStop);
+
     }
 
     // Update is called once per frame

@@ -10,6 +10,8 @@ public class RoomSpawner : MonoBehaviour
     public int Coordx;
     public int Coordy;
 
+    public List<GameObject> Monsters;
+
     public GameObject T_Wall;
     public GameObject B_Wall;
     public GameObject L_Wall;
@@ -29,9 +31,15 @@ public class RoomSpawner : MonoBehaviour
     public bool LeftEntry;
     public bool RightEntry;
 
-    private bool AreEntryOpen = false;
+    public int NbMinEnemy;
+    public int NbMaxenemy;
+    private int NbEnemy;
 
     private Vector3 Coord;
+
+    private List<int[]> PossibleSpawn;
+
+    private List<int[]> ToSpawn;
 
     private GameObject[] enemys;
     private List<GameObject> PortalList;
@@ -39,6 +47,19 @@ public class RoomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PossSpawnCreat();
+        Debug.Log(PossibleSpawn.Count);
+        ToSpawn = new List<int[]>();
+        NbEnemy = Random.Range(NbMinEnemy, NbMaxenemy + 1);
+        int b;
+        for (int h = 0; h < NbEnemy; h++)
+        {
+            b = Random.Range(0, PossibleSpawn.Count);
+            ToSpawn.Add(PossibleSpawn[b]);
+            PossibleSpawn.RemoveAt(b);
+        }
+        Debug.Log(ToSpawn.Count);
+
         PortalList = new List<GameObject>();
         Coord = transform.position;
         int len = Floors.Length;
@@ -103,10 +124,20 @@ public class RoomSpawner : MonoBehaviour
                     Instantiate(Floors[pos], Coord, transform.rotation, transform);
                 }
                 Coord += new Vector3(SBW / 2, 0);
+                int[] TesteurInt = new int[2] { i, j };
+                foreach(int[] inting in ToSpawn)
+                {
+                    if (inting[0] == i && inting[1] == j)
+                    {
+                        Debug.Log("Conditon verif");
+                        Instantiate(Monsters[Random.Range(0, Monsters.Count)], Coord, transform.rotation, transform);
+                    }                    
+                }
             }
             Coord += new Vector3(SBW * 1 / 4, 0);
             Instantiate(R_Wall, Coord, transform.rotation, transform);
             Coord = transform.position - new Vector3(0, SBW * j / 2 + SBW * 5 / 4);
+
         }
 
         Coord -= new Vector3(0, SBW / 4);
@@ -166,5 +197,67 @@ public class RoomSpawner : MonoBehaviour
     public void ChangeRight(bool caca)
     {
         RightEntry = caca;
+    }
+
+    private void PossSpawnCreat()
+    {
+        PossibleSpawn = new List<int[]>();
+        PossibleSpawn.Add(new int[2] { 2, 0 });
+        PossibleSpawn.Add(new int[2] { 3, 0 });
+        PossibleSpawn.Add(new int[2] { 4, 0 });
+        PossibleSpawn.Add(new int[2] { 14, 0 });
+        PossibleSpawn.Add(new int[2] { 15, 0 });
+        PossibleSpawn.Add(new int[2] { 16, 0 });
+        PossibleSpawn.Add(new int[2] { 3, 1 });
+        PossibleSpawn.Add(new int[2] { 4, 1 });
+        PossibleSpawn.Add(new int[2] { 5, 1 });
+        PossibleSpawn.Add(new int[2] { 13, 1 });
+        PossibleSpawn.Add(new int[2] { 14, 1 });
+        PossibleSpawn.Add(new int[2] { 15, 1 });
+        PossibleSpawn.Add(new int[2] { 4, 2 });
+        PossibleSpawn.Add(new int[2] { 5, 2 });
+        PossibleSpawn.Add(new int[2] { 13, 2 });
+        PossibleSpawn.Add(new int[2] { 14, 2 });
+        PossibleSpawn.Add(new int[2] { 4, 3 });
+        PossibleSpawn.Add(new int[2] { 5, 3 });
+        PossibleSpawn.Add(new int[2] { 6, 3 });
+        PossibleSpawn.Add(new int[2] { 7, 3 });
+        PossibleSpawn.Add(new int[2] { 11, 3 });
+        PossibleSpawn.Add(new int[2] { 12, 3 });
+        PossibleSpawn.Add(new int[2] { 13, 3 });
+        PossibleSpawn.Add(new int[2] { 14, 3 });
+        PossibleSpawn.Add(new int[2] { 5, 4 });
+        PossibleSpawn.Add(new int[2] { 6, 4 });
+        PossibleSpawn.Add(new int[2] { 7, 4 });
+        PossibleSpawn.Add(new int[2] { 8, 4 });
+        PossibleSpawn.Add(new int[2] { 9, 4 });
+        PossibleSpawn.Add(new int[2] { 10, 4 });
+        PossibleSpawn.Add(new int[2] { 11, 4 });
+        PossibleSpawn.Add(new int[2] { 12, 4 });
+        PossibleSpawn.Add(new int[2] { 13, 4 });
+        PossibleSpawn.Add(new int[2] { 4, 5 });
+        PossibleSpawn.Add(new int[2] { 5, 5 });
+        PossibleSpawn.Add(new int[2] { 6, 5 });
+        PossibleSpawn.Add(new int[2] { 7, 5 });
+        PossibleSpawn.Add(new int[2] { 11, 5 });
+        PossibleSpawn.Add(new int[2] { 12, 5 });
+        PossibleSpawn.Add(new int[2] { 13, 5 });
+        PossibleSpawn.Add(new int[2] { 14, 5 });
+        PossibleSpawn.Add(new int[2] { 4, 6 });
+        PossibleSpawn.Add(new int[2] { 5, 6 });
+        PossibleSpawn.Add(new int[2] { 13, 6 });
+        PossibleSpawn.Add(new int[2] { 14, 6 });
+        PossibleSpawn.Add(new int[2] { 3, 7 });
+        PossibleSpawn.Add(new int[2] { 4, 7 });
+        PossibleSpawn.Add(new int[2] { 5, 7 });
+        PossibleSpawn.Add(new int[2] { 13, 7 });
+        PossibleSpawn.Add(new int[2] { 14, 7 });
+        PossibleSpawn.Add(new int[2] { 15, 7 });
+        PossibleSpawn.Add(new int[2] { 2, 8 });
+        PossibleSpawn.Add(new int[2] { 3, 8 });
+        PossibleSpawn.Add(new int[2] { 4, 8 });
+        PossibleSpawn.Add(new int[2] { 14, 8 });
+        PossibleSpawn.Add(new int[2] { 15, 8 });
+        PossibleSpawn.Add(new int[2] { 16, 8 });
     }
 }

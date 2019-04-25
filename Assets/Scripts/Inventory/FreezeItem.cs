@@ -15,14 +15,18 @@ public class FreezeItem : MonoBehaviour
     private float Defspeed;
     private bool DefShootCd;
     
-
     private SkeletonIA _skeletonIa;
-    
+
+
+    void Awake()
+    {
+        _skeletonIa = GameObject.FindGameObjectWithTag("Enemy").GetComponent<SkeletonIA>();
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        _skeletonIa = GameObject.FindGameObjectWithTag("Enemy").GetComponent<SkeletonIA>();
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Defspeed = _skeletonIa.speed;
         DefShootCd = _skeletonIa.CanShoot;
