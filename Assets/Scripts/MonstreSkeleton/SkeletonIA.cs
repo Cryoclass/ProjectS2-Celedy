@@ -6,6 +6,9 @@ public class SkeletonIA : MonoBehaviour
 {
     public Animator anim;
 
+    public List<GameObject> drops;
+    public int droprate;
+
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -94,5 +97,14 @@ public class SkeletonIA : MonoBehaviour
         float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
         ToRotate.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         Instantiate(projectile, ShootPoint.transform.position, Quaternion.Euler(0f, 0f, rotZ + Offset));
+    }
+
+    private void OnDestroy()
+    {
+        if(Random.Range(0,100) < droprate)
+        {
+            if(drops.Count != 0)
+                Instantiate(drops[Random.Range(0, drops.Count)], transform.position, transform.rotation);
+        }
     }
 }

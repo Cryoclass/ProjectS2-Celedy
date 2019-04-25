@@ -354,6 +354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2371138828281693855}
+  drops:
+  - {fileID: 4429993404003000576, guid: 92e4a9b6183eb00439e2dc3d71ee0d5d, type: 3}
+  droprate: 40
   speed: 15
   stoppingDistance: 40
   retreatDistance: 35
