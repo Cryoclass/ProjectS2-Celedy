@@ -1490,6 +1490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Yaelle: {fileID: 386843286}
   DialogueManager: {fileID: 475655081}
+  ButtonContinue: {fileID: 1325818937}
 --- !u!4 &2125900316
 Transform:
   m_ObjectHideFlags: 0

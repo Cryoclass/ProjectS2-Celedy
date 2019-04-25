@@ -357,12 +357,15 @@ MonoBehaviour:
   speed: 15
   stoppingDistance: 40
   retreatDistance: 35
+  randStop: 65
+  randRetreat: 25
   StartTimeBtwShot: 2
   ShootPoint: {fileID: 1797642401375203157}
   Offset: -90
   ToRotate: {fileID: 6856977017987334865}
   projectile: {fileID: 4937086729925649656, guid: 12a19e81d041a354db01be41899dc38f,
     type: 3}
+  CanShoot: 1
 --- !u!114 &1287938393490083602
 MonoBehaviour:
   m_ObjectHideFlags: 0

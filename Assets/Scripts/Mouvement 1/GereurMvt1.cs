@@ -9,10 +9,12 @@ public class GereurMvt1 : MonoBehaviour
     private Queue<int[]> Actions;
     public GameObject DialogueManager;
     private bool DialogueLaunched;
+    public GameObject ButtonContinue;
 
     // Start is called before the first frame update
     void Start()
     {
+        ButtonContinue.SetActive(true);
         DialogueLaunched = false;
         DialogueManager.SetActive(false);
         Actions = new Queue<int[]>();
@@ -25,12 +27,14 @@ public class GereurMvt1 : MonoBehaviour
     {
         if(Actions.Count == 1 && !DialogueLaunched)
         {
+            ButtonContinue.SetActive(false);
             DialogueLaunched = true;
             DialogueManager.SetActive(true);
             DialogueManager.GetComponent<ParolesYa>().Speaking();
         }
         else if(Actions.Count != 0)
         {
+            ButtonContinue.SetActive(true);
             DialogueManager.SetActive(false);
             int[] NextMove = Actions.Dequeue();
             Yaelle.GetComponent<DeplacementYa>().Depl(NextMove[0], NextMove[1]);
