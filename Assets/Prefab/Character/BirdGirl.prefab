@@ -463,6 +463,7 @@ MonoBehaviour:
   i: 0
   WithModify: {fileID: 7105961384991321041}
   link: Assets/TexteDial/Henri.txt
+  ThePNJ: {fileID: 7105961386824579666}
   canvas: {fileID: 7105961384907656003}
 --- !u!1 &7105961385887573701
 GameObject:
@@ -743,8 +744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivatingCanvas: {fileID: 7105961385285728797}
-  IsAlly: 0
-  speed: 0
+  BirdAlly: {fileID: 422152739319547008, guid: a028db70c70f84b40908264412dc6678, type: 3}
+  BirdEnemy: {fileID: 0}
 --- !u!1 &7105961386870254036
 GameObject:
   m_ObjectHideFlags: 0

@@ -179,24 +179,24 @@ public class RoomSpawner : MonoBehaviour
         }
     }
 
-    public void ChangeTop(bool caca)
+    public void ChangeTop(bool IsEntry)
     {
-        TopEntry = caca;
+        TopEntry = IsEntry;
     }
 
-    public void ChangeBot(bool caca)
+    public void ChangeBot(bool IsEntry)
     {
-        BotEntry = caca;
+        BotEntry = IsEntry;
     }
 
-    public void ChangeLeft(bool caca)
+    public void ChangeLeft(bool IsEntry)
     {
-        LeftEntry = caca;
+        LeftEntry = IsEntry;
     }
 
-    public void ChangeRight(bool caca)
+    public void ChangeRight(bool IsEntry)
     {
-        RightEntry = caca;
+        RightEntry = IsEntry;
     }
 
     private void PossSpawnCreat()

@@ -5,24 +5,23 @@ using UnityEngine;
 public class BirdPNJ : MonoBehaviour
 {
     public GameObject ActivatingCanvas;
-    public bool IsAlly;
-    private GameObject ToFollow;
-    public float speed;
+    
+
+    public GameObject BirdAlly;
+    public GameObject BirdEnemy;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        IsAlly = false;
-        ToFollow = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsAlly)
-        {
-            if (Mathf.Pow(transform.position.x-ToFollow.transform.position.x,2) + Mathf.Pow(transform.position.y - ToFollow.transform.position.y, 2) > 9)
-                transform.position += (ToFollow.transform.position - this.transform.position) * speed * Time.deltaTime;
-        }
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -36,4 +35,20 @@ public class BirdPNJ : MonoBehaviour
             }
         }
     }
+
+    public void DialogueSucceed(bool succeeded)
+    {
+        if(succeeded)
+        {
+            Instantiate(BirdAlly, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(BirdEnemy, transform.position, transform.rotation);
+        }
+        Destroy(gameObject);
+        
+    }
+
+
 }
