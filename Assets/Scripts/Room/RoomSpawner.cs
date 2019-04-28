@@ -11,6 +11,8 @@ public class RoomSpawner : MonoBehaviour
     public int Coordy;
 
     public List<GameObject> Monsters;
+    public List<GameObject> PNJ;
+
 
     public GameObject T_Wall;
     public GameObject B_Wall;
@@ -121,6 +123,8 @@ public class RoomSpawner : MonoBehaviour
                 else
                 {
                     pos = Random.Range(0, len);
+                    if (PNJ.Count != 0 && Random.Range(0f,100f) > 99.9)
+                        Instantiate(PNJ[Random.Range(0,PNJ.Count)], Coord, transform.rotation);
                     Instantiate(Floors[pos], Coord, transform.rotation, transform);
                 }
                 Coord += new Vector3(SBW / 2, 0);
