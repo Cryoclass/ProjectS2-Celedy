@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d39806aa-18bc-4d2e-881e-04ea173dc7db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet/FireBall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,35 +16,36 @@
     <session id="-1022988776">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="17" />
+          <entry key="cs" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="17" />
+          <entry key="C#" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1994" />
+          <entry key="cs" value="2107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1994" />
+          <entry key="C#" value="2107" />
         </counts>
       </usages-collector>
     </session>
@@ -58,14 +55,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="120">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
-                <marker date="1556913391296" expanded="true" signature="6:78" ph="..." />
+                <marker date="1556913391296" expanded="false" signature="6:78" ph="..." />
                 <marker date="1556913391296" expanded="true" signature="130:401" ph="{...}" />
                 <marker date="1556913391296" expanded="true" signature="201:399" ph="{...}" />
                 <marker date="1556913391296" expanded="true" signature="237:327" ph="{...}" />
                 <marker date="1556913391296" expanded="true" signature="340:393" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <marker date="1556915515367" expanded="true" signature="6:78" ph="..." />
+                <marker date="1556915515367" expanded="true" signature="141:632" ph="{...}" />
+                <marker date="1556915515367" expanded="true" signature="317:630" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+              <folding>
+                <marker date="1556916008682" expanded="true" signature="0:246" ph="/* using System.Collections; ... */" />
               </folding>
             </state>
           </provider>
@@ -134,7 +157,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -157,14 +180,17 @@
     <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezeItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonstreSkeleton/SkeletonIA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezerEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/PickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room/LevelGen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mouvement 1/DeplacementYa.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="FORCE_HIGHLIGHTING" />
@@ -180,6 +206,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" />
       </list>
     </option>
   </component>
@@ -200,11 +228,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
       </pane>
       <pane id="FileSystemExplorer" />
     </panes>
@@ -260,11 +288,12 @@
       <workItem from="1556136261250" duration="8000" />
       <workItem from="1556187613535" duration="622000" />
       <workItem from="1556912827253" duration="1222000" />
+      <workItem from="1556914998197" duration="1016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15192000" />
+    <option name="totallyTimeSpent" value="16208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,7 +307,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,6 +364,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Room/LevelGen.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/MusicTransition.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -386,106 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1556912601327" expanded="false" signature="6:113" ph="..." />
-            <marker date="1556912601327" expanded="true" signature="153:955" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="290:518" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="342:512" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="378:432" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="449:502" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="544:649" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="667:770" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="798:885" ph="{...}" />
-            <marker date="1556912601327" expanded="true" signature="913:953" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Room/LevelGen.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1556912601333" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556912601333" expanded="true" signature="117:8424" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="554:5464" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="929:4282" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="1215:1481" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="1750:2895" ph="/* int nextY = 12; ... */" />
-            <marker date="1556912601333" expanded="true" signature="2909:3070" ph="/* la en gros, je suis sensé venir de trouver le prochain x et y ... */" />
-            <marker date="1556912601333" expanded="true" signature="3342:4079" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="3452:3746" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="3504:3728" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="3609:3706" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="3776:4065" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="3843:4047" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="4374:4675" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="4425:4665" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="4480:4555" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="4576:4651" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5503:6329" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5574:5732" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5625:5710" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5757:5915" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5808:5893" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5940:6123" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="5991:6076" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6149:6306" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6200:6284" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6370:7562" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6514:6727" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6565:6616" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6633:6717" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6783:6996" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6834:6885" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="6902:6986" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7052:7264" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7102:7153" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7170:7254" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7321:7534" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7372:7423" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7440:7524" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7603:7637" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7681:8342" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="7715:8336" ph="{...}" />
-            <marker date="1556912601333" expanded="true" signature="8401:8422" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/MusicTransition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <folding>
-            <marker date="1556913391296" expanded="true" signature="6:78" ph="..." />
-            <marker date="1556913391296" expanded="true" signature="130:401" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="201:399" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="237:327" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="340:393" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -494,6 +446,49 @@
             <marker date="1556912999117" expanded="true" signature="6:103" ph="..." />
             <marker date="1556912999117" expanded="true" signature="140:284" ph="{...}" />
             <marker date="1556912999117" expanded="true" signature="218:277" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <marker date="1556913391296" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556913391296" expanded="true" signature="130:401" ph="{...}" />
+            <marker date="1556913391296" expanded="true" signature="201:399" ph="{...}" />
+            <marker date="1556913391296" expanded="true" signature="237:327" ph="{...}" />
+            <marker date="1556913391296" expanded="true" signature="340:393" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1556915515367" expanded="true" signature="6:78" ph="..." />
+            <marker date="1556915515367" expanded="true" signature="141:632" ph="{...}" />
+            <marker date="1556915515367" expanded="true" signature="317:630" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <marker date="1556916008682" expanded="true" signature="0:246" ph="/* using System.Collections; ... */" />
           </folding>
         </state>
       </provider>
