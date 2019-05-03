@@ -8,8 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BirdGirl" t="Include">
+            <e p="BirdPBJAlly.cs" t="Include" />
+            <e p="BirdPBJEnemy.cs" t="Include" />
             <e p="BirdPNJ.cs" t="Include" />
           </e>
+          <e p="BossBatIA.cs" t="Include" />
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
@@ -55,6 +58,7 @@
             <e p="Portal_Open.cs" t="Include" />
             <e p="RoomScript.cs" t="Include" />
             <e p="RoomSpawner.cs" t="Include" />
+            <e p="RoomSpawnerBoss.cs" t="Include" />
           </e>
           <e p="Spells" t="Include">
             <e p="ExplosionObj.cs" t="Include" />
