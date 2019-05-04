@@ -19,6 +19,7 @@ public class BossBatIA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Target = GameObject.FindGameObjectWithTag("Player");
         CD = Random.Range(ReloadTime, ReloadTime * 20 / 100);
         GameObject.FindGameObjectWithTag("Player");        
     }
