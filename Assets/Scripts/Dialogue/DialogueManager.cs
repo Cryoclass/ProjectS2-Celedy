@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Changed(int oupas)
     {
-        
+        Debug.Log("Les boutons marchent");
         i = i * 2 + oupas;
         if(i<sentences.Count)
         {
@@ -73,6 +73,11 @@ public class DialogueManager : MonoBehaviour
     public void Activate()
     {
         canvas.SetActive(true);
+    }
+
+    public void Desactivate()
+    {
+        canvas.SetActive(false);
     }
     
 }

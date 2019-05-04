@@ -15,7 +15,7 @@ public class BirdPNJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ActivatingCanvas.GetComponent<DialogueManager>().Desactivate();
     }
 
     // Update is called once per frame
