@@ -10,18 +10,20 @@ public class SmallBatIa : MonoBehaviour
     private GameObject Target;
     private bool Throwed;
     private Vector3 direction { get; set; }
+    private float Immobilized;
 
     // Start is called before the first frame update
     void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Player");
-        Throwed = false;
+        SetImmo(1.5f);
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if(!Throwed)
+        if(!Throwed && Immobilized <= 0)
         {
             direction = Target.transform.position - this.transform.position;
             Debug.Log(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
@@ -29,6 +31,12 @@ public class SmallBatIa : MonoBehaviour
             rgbd2D.velocity = transform.up * speed;
             Throwed = true;
         }
+        else if(!Throwed)
+        {
+            Immobilized -= Time.deltaTime;
+        }
+
+
     }
 
     
@@ -43,5 +51,11 @@ public class SmallBatIa : MonoBehaviour
         {
             collision.gameObject.GetComponent<Ya_Health>().CurrentHealth--;
         }
+    }
+
+    public void SetImmo(float a)
+    {
+        Throwed = false;
+        Immobilized = a;
     }
 }

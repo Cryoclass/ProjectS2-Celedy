@@ -7,7 +7,7 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     private List<string> sentences;
-    public int i;
+    private int i;
     public GameObject WithModify;
     public string link;
 
