@@ -64,6 +64,9 @@
             <e p="Saving.cs" t="Include" />
             <e p="YaelleData.cs" t="Include" />
           </e>
+          <e p="SmallMonster" t="Include">
+            <e p="SmallBatIa.cs" t="Include" />
+          </e>
           <e p="Spells" t="Include">
             <e p="ExplosionObj.cs" t="Include" />
             <e p="SpellArchetype.cs" t="Include" />

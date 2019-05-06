@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d39806aa-18bc-4d2e-881e-04ea173dc7db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet/FireBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectS2-Celedy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,26 +16,26 @@
     <session id="-1022988776">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="20" />
+          <entry key="cs" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="20" />
+          <entry key="C#" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -53,52 +53,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="615">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <marker date="1556913391296" expanded="false" signature="6:78" ph="..." />
-                <marker date="1556913391296" expanded="true" signature="130:401" ph="{...}" />
-                <marker date="1556913391296" expanded="true" signature="201:399" ph="{...}" />
-                <marker date="1556913391296" expanded="true" signature="237:327" ph="{...}" />
-                <marker date="1556913391296" expanded="true" signature="340:393" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <marker date="1556915515367" expanded="true" signature="6:78" ph="..." />
-                <marker date="1556915515367" expanded="true" signature="141:632" ph="{...}" />
-                <marker date="1556915515367" expanded="true" signature="317:630" ph="{...}" />
+                <marker date="1557167224576" expanded="true" signature="6:149" ph="..." />
+                <marker date="1557167224576" expanded="true" signature="177:1385" ph="{...}" />
+                <marker date="1557167224576" expanded="true" signature="235:690" ph="{...}" />
+                <marker date="1557167224576" expanded="true" signature="785:1383" ph="{...}" />
+                <marker date="1557167224576" expanded="true" signature="892:1319" ph="{...}" />
+                <marker date="1557167224576" expanded="true" signature="1332:1377" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            <state relative-caret-position="180">
+              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding>
-                <marker date="1556916008682" expanded="true" signature="0:246" ph="/* using System.Collections; ... */" />
+                <marker date="1557167058075" expanded="true" signature="6:78" ph="..." />
+                <marker date="1557167058075" expanded="true" signature="141:632" ph="{...}" />
+                <marker date="1557167058075" expanded="true" signature="317:630" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -135,14 +115,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <marker date="1556912601330" expanded="false" signature="6:78" ph="..." />
-                <marker date="1556912601330" expanded="true" signature="122:1016" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="314:738" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="345:732" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="379:447" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="464:722" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="603:708" ph="{...}" />
-                <marker date="1556912601330" expanded="true" signature="774:1005" ph="{...}" />
+                <marker date="1557167058067" expanded="false" signature="6:78" ph="..." />
+                <marker date="1557167058067" expanded="true" signature="122:1016" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="314:738" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="345:732" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="379:447" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="464:722" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="603:708" ph="{...}" />
+                <marker date="1557167058067" expanded="true" signature="774:1005" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -161,11 +141,11 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
-                <marker date="1556912999117" expanded="true" signature="6:103" ph="..." />
-                <marker date="1556912999117" expanded="true" signature="140:284" ph="{...}" />
-                <marker date="1556912999117" expanded="true" signature="218:277" ph="{...}" />
+                <marker date="1557167058063" expanded="true" signature="6:103" ph="..." />
+                <marker date="1557167058063" expanded="true" signature="140:360" ph="{...}" />
+                <marker date="1557167058063" expanded="true" signature="345:353" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -184,8 +164,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezeItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonstreSkeleton/SkeletonIA.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/YaelleData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezerEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/PickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Saving.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs" root0="FORCE_HIGHLIGHTING" />
@@ -206,8 +188,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs" />
       </list>
     </option>
   </component>
@@ -231,10 +213,10 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,11 +271,12 @@
       <workItem from="1556187613535" duration="622000" />
       <workItem from="1556912827253" duration="1222000" />
       <workItem from="1556914998197" duration="1016000" />
+      <workItem from="1557167205331" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16208000" />
+    <option name="totallyTimeSpent" value="16261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -307,7 +290,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28322148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -387,6 +370,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <marker date="1557167058062" expanded="false" signature="6:78" ph="..." />
+            <marker date="1557167058062" expanded="true" signature="130:401" ph="{...}" />
+            <marker date="1557167058062" expanded="true" signature="201:399" ph="{...}" />
+            <marker date="1557167058062" expanded="true" signature="237:327" ph="{...}" />
+            <marker date="1557167058062" expanded="true" signature="340:393" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -416,20 +420,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mouvement 1/DeplacementYa.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1556912601330" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556912601330" expanded="true" signature="122:1016" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="314:738" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="345:732" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="379:447" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="464:722" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="603:708" ph="{...}" />
-            <marker date="1556912601330" expanded="true" signature="774:1005" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,30 +432,38 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <marker date="1556912999117" expanded="true" signature="6:103" ph="..." />
-            <marker date="1556912999117" expanded="true" signature="140:284" ph="{...}" />
-            <marker date="1556912999117" expanded="true" signature="218:277" ph="{...}" />
+            <marker date="1557167058063" expanded="true" signature="6:103" ph="..." />
+            <marker date="1557167058063" expanded="true" signature="140:360" ph="{...}" />
+            <marker date="1557167058063" expanded="true" signature="345:353" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
+    <entry file="file://$USER_HOME$/Desktop/Saving.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state>
+          <caret selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <marker date="1556913391296" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556913391296" expanded="true" signature="130:401" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="201:399" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="237:327" ph="{...}" />
-            <marker date="1556913391296" expanded="true" signature="340:393" ph="{...}" />
+            <marker date="1557167224576" expanded="true" signature="6:149" ph="..." />
+            <marker date="1557167224576" expanded="true" signature="177:1385" ph="{...}" />
+            <marker date="1557167224576" expanded="true" signature="235:690" ph="{...}" />
+            <marker date="1557167224576" expanded="true" signature="785:1383" ph="{...}" />
+            <marker date="1557167224576" expanded="true" signature="892:1319" ph="{...}" />
+            <marker date="1557167224576" expanded="true" signature="1332:1377" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs">
+    <entry file="file://$USER_HOME$/Desktop/YaelleData.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="25" />
@@ -473,22 +472,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="180">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding>
-            <marker date="1556915515367" expanded="true" signature="6:78" ph="..." />
-            <marker date="1556915515367" expanded="true" signature="141:632" ph="{...}" />
-            <marker date="1556915515367" expanded="true" signature="317:630" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-          <folding>
-            <marker date="1556916008682" expanded="true" signature="0:246" ph="/* using System.Collections; ... */" />
+            <marker date="1557167058075" expanded="true" signature="6:78" ph="..." />
+            <marker date="1557167058075" expanded="true" signature="141:632" ph="{...}" />
+            <marker date="1557167058075" expanded="true" signature="317:630" ph="{...}" />
           </folding>
         </state>
       </provider>
