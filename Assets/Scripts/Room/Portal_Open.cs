@@ -187,7 +187,6 @@ public class Portal_Open : MonoBehaviour
     {
         if (!isopen)
         {
-            Debug.Log("OpenIt + IsOpen = false");
             gameObject.GetComponent<SpriteRenderer>().sprite = open;
             isopen = true;
         }
@@ -196,7 +195,6 @@ public class Portal_Open : MonoBehaviour
     {
         if (isopen)
         {
-            Debug.Log("CloseIt + IsOpen = true");
             gameObject.GetComponent<SpriteRenderer>().sprite = close;
             isopen = false;
         }

@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WithModify: {fileID: 1725187949259905453}
   link: Assets/TexteDial/Henri.txt
-  ThePNJ: {fileID: 0}
+  ThePNJ: {fileID: 7698724567365974387}
   canvas: {fileID: 7053644944418825658}
 --- !u!1 &967748724206688463
 GameObject:
