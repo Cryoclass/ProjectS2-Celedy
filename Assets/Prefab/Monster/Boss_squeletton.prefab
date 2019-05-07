@@ -247,9 +247,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7295252104452976325}
   - component: {fileID: 7689270494938413900}
+  - component: {fileID: 3158308330064103467}
   m_Layer: 0
   m_Name: Boss_squeletton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,6 +293,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3158308330064103467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246834822412750637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b9c4504b79eea4f882f15e17efb56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chauve_souris: {fileID: 570903891281261688, guid: 0249ab82c3301e848b2ed1e64e697e09,
+    type: 3}
+  top_mouse: {fileID: 3589935616800069922}
+  bot_mouse: {fileID: 4757614927521937297}
+  right_hand: {fileID: 1277527995903183587}
+  left_hand: {fileID: 5317693430821061374}
+  crane: {fileID: 6109342795805849076}
+  palier: 100
+  is_dying: 0
+  right_had_hand: 0
+  left_had_hand: 0
 --- !u!1 &5317693430821061374
 GameObject:
   m_ObjectHideFlags: 0
