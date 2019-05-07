@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         using (StreamReader myReader = new StreamReader(link))
         {
             string RTE = myReader.ReadToEnd();
-            foreach(string a in RTE.Split('|'))
+            foreach(string a in RTE.Split('\n'))
             {
                 sentences.Add(a);
             }

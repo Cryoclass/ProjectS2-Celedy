@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\setth\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\setth\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.-36315174.00" t="ExcludeRecursive" />
-    <e p="C:\Users\setth\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
+    <e p="C:\Users\SoPhi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\SoPhi\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.-209713194.00" t="ExcludeRecursive" />
+    <e p="C:\Users\SoPhi\Desktop\ProjectS2-Celedy" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Big_squeletton" t="Include">
+            <e p="B_C_shoot_with_mouse.cs" t="Include" />
+          </e>
           <e p="BirdGirl" t="Include">
             <e p="BirdPBJAlly.cs" t="Include" />
             <e p="BirdPBJEnemy.cs" t="Include" />
