@@ -49,6 +49,15 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1009348544">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.137" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -57,30 +66,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <marker date="1557167224576" expanded="true" signature="6:149" ph="..." />
-                <marker date="1557167224576" expanded="true" signature="177:1385" ph="{...}" />
-                <marker date="1557167224576" expanded="true" signature="235:690" ph="{...}" />
-                <marker date="1557167224576" expanded="true" signature="785:1383" ph="{...}" />
-                <marker date="1557167224576" expanded="true" signature="892:1319" ph="{...}" />
-                <marker date="1557167224576" expanded="true" signature="1332:1377" ph="{...}" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-              <folding>
-                <marker date="1557167058075" expanded="true" signature="6:78" ph="..." />
-                <marker date="1557167058075" expanded="true" signature="141:632" ph="{...}" />
-                <marker date="1557167058075" expanded="true" signature="317:630" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Big_squeletton/B_C_shoot_with_mouse.cs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -112,20 +113,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mouvement 1/DeplacementYa.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1557167058067" expanded="false" signature="6:78" ph="..." />
-                <marker date="1557167058067" expanded="true" signature="122:1016" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="314:738" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="345:732" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="379:447" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="464:722" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="603:708" ph="{...}" />
-                <marker date="1557167058067" expanded="true" signature="774:1005" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -140,13 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="210">
               <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <folding>
-                <marker date="1557167058063" expanded="true" signature="6:103" ph="..." />
-                <marker date="1557167058063" expanded="true" signature="140:360" ph="{...}" />
-                <marker date="1557167058063" expanded="true" signature="345:353" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -157,26 +140,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezeItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonstreSkeleton/SkeletonIA.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/YaelleData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezerEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/PickUp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/Saving.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonstreSkeleton/SkeletonIA.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/FreezeItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/HealthPotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room/LevelGen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/PickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mouvement 1/DeplacementYa.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/MusicTransition.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -210,13 +187,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="FileSystemExplorer" />
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,11 +249,12 @@
       <workItem from="1556912827253" duration="1222000" />
       <workItem from="1556914998197" duration="1016000" />
       <workItem from="1557167205331" duration="53000" />
+      <workItem from="1557179692543" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16261000" />
+    <option name="totallyTimeSpent" value="16272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -290,7 +268,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28322148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2872483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,47 +325,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/Volume.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Pause Menu/PauseMenu.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Room/LevelGen.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/MusicTransition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs" />
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Menu/MainMenu/MusicTransition.cs" />
+    <entry file="file://$USER_HOME$/Desktop/BackUp/ProjectS2-Celedy/Assets/Scripts/Save/YaelleData.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/TransitionScenesMusic.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <marker date="1557167058062" expanded="false" signature="6:78" ph="..." />
-            <marker date="1557167058062" expanded="true" signature="130:401" ph="{...}" />
-            <marker date="1557167058062" expanded="true" signature="201:399" ph="{...}" />
-            <marker date="1557167058062" expanded="true" signature="237:327" ph="{...}" />
-            <marker date="1557167058062" expanded="true" signature="340:393" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -395,6 +346,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Saving.cs" />
+    <entry file="file://$USER_HOME$/Desktop/YaelleData.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -431,56 +391,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu/Volume.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="210">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <marker date="1557167058063" expanded="true" signature="6:103" ph="..." />
-            <marker date="1557167058063" expanded="true" signature="140:360" ph="{...}" />
-            <marker date="1557167058063" expanded="true" signature="345:353" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Saving.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/Saving.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <marker date="1557167224576" expanded="true" signature="6:149" ph="..." />
-            <marker date="1557167224576" expanded="true" signature="177:1385" ph="{...}" />
-            <marker date="1557167224576" expanded="true" signature="235:690" ph="{...}" />
-            <marker date="1557167224576" expanded="true" signature="785:1383" ph="{...}" />
-            <marker date="1557167224576" expanded="true" signature="892:1319" ph="{...}" />
-            <marker date="1557167224576" expanded="true" signature="1332:1377" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/YaelleData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Save/YaelleData.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <marker date="1557167058075" expanded="true" signature="6:78" ph="..." />
-            <marker date="1557167058075" expanded="true" signature="141:632" ph="{...}" />
-            <marker date="1557167058075" expanded="true" signature="317:630" ph="{...}" />
-          </folding>
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Big_squeletton/B_C_shoot_with_mouse.cs">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
