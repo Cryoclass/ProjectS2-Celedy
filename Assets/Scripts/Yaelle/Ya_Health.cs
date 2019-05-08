@@ -12,7 +12,9 @@ public class Ya_Health : MonoBehaviour
     public Sprite FullHeart;
     public Sprite EmptyHeart;
     public Sprite HalfHeart;
+    private float invincibility = 0;
 
+    private int life;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class Ya_Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int life = CurrentHealth;
+        life = CurrentHealth;
         for (int i = 0; i < Hearts.Length; i++)
         {
             if (life >= 2)
@@ -48,6 +50,18 @@ public class Ya_Health : MonoBehaviour
         if (CurrentHealth> 2*CurrentMaxHeart)
         {
             CurrentHealth = 2 * CurrentMaxHeart;
+        }
+
+        if (invincibility > 0)
+            invincibility -= Time.deltaTime;
+    }
+
+    public void Take_hit()
+    {
+        if (invincibility <= 0)
+        {
+            CurrentHealth -= 1;
+            invincibility = 0.5f;
         }
     }
 }

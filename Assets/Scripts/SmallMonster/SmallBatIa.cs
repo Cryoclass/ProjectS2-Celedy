@@ -35,8 +35,6 @@ public class SmallBatIa : MonoBehaviour
         {
             Immobilized -= Time.deltaTime;
         }
-
-
     }
 
     
@@ -49,7 +47,7 @@ public class SmallBatIa : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Ya_Health>().CurrentHealth--;
+            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
         }
     }
 

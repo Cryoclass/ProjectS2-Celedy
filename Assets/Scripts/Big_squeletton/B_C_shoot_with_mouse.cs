@@ -11,7 +11,7 @@ public class B_C_shoot_with_mouse : MonoBehaviour
     public GameObject right_hand;
     public GameObject left_hand;
     public GameObject crane;
-    private int life;
+    private int life = 1000;
     private int previous_life;
     public int palier = 100;
     private int max_life;
@@ -19,27 +19,41 @@ public class B_C_shoot_with_mouse : MonoBehaviour
 
     public bool is_dying = false;
 
-    public int right_had_hand;
-    public int left_had_hand;
+    public int right_hand_life;
+    private bool right_hand_alive = true;
+    
+    public int left_hand_life;
+    private bool left_hand_alive = true;
+
+    private string collidtag;
     // Start is called before the first frame update
     void Start()
     {
         previous_life = life;
         max_life = life;
         
-        Chauve_souris_attaque(10,0.4f);
+        //Chauve_souris_attaque(10,0.4f);
     }
 
     private void Update()
     {
         if (life < 0)
         {
-            
+            Kill();
         }
         else if(previous_life != life && ((int)(previous_life / palier) != (int)(life / palier)))
         {
             Chauve_souris_attaque((2*((max_life/palier) - life/palier)),0.4f);
             previous_life = life;
+        }
+
+        if (right_hand_alive && (right_hand_life < 0))
+        {
+            Kill_right_hand();
+        }
+        if (left_hand_alive && (left_hand_life < 0))
+        {
+            Kill_left_hand();
         }
     }
 
@@ -64,5 +78,38 @@ public class B_C_shoot_with_mouse : MonoBehaviour
     private void Kill()
     {
         is_dying = true;
+        Destroy(gameObject);
+    }
+
+    private void Kill_right_hand()
+    {
+        right_hand_alive = false;
+        Destroy(right_hand);
+    }
+    
+    private void Kill_left_hand()
+    {
+        left_hand_alive = false;
+        Destroy(left_hand);
+    }
+
+    public void Left_hand_take_damage(int damage)
+    {
+        left_hand_life -= damage;
+    }
+    public void Right_hand_take_damage(int damage)
+    {
+        right_hand_life -= damage;
+    }
+
+    private void OnTriggerEnter2D(Collision2D other)
+    {
+        collidtag = other.gameObject.tag;
+        if (collidtag == "Player")
+        {
+            other.gameObject.GetComponent<Ya_Health>().Take_hit();
+        }
+        else if (collidtag == "Bullet")
+            life -= other.gameObject.GetComponent<SpellArchetype>().damage;
     }
 }

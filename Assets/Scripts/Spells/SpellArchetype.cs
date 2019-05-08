@@ -13,6 +13,8 @@ public class SpellArchetype : MonoBehaviour
 
     public GameObject Expl;
 
+    private string collisiontag;
+
     void Start()
     {
         rb.velocity = transform.up * speed;
@@ -27,18 +29,23 @@ public class SpellArchetype : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        collisiontag = collision.gameObject.tag;
+        if (collisiontag == "Player")
         {
-            collision.gameObject.GetComponent<Ya_Health>().CurrentHealth += -1;
+            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
             DestroyProjectile();
         }
-        else if (collision.gameObject.tag == "Wall")
+        else if (collisiontag == "Wall")
         {
             DestroyProjectile();
         }
-        else if (collision.gameObject.tag == "Enemy")
+        else if (collisiontag == "Enemy")
         {
             collision.GetComponent<MonsterLife>().damaged(damage);
+            DestroyProjectile();
+        }
+        else if(collisiontag == "Boss")
+        {
             DestroyProjectile();
         }
     }
