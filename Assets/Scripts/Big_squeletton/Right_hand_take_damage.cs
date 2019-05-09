@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Right_hand_take_damage : MonoBehaviour
+public class Right_hand_take_damage : Take_damage
 {
 
     public bool is_right = true;//true -> right hand    //false -> left hand
 
-    public void OnTriggerEnter2D(Collision2D collision)
+    public override void InflictDamage(int i)
     {
-        if (collision.gameObject.tag == "Player")
+        if(is_right)
+            gameObject.GetComponentInParent<B_C_shoot_with_mouse>().Right_hand_take_damage(i);
+        else
         {
-            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
-        }
-
-        if (collision.gameObject.tag == "Bullet")
-        {
-            if (is_right)
-                gameObject.GetComponentInParent<B_C_shoot_with_mouse>().Right_hand_take_damage(collision.gameObject.GetComponent<SpellArchetype>().damage);
-            else
-            {
-                gameObject.GetComponentInParent<B_C_shoot_with_mouse>().Left_hand_take_damage(collision.gameObject.GetComponent<SpellArchetype>().damage);
-
-            }
+            gameObject.GetComponentInParent<B_C_shoot_with_mouse>().Left_hand_take_damage(i);
         }
     }
 }

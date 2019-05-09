@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6512200808587735753}
   m_Layer: 0
   m_Name: B_C_right_hand
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -354,6 +354,7 @@ MonoBehaviour:
   right_hand: {fileID: 1277527995903183587}
   left_hand: {fileID: 5317693430821061374}
   crane: {fileID: 6109342795805849076}
+  life: 10000
   palier: 1000
   is_dying: 0
   right_hand_life: 5000
@@ -398,7 +399,7 @@ GameObject:
   - component: {fileID: 285750541934216196}
   m_Layer: 0
   m_Name: B_C_left_hand
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +476,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -17,6 +17,7 @@ public class LevelGen : MonoBehaviour
     public int[,] visited;
 
     public GameObject ASpawn;
+    public GameObject FirstRoom;
 
     public GameObject Minimap;
 
@@ -159,8 +160,8 @@ public class LevelGen : MonoBehaviour
 
         visited[5, 5] = 1;
 
-        ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = this.NbMaxEnemy;
-        ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = this.NbMinEnemy;
+        ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = 0;
+        ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = 0;
 
         ASpawn.GetComponent<RoomSpawner>().ChangeTop(rooms[5, 5].IsTop());
         ASpawn.GetComponent<RoomSpawner>().ChangeBot(rooms[5, 5].IsBot());
@@ -284,8 +285,20 @@ public class LevelGen : MonoBehaviour
 
     public void Instantiater(int x, int y)
     {
+        
         if(visited[x,y]==0)
-        {      
+        {
+            int i = 0;
+            foreach (int a in visited)
+            {
+                if (a == 0)
+                    i++;
+            }
+
+            if (i == 1)
+            {
+                ASpawn.GetComponent<RoomSpawner>().IsFinalRoom = true;
+            }
             ASpawn.GetComponent<RoomSpawner>().ChangeTop(rooms[x, y].IsTop());
             ASpawn.GetComponent<RoomSpawner>().ChangeBot(rooms[x, y].IsBot());
             ASpawn.GetComponent<RoomSpawner>().ChangeRight(rooms[x, y].IsRight());
@@ -295,13 +308,7 @@ public class LevelGen : MonoBehaviour
 
             Instantiate(ASpawn, transform.position + new Vector3(x * spacedx, y * spacedy), transform.rotation,transform);
             visited[x, y] = 1;
+            ASpawn.GetComponent<RoomSpawner>().IsFinalRoom = false;
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

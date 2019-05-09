@@ -27,6 +27,8 @@ public class RoomSpawner : MonoBehaviour
     public float SBW = 20.58f;
     public GameObject[] Floors;
     public GameObject EntryOpen;
+    public GameObject ExitEntry;
+    public bool IsFinalRoom = false;
 
     public bool TopEntry;
     public bool BotEntry;
@@ -83,7 +85,7 @@ public class RoomSpawner : MonoBehaviour
             Coord += new Vector3(SBW * 3 / 4, 0);
             for (int i = 0; i < Largeur; i++)
             {
-                if (j == 0 && TopEntry && i == Largeur / 2)
+                if (j == 0 && TopEntry && i == Largeur / 2 && !IsFinalRoom)
                 {
                     GameObject port;
                     port = EntryOpen;
@@ -93,7 +95,7 @@ public class RoomSpawner : MonoBehaviour
                     PortalList.Add(Instantiate(port, Coord, transform.rotation, transform));
 
                 }                                  
-                else if (j == Hauteur / 2 && LeftEntry && i == 0)
+                else if (j == Hauteur / 2 && LeftEntry && i == 0 && !IsFinalRoom)
                 {
                     GameObject port;
                     port = EntryOpen;
@@ -102,7 +104,7 @@ public class RoomSpawner : MonoBehaviour
                     port.GetComponent<Portal_Open>().CoordY = this.Coordy;
                     PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW * 3 / 4, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform));
                 }
-                else if (j == Hauteur - 1 && BotEntry && i == Largeur / 2)
+                else if (j == Hauteur - 1 && BotEntry && i == Largeur / 2 && !IsFinalRoom)
                 {
                     GameObject port;
                     port = EntryOpen;
@@ -111,7 +113,7 @@ public class RoomSpawner : MonoBehaviour
                     port.GetComponent<Portal_Open>().CoordY = this.Coordy;
                     PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * 3 / 4 - (Hauteur - 1) * SBW / 2), transform.rotation, transform));
                 }
-                else if (j == Hauteur / 2 && RightEntry && i == Largeur - 1)
+                else if (j == Hauteur / 2 && RightEntry && i == Largeur - 1 && !IsFinalRoom)
                 {
                     GameObject port;
                     port = EntryOpen;
@@ -119,6 +121,10 @@ public class RoomSpawner : MonoBehaviour
                     port.GetComponent<Portal_Open>().CoordX = this.Coordx;
                     port.GetComponent<Portal_Open>().CoordY = this.Coordy;
                     PortalList.Add(Instantiate(port, transform.position + new Vector3(SBW * 3 / 4 + SBW / 2 * (Largeur - 1), -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform));
+                }
+                else if (IsFinalRoom && j == Hauteur / 2 && i == Largeur / 2)
+                {
+                    Instantiate(ExitEntry, transform.position + new Vector3(SBW * 3 / 4 + SBW / 2 * (Largeur - 1), -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
                 }
                 else
                 {

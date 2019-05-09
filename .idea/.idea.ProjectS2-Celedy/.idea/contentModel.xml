@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="Big_squeletton" t="Include">
             <e p="B_C_shoot_with_mouse.cs" t="Include" />
+            <e p="Boss_take_damages.cs" t="Include" />
             <e p="Right_hand_take_damage.cs" t="Include" />
           </e>
           <e p="BirdGirl" t="Include">

@@ -46,6 +46,7 @@ public class SpellArchetype : MonoBehaviour
         }
         else if(collisiontag == "Boss")
         {
+            collision.gameObject.GetComponent<Take_damage>().InflictDamage(damage);
             DestroyProjectile();
         }
     }

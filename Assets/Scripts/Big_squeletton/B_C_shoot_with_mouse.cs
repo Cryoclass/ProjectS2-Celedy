@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class B_C_shoot_with_mouse : MonoBehaviour
+public class B_C_shoot_with_mouse : Take_damage
 {
 
     public GameObject chauve_souris;
@@ -11,7 +11,7 @@ public class B_C_shoot_with_mouse : MonoBehaviour
     public GameObject right_hand;
     public GameObject left_hand;
     public GameObject crane;
-    private int life = 1000;
+    public int life = 10000;
     private int previous_life;
     public int palier = 100;
     private int max_life;
@@ -37,7 +37,7 @@ public class B_C_shoot_with_mouse : MonoBehaviour
 
     private void Update()
     {
-        if (life < 0)
+        if (life <= 0)
         {
             Kill();
         }
@@ -47,11 +47,11 @@ public class B_C_shoot_with_mouse : MonoBehaviour
             previous_life = life;
         }
 
-        if (right_hand_alive && (right_hand_life < 0))
+        if (right_hand_alive && (right_hand_life <= 0))
         {
             Kill_right_hand();
         }
-        if (left_hand_alive && (left_hand_life < 0))
+        if (left_hand_alive && (left_hand_life <= 0))
         {
             Kill_left_hand();
         }
@@ -102,14 +102,8 @@ public class B_C_shoot_with_mouse : MonoBehaviour
         right_hand_life -= damage;
     }
 
-    private void OnTriggerEnter2D(Collision2D other)
+    public override void InflictDamage(int i)
     {
-        collidtag = other.gameObject.tag;
-        if (collidtag == "Player")
-        {
-            other.gameObject.GetComponent<Ya_Health>().Take_hit();
-        }
-        else if (collidtag == "Bullet")
-            life -= other.gameObject.GetComponent<SpellArchetype>().damage;
+        life -= i;
     }
 }
