@@ -354,6 +354,9 @@ MonoBehaviour:
   right_hand: {fileID: 1277527995903183587}
   left_hand: {fileID: 5317693430821061374}
   crane: {fileID: 6109342795805849076}
+  Laser: {fileID: 7442115600621744379, guid: 491940cf92a970e4fb7d904f697855cd, type: 3}
+  GrowingBall: {fileID: 0}
+  FireBall: {fileID: 0}
   life: 10000
   palier: 1000
   is_dying: 0

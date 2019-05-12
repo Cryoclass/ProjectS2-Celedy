@@ -57,9 +57,6 @@ public class  YaMoove : MonoBehaviour
         anim.SetFloat("LastMoveX", LastMove.x);
         anim.SetFloat("LastMoveY", LastMove.y);
     }
-
-    
-
     
 
     public void Teleport(int x,int y)

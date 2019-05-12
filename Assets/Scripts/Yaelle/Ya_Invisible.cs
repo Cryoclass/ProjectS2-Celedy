@@ -23,8 +23,9 @@ public class Ya_Invisible : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = col;
     }
 
-    void Update()
+    public void MakeTotallyInvisible()
     {
-        
+        col.a = 0;
+        gameObject.GetComponent<SpriteRenderer>().color = col;
     }
 }

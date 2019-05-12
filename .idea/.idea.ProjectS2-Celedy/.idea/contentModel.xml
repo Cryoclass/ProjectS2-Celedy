@@ -74,6 +74,8 @@
           </e>
           <e p="Spells" t="Include">
             <e p="ExplosionObj.cs" t="Include" />
+            <e p="Laser_Script.cs" t="Include" />
+            <e p="Middle_laser_script.cs" t="Include" />
             <e p="SpellArchetype.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
           </e>

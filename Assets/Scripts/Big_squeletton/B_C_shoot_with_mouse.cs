@@ -11,6 +11,10 @@ public class B_C_shoot_with_mouse : Take_damage
     public GameObject right_hand;
     public GameObject left_hand;
     public GameObject crane;
+    public GameObject Laser;
+    public GameObject GrowingBall;
+    public GameObject FireBall;
+
     public int life = 10000;
     private int previous_life;
     public int palier = 100;
@@ -32,6 +36,8 @@ public class B_C_shoot_with_mouse : Take_damage
         previous_life = life;
         max_life = life;
         
+        ThowLaser(left_hand,0f);
+        ThowLaser(right_hand,0f);
         //Chauve_souris_attaque(10,0.4f);
     }
 
@@ -105,5 +111,11 @@ public class B_C_shoot_with_mouse : Take_damage
     public override void InflictDamage(int i)
     {
         life -= i;
+    }
+
+    private void ThowLaser(GameObject hand_from, float duration)
+    {
+        GameObject las = Instantiate(Laser, hand_from.transform.position, Quaternion.Euler(0,0,0),hand_from.transform);
+        las.GetComponent<Laser_Script>().DestroyIn(duration);
     }
 }
