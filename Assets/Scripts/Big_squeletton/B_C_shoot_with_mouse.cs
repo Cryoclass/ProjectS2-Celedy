@@ -90,13 +90,13 @@ public class B_C_shoot_with_mouse : Take_damage
     private void Kill_right_hand()
     {
         right_hand_alive = false;
-        Destroy(right_hand);
+        right_hand.SetActive(right_hand_alive);
     }
     
     private void Kill_left_hand()
     {
         left_hand_alive = false;
-        Destroy(left_hand);
+        left_hand.SetActive(left_hand_alive);
     }
 
     public void Left_hand_take_damage(int damage)
