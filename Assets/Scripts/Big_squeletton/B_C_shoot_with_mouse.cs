@@ -90,7 +90,9 @@ public class B_C_shoot_with_mouse : Take_damage
     private void Kill_right_hand()
     {
         right_hand_alive = false;
-        Destroy(right_hand);
+        //Destroy(right_hand);
+        right_hand.transform.localScale.Scale(new Vector3(0f,0f,0f));
+        
     }
     
     private void Kill_left_hand()
