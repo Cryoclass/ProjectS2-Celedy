@@ -358,7 +358,7 @@ MonoBehaviour:
   GrowingBall: {fileID: 0}
   FireBall: {fileID: 0}
   life: 10000
-  palier: 1000
+  palier: 2000
   is_dying: 0
   right_hand_life: 5000
   left_hand_life: 5000
