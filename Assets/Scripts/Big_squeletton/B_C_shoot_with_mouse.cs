@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -90,15 +90,13 @@ public class B_C_shoot_with_mouse : Take_damage
     private void Kill_right_hand()
     {
         right_hand_alive = false;
-        //Destroy(right_hand);
-        right_hand.transform.localScale.Scale(new Vector3(0f,0f,0f));
-        
+        right_hand.SetActive = false;
     }
     
     private void Kill_left_hand()
     {
         left_hand_alive = false;
-        Destroy(left_hand);
+        left_hand.SetActive(left_hand_alive);
     }
 
     public void Left_hand_take_damage(int damage)
