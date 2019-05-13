@@ -313,6 +313,7 @@ Transform:
   - {fileID: 2757579562143993043}
   - {fileID: 5848389796280510147}
   - {fileID: 2679287963204077834}
+  - {fileID: 3643827780933334636}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -355,9 +356,12 @@ MonoBehaviour:
   left_hand: {fileID: 5317693430821061374}
   crane: {fileID: 6109342795805849076}
   Laser: {fileID: 7442115600621744379, guid: 491940cf92a970e4fb7d904f697855cd, type: 3}
-  GrowingBall: {fileID: 0}
-  FireBall: {fileID: 0}
-  life: 10000
+  GrowingBall: {fileID: 7993134291719311378, guid: 794d3246f23e0224d93cf761ce604e3f,
+    type: 3}
+  FireBall: {fileID: 1093600883843719822, guid: 23a5e91b8840ba7468ac44bd7e66854e,
+    type: 3}
+  PointShootInMouseOpen: {fileID: 7679375007342798373}
+  life: 2000
   palier: 2000
   is_dying: 0
   right_hand_life: 5000
@@ -587,3 +591,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7679375007342798373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3643827780933334636}
+  m_Layer: 0
+  m_Name: shoot_point_open_mouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3643827780933334636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679375007342798373}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7295252104452976325}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

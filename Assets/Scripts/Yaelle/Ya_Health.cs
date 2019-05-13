@@ -55,7 +55,7 @@ public class Ya_Health : MonoBehaviour
         if (invincibility > 0)
         {
             invincibility -= Time.deltaTime;
-            if((invincibility < 1 && invincibility> 0.8) || invincibility < 0.6 && invincibility > 0.4)
+            if((invincibility < 1 && invincibility> 0.8) || invincibility < 0.6 && invincibility > 0.4 || invincibility < 0.25 && invincibility > 0.5f)
                 gameObject.GetComponent<Ya_Invisible>().MakeTotallyInvisible();
             else
             {
