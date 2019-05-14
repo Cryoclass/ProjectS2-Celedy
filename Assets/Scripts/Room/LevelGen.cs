@@ -172,6 +172,10 @@ public class LevelGen : MonoBehaviour
 
         Instantiate(ASpawn, transform.position + new Vector3(5 * spacedx, 5 * spacedy), transform.rotation,transform);
         // Instantiate(Minimap,transform.position,transform.rotation);
+
+        ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = NbMaxEnemy;
+        ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = NbMinEnemy;
+
     }
 
     private void Around(int x, int y)

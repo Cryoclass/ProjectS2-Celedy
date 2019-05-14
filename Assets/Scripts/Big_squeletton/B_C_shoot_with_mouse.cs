@@ -61,7 +61,7 @@ public class B_C_shoot_with_mouse : Take_damage
         }
         else if(life < 900)
         {
-            DestroyLaser(right_hand);
+            //DestroyLaser(right_hand);
         }
         else if (life < 1200 && !Thowing_fire_ball)
         {
@@ -143,6 +143,8 @@ public class B_C_shoot_with_mouse : Take_damage
     {
         GameObject las = Instantiate(Laser, hand_from.transform.position, Quaternion.Euler(0,0,0),hand_from.transform);
     }
+
+
     public void DestroyLaser(GameObject hand)
     {
         hand.GetComponentInChildren<Laser_Script>().Ded();

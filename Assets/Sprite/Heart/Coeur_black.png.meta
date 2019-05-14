@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: bd228061e4e97974ba12b6323f0373eb
+guid: 94d6bc6c3ef5c59428e6c252652e1420
 TextureImporter:
   fileIDToRecycleName:
-    21300000: piexel_art_inventory_0
-    21300002: piexel_art_inventory_1
+    21300000: Coeur_black_0
+    21300002: Coeur_black_1
+    21300004: Coeur_black_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -86,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: piexel_art_inventory_0
+      name: Coeur_black_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 780
-        width: 360
-        height: 360
+        x: 70
+        y: 410
+        width: 170
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 220704db7ec56de449c17cdf449155b8
+      spriteID: 98f532a2ca5f91241afaf3ecd9e8887d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: piexel_art_inventory_1
+      name: Coeur_black_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 210
-        width: 200
-        height: 220
+        x: 390
+        y: 410
+        width: 170
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +121,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e04b73516c0a5ec45bd0b09e6cdecfc3
+      spriteID: 01b557bea2c187d4d9360404228d98ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coeur_black_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 90
+        width: 170
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7defa2ab787c0438182f705f0e2e7c
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 512b28f097962a04a99d52a93c592913
+    spriteID: fad1c42f0fc4fcb47a8d5be42ebc1a2c
     vertices: []
     indices: 
     edges: []

@@ -5,27 +5,38 @@ using UnityEngine;
 public class Ya_Invisible : MonoBehaviour
 {
     Color col;
+    SpriteRenderer[] AllSprite;
 
     private void Start()
     {
-        col = gameObject.GetComponent<SpriteRenderer>().color;
+        AllSprite = gameObject.GetComponentsInChildren<SpriteRenderer>();
+        col = AllSprite[0].color;
     }
     
     public void invisible()
     {
         col.a -= 0.34f;
-        gameObject.GetComponent<SpriteRenderer>().color = col;
+        foreach(SpriteRenderer spr in AllSprite)
+        {
+            spr.color = col;
+        }
     }
 
     public void visible()
     {
         col.a = 1;
-        gameObject.GetComponent<SpriteRenderer>().color = col;
+        foreach (SpriteRenderer spr in AllSprite)
+        {
+            spr.color = col;
+        }
     }
 
     public void MakeTotallyInvisible()
     {
         col.a = 0;
-        gameObject.GetComponent<SpriteRenderer>().color = col;
+        foreach (SpriteRenderer spr in AllSprite)
+        {
+            spr.color = col;
+        }
     }
 }
