@@ -16,8 +16,14 @@ public class MainCam : MonoBehaviour
         
     }
 
-    public void Teleport(int x, int y)
+    public void Teleport(float x, float y)
     {
         transform.position += new Vector3(x, y);
     }
+
+    public void SetPos(float x, float y)
+    {
+        transform.position = new Vector3(x, y, transform.position.z);
+    }
+        
 }

@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6086825885512398761}
   - component: {fileID: 4171131768904620938}
   - component: {fileID: 1858608595602000566}
+  - component: {fileID: 995415490125118246}
   m_Layer: 0
   m_Name: F-Wall Rock
   m_TagString: Wall
@@ -186,3 +187,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 3.2}
   m_EdgeRadius: 0
+--- !u!114 &995415490125118246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169232276957742437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103026c91b5d99047b8aef83cb2ffbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sens: 2

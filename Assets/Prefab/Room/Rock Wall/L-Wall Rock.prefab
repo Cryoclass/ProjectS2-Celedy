@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2013372414013420876}
   - component: {fileID: 2013372414013420877}
   - component: {fileID: 6867932605409645272}
+  - component: {fileID: 2074308133879059250}
   m_Layer: 0
   m_Name: L-Wall Rock
   m_TagString: Wall
@@ -107,6 +108,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &2074308133879059250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013372414013420914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103026c91b5d99047b8aef83cb2ffbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sens: 1
 --- !u!1 &9058272780178696191
 GameObject:
   m_ObjectHideFlags: 0
