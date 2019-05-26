@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Laser_Script : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public void Ded()
+    public void DedIn(float timer)
     {
-        Debug.Log("je devrais mourir 2");
+        Invoke("Ded", timer);
+    }
+
+    private void Ded()
+    {
         Destroy(gameObject);
     }
 }

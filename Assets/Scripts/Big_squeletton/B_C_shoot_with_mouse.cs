@@ -41,6 +41,11 @@ public class B_C_shoot_with_mouse : Take_damage
 
     private float FireBallAnimation_Timer = 0;
 
+    private bool Last_laser_was_symetric = false;
+    private bool Is_Shooting_Laser = false;
+
+    private float laser_timer = 0;
+
     private string collidtag;
     // Start is called before the first frame update
     void Start()
@@ -48,13 +53,15 @@ public class B_C_shoot_with_mouse : Take_damage
         anim = gameObject.GetComponent<Animator>();
         previous_life = life;
         max_life = life;
-        ThowLaser(right_hand,0f);
-        ThowLaser(left_hand,0f);
         //Chauve_souris_attaque(10,0.4f);
     }
 
     private void Update()
     {
+        if (laser_timer <= 0)
+        {
+            Attack_laser();
+        }
         if (life <= 0)
         {
             Kill();
@@ -80,6 +87,14 @@ public class B_C_shoot_with_mouse : Take_damage
         {
             Kill_left_hand();
         }
+        if (laser_timer > 0)
+        {
+            laser_timer -= Time.deltaTime;
+            if (laser_timer < 10)
+                Is_Shooting_Laser = false;
+        }
+        if(laser_timer <= 0)
+            Attack_laser();
         ManageAnimator();
     }
 
@@ -142,22 +157,53 @@ public class B_C_shoot_with_mouse : Take_damage
     private void ThowLaser(GameObject hand_from, float duration)
     {
         GameObject las = Instantiate(Laser, hand_from.transform.position, Quaternion.Euler(0,0,0),hand_from.transform);
+        las.GetComponent<Laser_Script>().DedIn(duration);
     }
 
 
     public void DestroyLaser(GameObject hand)
     {
-        hand.GetComponentInChildren<Laser_Script>().Ded();
+        hand.GetComponentInChildren<Laser_Script>().DedIn(0f);
     }
 
     private void ManageAnimator()
     {
-        if(Open_mouse)
+        if (!Open_mouse && Is_Shooting_Laser && Last_laser_was_symetric)
+        {
+            anim.SetBool("Laser_opposit",true);
+            anim.SetBool("Is_Shooting_Laser",true);
+            anim.SetBool("Must_open-mouse",false);
+        }
+        else if (!Open_mouse && Is_Shooting_Laser && !Last_laser_was_symetric)
+        {
+            anim.SetBool("Laser_opposit",false);
+            anim.SetBool("Is_Shooting_Laser",true);
+            anim.SetBool("Must_open-mouse",false);
+        }
+        else if(Open_mouse && Is_Shooting_Laser && Last_laser_was_symetric)
+        {
+            anim.SetBool("Laser_opposit",true);
+            anim.SetBool("Is_Shooting_Laser",true);
             anim.SetBool("Must_open-mouse",true);
+        }
+        else if (Open_mouse && Is_Shooting_Laser && !Last_laser_was_symetric)
+        {
+            anim.SetBool("Laser_opposit",false);
+            anim.SetBool("Is_Shooting_Laser",true);
+            anim.SetBool("Must_open-mouse",true);
+        }
+        else if (Open_mouse)
+        {
+            anim.SetBool("Must_open-mouse",true);
+            anim.SetBool("Is_Shooting_Laser",false);
+        }
+        
         else
         {
             anim.SetBool("Must_open-mouse",false);
+            anim.SetBool("Is_Shooting_Laser",false);
         }
+        
     }
 
     private void Spawn_FireBall()
@@ -185,6 +231,17 @@ public class B_C_shoot_with_mouse : Take_damage
         {
             CancelInvoke("DecreaseFireTimer");
             Open_mouse = false;
+        }
+    }
+    private void Attack_laser()
+    {
+        if (laser_timer <= 0)
+        {
+            laser_timer = 20;
+            Is_Shooting_Laser = true;
+            Last_laser_was_symetric = !Last_laser_was_symetric;
+            ThowLaser(left_hand,11.5f);
+            ThowLaser(right_hand,11.5f);
         }
     }
     
