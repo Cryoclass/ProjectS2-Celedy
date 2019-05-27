@@ -37,7 +37,7 @@ public class B_C_shoot_with_mouse : Take_damage
     private Animator anim;
 
     private bool Thowing_fire_ball = false;
-    private bool spawning_bat = false;
+    // private bool spawning_bat = false;
 
     private float FireBallAnimation_Timer = 0;
 

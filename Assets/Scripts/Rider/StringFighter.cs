@@ -5,21 +5,40 @@ using UnityEngine;
 public class StringFighter : MonoBehaviour
 {
     public GameObject ToRotate { get; set; }
+    public GameObject WebFirePoint { get; set; }
+
     public Rigidbody2D rb { get; set; }
 
     private bool IsMoving { get; set; }
+
+    public float TimeBtwLaunch;
     private float CdBeforeLaunch;
+
+    public GameObject WebCreatorObj;
+    private GameObject WebCreatorLauched;
 
     // Start is called before the first frame update
     void Start()
     {
         IsMoving = false;
+        CdBeforeLaunch = TimeBtwLaunch;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if(!IsMoving && CdBeforeLaunch <= 0)
+        {
+            WebCreatorLauched = Instantiate(WebCreatorObj, WebFirePoint.transform.position, ToRotate.transform.rotation, transform);
+                       
+
+            CdBeforeLaunch = TimeBtwLaunch;
+        }
+        else if(!IsMoving)
+        {
+            CdBeforeLaunch -= 2 * Time.deltaTime;
+        }
+        else
         {
 
         }
