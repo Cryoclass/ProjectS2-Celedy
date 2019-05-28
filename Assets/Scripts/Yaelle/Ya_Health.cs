@@ -62,6 +62,11 @@ public class Ya_Health : MonoBehaviour
                 gameObject.GetComponent<Ya_Invisible>().visible();
             }
         }
+
+        if (CurrentHealth <= 0)
+        {
+            FindObjectOfType<GameOver>().EndGame();
+        }
     }
 
     public void Take_hit()

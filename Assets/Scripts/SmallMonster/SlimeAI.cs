@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
+using Random = UnityEngine.Random;
 
 public class SlimeAI : MonoBehaviour
 {
@@ -10,19 +12,30 @@ public class SlimeAI : MonoBehaviour
     public Rigidbody2D rb;
     
     private GameObject target;
-    private Vector2 direction;
+    private Vector3 direction;
     private PortSens CollideWallSens;
     private float x;
     private float y;
 
+    private PortSens LastWall;
+
+    private Animator anim;
+
     private void Start()
     {
-        x = Random.Range(0, 360);
-        y = Random.Range(0, 360);
-        rb.velocity = new Vector2(x, y);
+        anim = GetComponent<Animator>();
+        
+        x = (float) Math.Cos(Random.Range(0, 360));
+        y = (float) Math.Cos(Random.Range(0, 360));
+        direction = new Vector3(x, y, 0f);
+        direction.Normalize();
+        
     }
 
-
+    private void Update()
+    {
+        transform.position += direction * speed;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,20 +45,44 @@ public class SlimeAI : MonoBehaviour
             CollideWallSens = collision.GetComponent<WallS>().sens;
             if (CollideWallSens == PortSens.Right)
             {
-                rb.velocity = new Vector2(-x, y);
+                Debug.Log("Right");
+                if (LastWall != PortSens.Right)
+                {
+                    direction = new Vector3(-direction.x,direction.y);
+                    LastWall = PortSens.Right;
+                }
+                
             }
             if (CollideWallSens == PortSens.Left)
             {
-                rb.velocity = new Vector2(-x, y);
+                Debug.Log("Left");
+                if (LastWall != PortSens.Left)
+                {
+                    direction = new Vector3(-direction.x, direction.y);
+                    LastWall = PortSens.Left;
+                }
             }
             if (CollideWallSens == PortSens.Top)
             {
-                rb.velocity = new Vector2(x, -y);
+                Debug.Log("Top");
+                if (LastWall != PortSens.Top)
+                {
+                    direction = new Vector3(direction.x, -direction.y);
+                    LastWall = PortSens.Top;
+                }
             }
             if (CollideWallSens == PortSens.Bot)
             {
-                rb.velocity = new Vector2(x, -y);
+                Debug.Log("Bot");
+                if (LastWall != PortSens.Bot)
+                {
+                    direction = new Vector3(direction.x, -direction.y);
+                    LastWall = PortSens.Bot;
+                }
             }
         }
+        
+        
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
     }
 }
