@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &198771927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198771929}
+  - component: {fileID: 198771928}
+  m_Layer: 0
+  m_Name: Room Spawner-DarkWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198771929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198771927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -127.6, y: 36.6, z: -0.53265095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198771928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198771927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3306a71e0017aeb4a8282ccee358900e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Largeur: 25
+  Hauteur: 17
+  Coordx: 0
+  Coordy: 0
+  Monsters:
+  - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
+  PNJ:
+  - {fileID: 7105961386824579666, guid: dcbc24ad39c1a66418faaa575afc6d88, type: 3}
+  T_Wall: {fileID: 5017695628300648732, guid: cd15339fa798d0243b0feb35e224364e, type: 3}
+  B_Wall: {fileID: 5929202139757401587, guid: 368735ed332e6ed45b5c71b71507eb40, type: 3}
+  L_Wall: {fileID: 7254210632600726808, guid: c8fa951fe12a44f4e93e90a1df273a84, type: 3}
+  R_Wall: {fileID: 2942520976064626858, guid: a800288a79f123f488625b7105d5b09e, type: 3}
+  T_L_Corner: {fileID: 4296523414321570349, guid: 0380897cc9f5cef49b7ddb13c5b7ffde,
+    type: 3}
+  T_R_Corner: {fileID: 1038050155549178435, guid: 42b755b2186a9d942ac55bb9959b8334,
+    type: 3}
+  B_L_Corner: {fileID: 3603681828624081486, guid: 93614a118031031479fd895472a3bd62,
+    type: 3}
+  B_R_Corner: {fileID: 8740600203178283536, guid: 579f5f3f2ad5a0e49b948457748938d8,
+    type: 3}
+  SBW: 18.9
+  Floors:
+  - {fileID: 354769259628670800, guid: d1fae0ce6f670d646b8e8788910c45ca, type: 3}
+  EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
+    type: 3}
+  ExitEntry: {fileID: 519736225507065723, guid: 2688549510fd91b4a990e057eda74b8c,
+    type: 3}
+  IsFinalRoom: 1
+  TopEntry: 0
+  BotEntry: 0
+  LeftEntry: 0
+  RightEntry: 0
+  NbMinEnemy: 0
+  NbMaxenemy: 0

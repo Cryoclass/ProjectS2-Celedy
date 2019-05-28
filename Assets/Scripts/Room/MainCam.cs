@@ -5,14 +5,27 @@ using UnityEngine;
 public class MainCam : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool InSquelletteRoom = false;
+    public float MinX;
+    public float MaxX;
+    public float MinY;
+    public float MaxY;
+
+    private Transform player_pos;
+    // Update is called once per frame
     void Start()
     {
-        
+        player_pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-
-    // Update is called once per frame
     void Update()
     {
+        if (InSquelletteRoom)
+        {
+            if (player_pos.position.x < MaxX || player_pos.position.x > MinX)
+                gameObject.transform.position = Vector3.MoveTowards(transform.position,player_pos.position,1);
+            if (player_pos.position.y < MaxY || player_pos.position.y > MinY)
+                gameObject.transform.position = Vector3.MoveTowards(transform.position,player_pos.position,1);
+        }
         
     }
 
