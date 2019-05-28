@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
                 sentences.Add(a);
             }
         }
+        Debug.Log(sentences[1]);
         Changed(1);
         canvas.SetActive(false);
 
@@ -41,8 +42,10 @@ public class DialogueManager : MonoBehaviour
     public void Changed(int oupas)
     {
         Debug.Log("Les boutons marchent");
+
         i = i * 2 + oupas;
-        if(i<sentences.Count)
+
+        if(i < sentences.Count)
         {
             splited = sentences[i].Split('+');                      
               
@@ -56,11 +59,11 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            if (splited[1] == " End ")
+            if (splited[1] == " *New Ally* ")
             {          
                 ThePNJ.GetComponent<BirdPNJ>().DialogueSucceed(true);
             }
-            else if(splited[1] == " Continue ")
+            else if(splited[1] == " *Start Fight* ")
             {
                 ThePNJ.GetComponent<BirdPNJ>().DialogueSucceed(false);
             }
