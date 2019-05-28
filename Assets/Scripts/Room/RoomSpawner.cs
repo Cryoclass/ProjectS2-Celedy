@@ -124,7 +124,7 @@ public class RoomSpawner : MonoBehaviour
                 }
                 else if (IsFinalRoom && j == Hauteur / 2 && i == Largeur / 2)
                 {
-                    Instantiate(ExitEntry, transform.position + new Vector3(SBW * 3 / 4 + SBW / 2 * (Largeur - 1), -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
+                    Instantiate(ExitEntry, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
                 }
                 else
                 {

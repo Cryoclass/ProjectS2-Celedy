@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Room Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -68,6 +68,8 @@ MonoBehaviour:
   - {fileID: 742422144567552004, guid: 93c2bb7d75067e34faf9bf642bc4a2e4, type: 3}
   EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
     type: 3}
+  ExitEntry: {fileID: 0}
+  IsFinalRoom: 0
   TopEntry: 0
   BotEntry: 0
   LeftEntry: 1
