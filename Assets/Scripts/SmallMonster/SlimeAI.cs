@@ -81,6 +81,11 @@ public class SlimeAI : MonoBehaviour
                 }
             }
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.GetComponent<Ya_Health>().Take_hit();
+        }
         
         
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
