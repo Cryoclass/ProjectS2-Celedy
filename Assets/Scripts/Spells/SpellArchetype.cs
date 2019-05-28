@@ -13,6 +13,7 @@ public class SpellArchetype : MonoBehaviour
 
     public GameObject Expl;
 
+    public bool FromEnemy = false;
     private string collisiontag;
 
     void Start()
@@ -33,7 +34,7 @@ public class SpellArchetype : MonoBehaviour
         if (collisiontag == "Player")
         {
             collision.gameObject.GetComponent<Ya_Health>().Take_hit();
-            DestroyProjectile();
+            if(FromEnemy)DestroyProjectile();
         }
         else if (collisiontag == "Wall")
         {
@@ -42,12 +43,12 @@ public class SpellArchetype : MonoBehaviour
         else if (collisiontag == "Enemy")
         {
             collision.GetComponent<MonsterLife>().damaged(damage);
-            DestroyProjectile();
+            if(!FromEnemy)DestroyProjectile();
         }
         else if(collisiontag == "Boss")
         {
             collision.gameObject.GetComponent<Take_damage>().InflictDamage(damage);
-            DestroyProjectile();
+            if(!FromEnemy)DestroyProjectile();
         }
     }
 

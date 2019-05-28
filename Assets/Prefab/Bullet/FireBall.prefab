@@ -97,9 +97,10 @@ MonoBehaviour:
   speed: 60
   Duration: 5
   rb: {fileID: 187092360208984153}
-  damage: 500
+  damage: 50
   rotate: 0
   Expl: {fileID: 0}
+  FromEnemy: 0
 --- !u!50 &187092360208984153
 Rigidbody2D:
   serializedVersion: 4

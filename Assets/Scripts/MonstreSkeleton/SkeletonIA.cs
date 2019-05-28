@@ -41,7 +41,6 @@ public class SkeletonIA : MonoBehaviour
         TimeBtwShots = Random.Range(StartTimeBtwShot*0.5f, StartTimeBtwShot*1.5f);
         retreatDistance = Random.Range(retreatDistance,randRetreat);
         stoppingDistance = Random.Range(stoppingDistance,randStop);
-
     }
 
     // Update is called once per frame

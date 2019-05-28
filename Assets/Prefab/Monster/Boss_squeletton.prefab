@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300008, guid: 4000e46c80ea42540b2f0002a3805bfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -362,10 +362,10 @@ MonoBehaviour:
     type: 3}
   PointShootInMouseOpen: {fileID: 7679375007342798373}
   life: 2000
-  palier: 2000
+  palier: 300
   is_dying: 0
-  right_hand_life: 5000
-  left_hand_life: 5000
+  right_hand_life: 1200
+  left_hand_life: 1200
 --- !u!61 &7385333075375106324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300008, guid: 4000e46c80ea42540b2f0002a3805bfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

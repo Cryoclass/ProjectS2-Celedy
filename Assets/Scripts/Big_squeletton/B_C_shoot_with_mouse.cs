@@ -17,6 +17,7 @@ public class B_C_shoot_with_mouse : Take_damage
     public GameObject PointShootInMouseOpen;
 
     private GameObject ActualFireBall;
+    private GameObject Player;
 
     public int life = 10000;
     private int previous_life;
@@ -44,15 +45,18 @@ public class B_C_shoot_with_mouse : Take_damage
     private bool Last_laser_was_symetric = false;
     private bool Is_Shooting_Laser = false;
 
-    private float laser_timer = 0;
+    private float laser_timer = 9;
 
     private string collidtag;
+
+    private GameObject current_little_fireBall;
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         previous_life = life;
         max_life = life;
+        Player = GameObject.FindGameObjectWithTag("Player");
         //Chauve_souris_attaque(10,0.4f);
     }
 
@@ -66,17 +70,18 @@ public class B_C_shoot_with_mouse : Take_damage
         {
             Kill();
         }
-        else if(life < 900)
-        {
-            //DestroyLaser(right_hand);
-        }
         else if (life < 1200 && !Thowing_fire_ball)
         {
             Spawn_FireBall();
         }
         else if(previous_life != life && ((int)(previous_life / palier) != (int)(life / palier)))
         {
-            Chauve_souris_attaque((2*((max_life/palier) - life/palier)),0.4f);
+            if(life / palier % 2 == 0)
+                Chauve_souris_attaque((2*((max_life/palier) - life/palier)),0.4f);
+            else
+            {
+                Spawn_FireBall();
+            }
             previous_life = life;
         }
         if (right_hand_alive && (right_hand_life <= 0))
@@ -90,7 +95,7 @@ public class B_C_shoot_with_mouse : Take_damage
         if (laser_timer > 0)
         {
             laser_timer -= Time.deltaTime;
-            if (laser_timer < 10)
+            if (laser_timer < 13)
                 Is_Shooting_Laser = false;
         }
         if(laser_timer <= 0)
@@ -156,7 +161,7 @@ public class B_C_shoot_with_mouse : Take_damage
 
     private void ThowLaser(GameObject hand_from, float duration)
     {
-        GameObject las = Instantiate(Laser, hand_from.transform.position, Quaternion.Euler(0,0,0),hand_from.transform);
+        GameObject las = Instantiate(Laser, hand_from.transform.position + new Vector3(1f,-5,0f), Quaternion.Euler(0,0,0),hand_from.transform);
         las.GetComponent<Laser_Script>().DedIn(duration);
     }
 
@@ -216,10 +221,30 @@ public class B_C_shoot_with_mouse : Take_damage
         InvokeRepeating("DecreaseFireTimer",0f,Time.deltaTime);
     }
 
+    private void ShootFireBall()
+    {
+        if (ActualFireBall.transform.localScale.x <= 2 || ActualFireBall.transform.localScale.y <= 2)
+        {
+            Destroy(ActualFireBall);
+            CancelInvoke("ShootFireBall");
+        }
+        VectOfShoot = Player.transform.position - PointShootInMouseOpen.transform.position;
+        float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
+        ActualFireBall.transform.localScale -= new Vector3(0.4f,0.4f);
+        current_little_fireBall = Instantiate(FireBall, PointShootInMouseOpen.transform.position,Quaternion.Euler(0f, 0f, rotZ - 90),transform);
+        current_little_fireBall.GetComponent<SpellArchetype>().FromEnemy = true;
+    }
+
+    private Vector3 VectOfShoot { get; set; }
+
     private void MakeFireGrow()
     {
-        if(FireBallAnimation_Timer < 1)
+        if (FireBallAnimation_Timer < 1)
+        {
             CancelInvoke("MakeFireGrow");
+            InvokeRepeating("ShootFireBall",1,0.4f);
+            GrowingBall.GetComponentInChildren<ParticleSystem>().Stop();
+        }
         ActualFireBall.transform.localScale += new Vector3(0.04f,0.04f);
     }
 
@@ -237,11 +262,11 @@ public class B_C_shoot_with_mouse : Take_damage
     {
         if (laser_timer <= 0)
         {
-            laser_timer = 20;
+            laser_timer = 26;
             Is_Shooting_Laser = true;
             Last_laser_was_symetric = !Last_laser_was_symetric;
-            ThowLaser(left_hand,11.5f);
-            ThowLaser(right_hand,11.5f);
+            ThowLaser(left_hand,14.6f);
+            ThowLaser(right_hand,14.6f);
         }
     }
     

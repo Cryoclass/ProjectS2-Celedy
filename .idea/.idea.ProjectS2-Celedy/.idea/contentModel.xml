@@ -54,6 +54,10 @@
             <e p="GereurMvt1.cs" t="Include" />
             <e p="ParolesYa.cs" t="Include" />
           </e>
+          <e p="Rider" t="Include">
+            <e p="StringFighter.cs" t="Include" />
+            <e p="WebCreator.cs" t="Include" />
+          </e>
           <e p="Room" t="Include">
             <e p="Laser_Port.cs" t="Include" />
             <e p="LevelGen.cs" t="Include" />
@@ -64,6 +68,8 @@
             <e p="RoomScript.cs" t="Include" />
             <e p="RoomSpawner.cs" t="Include" />
             <e p="RoomSpawnerBoss.cs" t="Include" />
+            <e p="Teleporteur.cs" t="Include" />
+            <e p="WallS.cs" t="Include" />
           </e>
           <e p="Save" t="Include">
             <e p="Saving.cs" t="Include" />
