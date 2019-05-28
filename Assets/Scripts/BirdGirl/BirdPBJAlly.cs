@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdPBJAlly : MonoBehaviour
+public class BirdPBJAlly : AbstractAlly
 {
-    private GameObject ToFollow;
     private float distance;
-
-    public GameObject bullet;
-
-    public float speed;
+    
     private GameObject target;
 
     // public Animator anim;
+
+    public GameObject bullet;
 
     private float TimeBtwShots;
     public float StartTimeBtwShot;
@@ -22,15 +20,7 @@ public class BirdPBJAlly : MonoBehaviour
 
     private bool MooveThisF;
     public GameObject ToRotate;
-    public float Offset;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        TimeBtwShots = StartTimeBtwShot;
-        ToFollow = GameObject.FindGameObjectWithTag("Player");
-    }
+    public float Offset;  
 
     // Update is called once per frame
     void Update()
@@ -69,4 +59,8 @@ public class BirdPBJAlly : MonoBehaviour
         ToRotate.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         Instantiate(bullet, ShootPoint.transform.position, Quaternion.Euler(0f, 0f, rotZ+ Offset));
     }
+    
+    
+
+    
 }

@@ -67,6 +67,10 @@ public class DialogueManager : MonoBehaviour
             {
                 ThePNJ.GetComponent<BirdPNJ>().DialogueSucceed(false);
             }
+            else
+            {
+                ThePNJ.GetComponent<BirdPNJ>().SetCanSpeak(false);
+            }
             canvas.SetActive(false);
             Time.timeScale = 1f;
         }

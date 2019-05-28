@@ -10,12 +10,12 @@ public class BirdPNJ : MonoBehaviour
     public GameObject BirdAlly;
     public GameObject BirdEnemy;
 
-    
+    private bool CanSpeak;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CanSpeak = true;
     }
 
     // Update is called once per frame
@@ -28,8 +28,8 @@ public class BirdPNJ : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.A))
-            {
+            if(Input.GetKeyDown(KeyCode.A) && CanSpeak)
+            {                
                 ActivatingCanvas.GetComponent<DialogueManager>().Activate();
                 Time.timeScale = 0f;
             }
@@ -40,14 +40,19 @@ public class BirdPNJ : MonoBehaviour
     {
         if(succeeded)
         {
-            Instantiate(BirdAlly, transform.position, transform.rotation);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().ChangeAlly(Instantiate(BirdAlly, transform.position, transform.rotation));
         }
         else
         {
-            Instantiate(BirdEnemy, transform.position, transform.rotation);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().ChangeAlly(Instantiate(BirdEnemy, transform.position, transform.rotation));
         }
         Destroy(gameObject);
         
+    }
+
+    public void SetCanSpeak(bool CanSpeak)
+    {
+        this.CanSpeak = CanSpeak;
     }
 
 

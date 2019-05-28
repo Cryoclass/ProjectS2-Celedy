@@ -23,6 +23,7 @@ public class Ya_Shoot : MonoBehaviour
 
     public float Speed;
 
+    public GameObject Ally;
 
 
     // Start is called before the first frame update
@@ -212,9 +213,14 @@ public class Ya_Shoot : MonoBehaviour
 
     }
 
-    public void Teleport(int x, int y)
+    public void Teleport(float x, float y)
     {
         transform.position += new Vector3(x, y);
         gameObject.GetComponent<Ya_Invisible>().visible();
+    }
+
+    public void ChangeAlly(GameObject ally)
+    {
+        this.Ally = ally;
     }
 }
