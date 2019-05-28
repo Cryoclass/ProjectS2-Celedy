@@ -40,11 +40,11 @@ public class BirdPNJ : MonoBehaviour
     {
         if(succeeded)
         {
-            Instantiate(BirdAlly, transform.position, transform.rotation);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().ChangeAlly(Instantiate(BirdAlly, transform.position, transform.rotation));
         }
         else
         {
-            Instantiate(BirdEnemy, transform.position, transform.rotation);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().ChangeAlly(Instantiate(BirdEnemy, transform.position, transform.rotation));
         }
         Destroy(gameObject);
         

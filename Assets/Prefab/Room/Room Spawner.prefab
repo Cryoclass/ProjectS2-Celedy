@@ -50,7 +50,7 @@ MonoBehaviour:
   Monsters:
   - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
   PNJ:
-  - {fileID: 7105961386824579666, guid: dcbc24ad39c1a66418faaa575afc6d88, type: 3}
+  - {fileID: 7698724567365974387, guid: ee9b2fdaff7e64e4c9b63463e00c1f55, type: 3}
   T_Wall: {fileID: 104891082420038203, guid: c38b5f42fb9ff1a4180999996b9b5e5e, type: 3}
   B_Wall: {fileID: 3566496091998171924, guid: 11b4125c079acf84f9d78f6225bced39, type: 3}
   L_Wall: {fileID: 3227732301884399029, guid: 55fc411ec6c695d4b9d8bffced65e36e, type: 3}

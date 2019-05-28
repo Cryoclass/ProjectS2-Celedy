@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivatingCanvas: {fileID: 875851267213459141}
-  BirdAlly: {fileID: 0}
+  BirdAlly: {fileID: 422152739319547008, guid: a028db70c70f84b40908264412dc6678, type: 3}
   BirdEnemy: {fileID: 0}
 --- !u!1 &7962073630259599226
 GameObject:

@@ -58,7 +58,9 @@ public class BirdPBJAlly : AbstractAlly
         float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
         ToRotate.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         Instantiate(bullet, ShootPoint.transform.position, Quaternion.Euler(0f, 0f, rotZ+ Offset));
-    }    
+    }
+    
+    
 
     
 }

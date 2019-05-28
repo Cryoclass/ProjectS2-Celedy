@@ -218,4 +218,9 @@ public class Ya_Shoot : MonoBehaviour
         transform.position += new Vector3(x, y);
         gameObject.GetComponent<Ya_Invisible>().visible();
     }
+
+    public void ChangeAlly(GameObject ally)
+    {
+        this.Ally = ally;
+    }
 }

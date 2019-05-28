@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 422152739319547008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.857479, y: -23.944155, z: -4.696342}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 7088418323991787199}
   - {fileID: 8863560173843148483}
@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6c81e84c1d43478a59f0d1a60f422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1177768238139559128, guid: 8b1a7ce49f7f7d541a2e14f65a3d88ce, type: 3}
+  ToFollow: {fileID: 0}
   speed: 5
+  bullet: {fileID: 1177768238139559128, guid: 8b1a7ce49f7f7d541a2e14f65a3d88ce, type: 3}
   StartTimeBtwShot: 2
   ShootPoint: {fileID: 7810362582862400206}
   ToRotate: {fileID: 8696307772447760604}
