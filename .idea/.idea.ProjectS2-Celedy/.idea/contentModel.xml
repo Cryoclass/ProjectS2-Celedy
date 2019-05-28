@@ -35,9 +35,6 @@
             <e p="Slot.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
-            <e p="Game Over" t="Include">
-              <e p="GameOver.cs" t="Include" />
-            </e>
             <e p="MainMenu" t="Include">
               <e p="MainMenu.cs" t="Include" />
               <e p="SettingsMenu.cs" t="Include" />
@@ -79,6 +76,7 @@
             <e p="YaelleData.cs" t="Include" />
           </e>
           <e p="SmallMonster" t="Include">
+            <e p="SlimeAI.cs" t="Include" />
             <e p="SmallBatIa.cs" t="Include" />
           </e>
           <e p="Spells" t="Include">
