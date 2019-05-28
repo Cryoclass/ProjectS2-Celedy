@@ -30,7 +30,7 @@ public class StringFighter : MonoBehaviour
         if(!IsMoving && CdBeforeLaunch <= 0)
         {
             WebCreatorLauched = Instantiate(WebCreatorObj, WebFirePoint.transform.position, ToRotate.transform.rotation, transform);
-                       
+            
 
             CdBeforeLaunch = TimeBtwLaunch;
         }
@@ -52,4 +52,5 @@ public class StringFighter : MonoBehaviour
             IsMoving = false;
         }
     }
+    
 }
