@@ -19,7 +19,5 @@ public class YaelleData : MonoBehaviour
         position[1] = Yaelle.transform.position.y;
         position[2] = Yaelle.transform.position.z;
         
-        
-
-    }
+        }
 }
