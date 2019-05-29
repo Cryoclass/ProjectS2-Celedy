@@ -8,10 +8,11 @@ using UnityEngine;
 
 public enum PortSens
 {
+    Null,
     Right,
     Left,
     Top,
-    Bot
+    Bot,
 }
 
 public class Portal_Open : MonoBehaviour
