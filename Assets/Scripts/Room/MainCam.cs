@@ -26,10 +26,12 @@ public class MainCam : MonoBehaviour
             {
                 player_pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             }
-            if (player_pos.position.x < MaxX || player_pos.position.x > MinX)
-                gameObject.transform.position = Vector3.MoveTowards(transform.position,player_pos.position,1);
-            if (player_pos.position.y < MaxY || player_pos.position.y > MinY)
-                gameObject.transform.position = Vector3.MoveTowards(transform.position,player_pos.position,1);
+
+            if (player_pos.position.x < MaxX && player_pos.position.x > MinX)
+                gameObject.transform.position +=
+                    new Vector3(player_pos.position.x - gameObject.transform.position.x, 0);
+            if (player_pos.position.y < MaxY && player_pos.position.y > MinY)
+                gameObject.transform.position += new Vector3(0,player_pos.position.y - gameObject.transform.position.y + 10);
         }
         
     }
@@ -43,5 +45,4 @@ public class MainCam : MonoBehaviour
     {
         transform.position = new Vector3(x, y, transform.position.z);
     }
-        
 }

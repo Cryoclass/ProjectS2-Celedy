@@ -87,6 +87,7 @@ public class ExitBoss : MonoBehaviour
     private void MakeInvisible()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
+        if(GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
         InviIteration++;
     }

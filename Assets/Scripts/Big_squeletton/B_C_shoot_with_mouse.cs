@@ -19,6 +19,7 @@ public class B_C_shoot_with_mouse : Take_damage
     private GameObject ActualFireBall;
     private GameObject Player;
 
+    private bool Last_chaves_souris = false;
     public int life = 10000;
     private int previous_life;
     public int palier = 100;
@@ -57,7 +58,6 @@ public class B_C_shoot_with_mouse : Take_damage
         previous_life = life;
         max_life = life;
         Player = GameObject.FindGameObjectWithTag("Player");
-        //Chauve_souris_attaque(10,0.4f);
     }
 
     private void Update()
@@ -76,10 +76,14 @@ public class B_C_shoot_with_mouse : Take_damage
         }
         else if(previous_life != life && ((int)(previous_life / palier) != (int)(life / palier)))
         {
-            if(life / palier % 2 == 0)
-                Chauve_souris_attaque((2*((max_life/palier) - life/palier)),0.4f);
+            if (!Last_chaves_souris)
+            {
+                Chauve_souris_attaque((8*((max_life/palier) - life/palier)),0.4f);
+                Last_chaves_souris = !Last_chaves_souris;
+            }
             else
             {
+                Last_chaves_souris = !Last_chaves_souris;
                 Spawn_FireBall();
             }
             previous_life = life;
