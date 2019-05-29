@@ -52,6 +52,7 @@ public class WebCreator : MonoBehaviour
             if(CountReb >= 6)
             {
                 rb.velocity = new Vector3(0, 0, 0);
+                SendInfo();
                 Destroy(gameObject);
             }
             else
@@ -89,7 +90,7 @@ public class WebCreator : MonoBehaviour
 
     public void SendInfo()
     {
-        transform.GetComponentInParent<StringFighter>();
+        transform.GetComponentInParent<StringFighter>().SetWeb(Webs);
     }
     
 }
