@@ -26,7 +26,7 @@ public class SlimeAI : MonoBehaviour
         anim = GetComponent<Animator>();
         
         x = (float) Math.Cos(Random.Range(0, 360));
-        y = (float) Math.Cos(Random.Range(0, 360));
+        y = (float) Math.Sin(Random.Range(0, 360));
         direction = new Vector3(x, y, 0f);
         direction.Normalize();
         
@@ -88,6 +88,6 @@ public class SlimeAI : MonoBehaviour
         }
         
         
-        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetBool("isRight", direction.x>=0);
     }
 }
