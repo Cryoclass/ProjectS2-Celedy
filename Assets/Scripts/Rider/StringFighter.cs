@@ -14,12 +14,20 @@ public class StringFighter : MonoBehaviour
     public float TimeBtwLaunch;
     private float CdBeforeLaunch;
 
+    public GameObject Arrow;
+
+
+    private PortSens SensOfActualWall;
+
     public GameObject WebCreatorObj;
     private GameObject WebCreatorLauched;
+
+    private Queue<GameObject> Webs;
 
     // Start is called before the first frame update
     void Start()
     {
+
         IsMoving = false;
         CdBeforeLaunch = TimeBtwLaunch;
     }
@@ -46,11 +54,22 @@ public class StringFighter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Wall")
+        if (collision.tag == "Wall" )
         {
+            SensOfActualWall = collision.gameObject.GetComponent<WallS>().sens;
             rb.velocity = new Vector2(0,0);
             IsMoving = false;
         }
+    }
+
+    private void ArrowRotation()
+    {
+
+    }
+
+    public void SetWeb()
+    {
+
     }
     
 }

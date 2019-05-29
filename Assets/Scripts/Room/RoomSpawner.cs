@@ -29,6 +29,7 @@ public class RoomSpawner : MonoBehaviour
     public GameObject EntryOpen;
     public GameObject ExitEntry;
     public bool IsFinalRoom = false;
+    private GameObject FinalPortal;
 
     public bool TopEntry;
     public bool BotEntry;
@@ -124,7 +125,7 @@ public class RoomSpawner : MonoBehaviour
                 }
                 else if (IsFinalRoom && j == Hauteur / 2 && i == Largeur / 2)
                 {
-                    Instantiate(ExitEntry, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
+                    FinalPortal = Instantiate(ExitEntry, transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation, transform);
                 }
                 else
                 {
@@ -160,33 +161,40 @@ public class RoomSpawner : MonoBehaviour
         }
         Coord += new Vector3(SBW * 1 / 4, 0);
         Instantiate(B_R_Corner, Coord, transform.rotation, transform);
-
-
-
-
-
-
-
-
     }
 
     private void Update()
     {
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemys.Length == 0)
+        if (IsFinalRoom)
         {
-            foreach (GameObject portal in PortalList)
+            if (enemys.Length == 0)
             {
-                portal.GetComponent<Portal_Open>().OpenIt();
+                FinalPortal.GetComponent<ExitBoss>().OpenIt();
+            }
+            else
+            {
+                FinalPortal.GetComponent<ExitBoss>().CloseIt();
             }
         }
         else
         {
-            foreach (GameObject portal in PortalList)
+            if (enemys.Length == 0)
             {
-                portal.GetComponent<Portal_Open>().CloseIt();
+                foreach (GameObject portal in PortalList)
+                {
+                    portal.GetComponent<Portal_Open>().OpenIt();
+                }
+            }
+            else
+            {
+                foreach (GameObject portal in PortalList)
+                {
+                    portal.GetComponent<Portal_Open>().CloseIt();
+                }
             }
         }
+        
     }
 
     public void ChangeTop(bool IsEntry)

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelGen : MonoBehaviour
 {
+    public List<string> ListServ;
+
     public RoomScript[,] rooms;
     public int NbMaxRooms;
     public List<int[]> ActualR;
@@ -65,6 +67,9 @@ public class LevelGen : MonoBehaviour
             nextX = PossNeigh[rdNe][0];
 
             /*
+             * 
+             * Ce gros bout de code ne marche pas, mais je n'avais pas le coeur a m'en séparer
+             * 
             int nextY = 12;
             int nextX = 12;
             while (nextX > 10 ||nextX > 10)
@@ -314,5 +319,10 @@ public class LevelGen : MonoBehaviour
             visited[x, y] = 1;
             ASpawn.GetComponent<RoomSpawner>().IsFinalRoom = false;
         }
+    }
+
+    public List<string> GetServ()
+    {
+        return ListServ;
     }
 }

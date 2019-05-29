@@ -931,13 +931,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
+      propertyPath: ListServ.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
       propertyPath: NbMinEnemy
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: NbMaxEnemy
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
@@ -945,6 +950,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8936661383662481633, guid: db099d976761f60439b899d1ad9b890c,
         type: 3}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: NbMaxRooms
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListServ.Array.data[0]
+      value: RiderScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6929ef860c0ac34fa1f9f9b33f04994, type: 3}
 --- !u!1 &632574408

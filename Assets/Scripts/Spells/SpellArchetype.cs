@@ -31,25 +31,35 @@ public class SpellArchetype : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collisiontag = collision.gameObject.tag;
-        if (collisiontag == "Player")
-        {
-            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
-            if(FromEnemy)DestroyProjectile();
-        }
-        else if (collisiontag == "Wall")
+        if (collisiontag == "Wall")
         {
             DestroyProjectile();
         }
-        else if (collisiontag == "Enemy")
+
+        if (FromEnemy)
         {
-            collision.GetComponent<MonsterLife>().damaged(damage);
-            if(!FromEnemy)DestroyProjectile();
+            if (collisiontag == "Player")
+            {
+                collision.gameObject.GetComponent<Ya_Health>().Take_hit();
+                DestroyProjectile();
+            }
         }
-        else if(collisiontag == "Boss")
+        else
         {
-            collision.gameObject.GetComponent<Take_damage>().InflictDamage(damage);
-            if(!FromEnemy)DestroyProjectile();
+            if (collisiontag == "Enemy")
+            {
+                collision.GetComponent<MonsterLife>().damaged(damage);
+                DestroyProjectile();
+            }
+            else if (collisiontag == "Boss")
+            {
+                collision.gameObject.GetComponent<Take_damage>().InflictDamage(damage);
+                DestroyProjectile();
+            }
         }
+        
+        
+        
     }
 
     private void DestroyProjectile()

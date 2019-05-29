@@ -12,15 +12,20 @@ public class MainCam : MonoBehaviour
     public float MaxY;
 
     private Transform player_pos;
+    private bool PlayerFoundInSquelletteRoom;
     // Update is called once per frame
     void Start()
-    {
-        player_pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-    }
+    {        
+        PlayerFoundInSquelletteRoom = false;
+}
     void Update()
     {
         if (InSquelletteRoom)
         {
+            if (!PlayerFoundInSquelletteRoom)
+            {
+                player_pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            }
             if (player_pos.position.x < MaxX || player_pos.position.x > MinX)
                 gameObject.transform.position = Vector3.MoveTowards(transform.position,player_pos.position,1);
             if (player_pos.position.y < MaxY || player_pos.position.y > MinY)
