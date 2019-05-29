@@ -48,7 +48,7 @@ public class WebCreator : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             CountReb++;
-            Debug.Log("Touché !");
+            Debug.Log(CountReb);
             if(CountReb >= 6)
             {
                 rb.velocity = new Vector3(0, 0, 0);
