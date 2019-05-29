@@ -23,6 +23,9 @@
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
           </e>
+          <e p="Fairy" t="Include">
+            <e p="Move.cs" t="Include" />
+          </e>
           <e p="Inventory" t="Include">
             <e p="Drake" t="Include">
               <e p="Drk_IA.cs" t="Include" />

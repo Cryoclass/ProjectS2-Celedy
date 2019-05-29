@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Web: {fileID: 4246770879570719628, guid: bc446a34f40b91d4cb8fe0b28df21ff5, type: 3}
   rb: {fileID: 8640138133530834265}
-  speed: 20
+  speed: 40
 --- !u!50 &8640138133530834265
 Rigidbody2D:
   serializedVersion: 4
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

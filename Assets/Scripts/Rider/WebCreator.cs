@@ -7,6 +7,7 @@ public class WebCreator : MonoBehaviour
     public GameObject Web;
     public Rigidbody2D rb;
 
+
     private Queue<GameObject> Webs;
     public float speed;
 
@@ -42,14 +43,13 @@ public class WebCreator : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.tag == "Wall")
         {
             CountReb++;
             Debug.Log(CountReb);
-            if(CountReb >= 6)
+            if (CountReb >= 6)
             {
                 rb.velocity = new Vector3(0, 0, 0);
                 SendInfo();
@@ -61,27 +61,32 @@ public class WebCreator : MonoBehaviour
                 switch (sens)
                 {
                     case PortSens.Bot:
-                        newZ = Random.Range(0, 180) - 90;
+                        newZ = Random.Range(15, 165) - 90;
                         break;
 
                     case PortSens.Top:
-                        newZ = Random.Range(0, 180) + 90;
+                        newZ = Random.Range(15, 165) + 90;
                         break;
 
                     case PortSens.Right:
-                        newZ = Random.Range(0, 180);
+                        newZ = Random.Range(15, 165);
                         break;
 
                     case PortSens.Left:
-                        newZ = Random.Range(0, 180) - 180;
+                        newZ = Random.Range(15, 165) - 180;
                         break;
                 }
                 transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, newZ);
                 rb.velocity = transform.up * speed;
-            }            
+            }
         }
 
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
+        }
     }
+    
 
     public Queue<GameObject> GetWebs()
     {

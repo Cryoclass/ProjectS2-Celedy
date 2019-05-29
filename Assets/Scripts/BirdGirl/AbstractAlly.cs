@@ -5,8 +5,9 @@ using UnityEngine;
 public abstract class AbstractAlly : MonoBehaviour
 {
     public GameObject ToFollow;
-    
+    public bool DoesHeal;
     public float speed;
+    public int CounterHl;
 
     Color col;
     SpriteRenderer[] AllSprite;
@@ -49,4 +50,7 @@ public abstract class AbstractAlly : MonoBehaviour
         transform.position += new Vector3(x, y);
         visible();
     }
+
+    
+    
 }
