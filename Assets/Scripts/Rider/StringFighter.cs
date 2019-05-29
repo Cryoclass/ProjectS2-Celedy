@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class StringFighter : MonoBehaviour
 {
-    public GameObject ToRotate { get; set; }
-    public GameObject WebFirePoint { get; set; }
+    public GameObject ToRotate;
+    public GameObject WebFirePoint;
+    private float CDRotation;
+
+
+
     private bool RightToLeft;
     private int TimeBeforeChange;
 
 
-    public Rigidbody2D rb { get; set; }
+    public Rigidbody2D rb;
 
-    private bool IsMoving { get; set; }
+    private bool IsMoving;
 
     public float TimeBtwLaunch;
     private float CdBeforeLaunch;
-
-    public GameObject Arrow;
 
     public float Speed;
 
@@ -27,10 +29,14 @@ public class StringFighter : MonoBehaviour
     private GameObject WebCreatorLauched;
 
     private Queue<GameObject> Webs;
-    public bool WebsReceived;
+    private bool WebsReceived;
 
     private float TimeForNextWeb;
     private float ActualTimeForNextWeb;
+
+
+    public GameObject Folder;
+    public GameObject Spike;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +44,10 @@ public class StringFighter : MonoBehaviour
         IsMoving = false;
         CdBeforeLaunch = TimeBtwLaunch;
         TimeForNextWeb = 5 / Speed;
+        WebsReceived = true;
+        SensOfActualWall = PortSens.Bot;
+        CDRotation = 2;
+        Folder = Instantiate(Folder, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
@@ -49,18 +59,21 @@ public class StringFighter : MonoBehaviour
             ToRotate.SetActive(false);
 
             WebsReceived = false;
-            CdBeforeLaunch = TimeBtwLaunch;
+            CdBeforeLaunch = Random.Range(TimeBtwLaunch, TimeBtwLaunch+2);
         }
         else if(!IsMoving && WebsReceived)
         {
             ArrowRotation();
             CdBeforeLaunch -= 2 * Time.deltaTime;
         }
-        else if (!IsMoving)
+        else if (IsMoving)
         {
-            if (ActualTimeForNextWeb <= 0)
+            if (ActualTimeForNextWeb <= 0 && Webs.Count != 0)
             {
-                transform.rotation = Webs.Dequeue().transform.rotation;
+                Instantiate(Spike, transform.position, transform.rotation, Folder.transform);
+                GameObject nextWeb = Webs.Dequeue();
+                transform.rotation = nextWeb.transform.rotation;
+                Destroy(nextWeb);
                 rb.velocity = transform.up * Speed;
                 ActualTimeForNextWeb = TimeForNextWeb;
             }
@@ -74,82 +87,55 @@ public class StringFighter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Webs.Count <= 2 && collision.tag == "Wall")
+        if (Webs.Count <= 5 && collision.tag == "Wall")
         {
+            destroythequeue();
+            CDRotation = 2;
             SensOfActualWall = collision.gameObject.GetComponent<WallS>().sens;
             rb.velocity = new Vector2(0, 0);
             IsMoving = false;
             ToRotate.SetActive(true);
+
             switch (SensOfActualWall)
             {
-                case PortSens.Bot:
-                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+                case PortSens.Bot:                    
+                    gameObject.transform.rotation = Quaternion.Euler(0,0,0);                    
                     break;
 
 
-                case PortSens.Left:
-                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, -90);
+                case PortSens.Left:                    
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, -90);
                     break;
 
 
-                case PortSens.Right:
-                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
+                case PortSens.Right:                    
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
                     break;
 
 
-                case PortSens.Top:
-                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
+                case PortSens.Top:                    
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
                     break;
             }
 
-
+            ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+            
         }
     }
 
     private void ArrowRotation()
     {
-        if (TimeBeforeChange <= 0)
+        if (CDRotation <= 0)
         {
-            switch (SensOfActualWall)
-            {
-                case PortSens.Bot:
-                    if (ToRotate.transform.rotation.z >= 90 || ToRotate.transform.rotation.z <= -90)
-                    {
-                        RightToLeft = !RightToLeft;
-                        TimeBeforeChange = 5;
-                    }
-                    break;
-
-
-                case PortSens.Left:
-                    if (ToRotate.transform.rotation.z >= 0 || ToRotate.transform.rotation.z <= -180)
-                    {
-                        RightToLeft = !RightToLeft;
-                        TimeBeforeChange = 5;
-                    }
-                    break;
-
-
-                case PortSens.Right:
-                    if (ToRotate.transform.rotation.z >= 180 || ToRotate.transform.rotation.z <= 0)
-                    {
-                        RightToLeft = !RightToLeft;
-                        TimeBeforeChange = 5;
-                    }
-                    break;
-
-
-                case PortSens.Top:
-                    if (ToRotate.transform.rotation.z >= 270 || ToRotate.transform.rotation.z <= 90)
-                    {
-                        RightToLeft = !RightToLeft;
-                        TimeBeforeChange = 5;
-                    }
-                    break;
-            }
+            RightToLeft = !RightToLeft;
+            CDRotation = 4;
+        }
+        else
+        {
+            CDRotation -= 2.5f * Time.deltaTime;
         }
 
-        ToRotate.transform.rotation = Quaternion.Euler(ToRotate.transform.rotation.x, ToRotate.transform.rotation.y, ToRotate.transform.rotation.z + (ToRotate ? -2 : 2));
+        ToRotate.transform.Rotate(0, 0, (RightToLeft ? 100 : -100)* Time.deltaTime);
         
     }
 
@@ -157,6 +143,15 @@ public class StringFighter : MonoBehaviour
     {
         this.Webs = Webs;
         WebsReceived = true;
+        IsMoving = true;
+    }
+
+    private void destroythequeue()
+    {
+        while (Webs.Count != 0)
+        {
+            Destroy(Webs.Dequeue());
+        }
     }
     
 }
