@@ -9,6 +9,9 @@ public class YaelleData : MonoBehaviour
     public int CurrentHealth;
     public int CurrentMaxHeart;
     public float[] position;
+    public int Etage; //
+    public bool Is_befor_boss;
+    public int Boss;
 
     public YaelleData(Ya_Health Yaelle)
     {
@@ -19,7 +22,5 @@ public class YaelleData : MonoBehaviour
         position[1] = Yaelle.transform.position.y;
         position[2] = Yaelle.transform.position.z;
         
-        
-
     }
 }

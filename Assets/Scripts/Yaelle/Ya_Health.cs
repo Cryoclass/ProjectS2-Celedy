@@ -76,5 +76,6 @@ public class Ya_Health : MonoBehaviour
             CurrentHealth -= 1;
             invincibility = 1f;
         }
+        
     }
 }
