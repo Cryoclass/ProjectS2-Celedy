@@ -7,7 +7,6 @@ public abstract class AbstractAlly : MonoBehaviour
     public GameObject ToFollow;
     public bool DoesHeal;
     public float speed;
-    public int CounterHl;
 
     Color col;
     SpriteRenderer[] AllSprite;

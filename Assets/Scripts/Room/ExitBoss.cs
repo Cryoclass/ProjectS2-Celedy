@@ -75,19 +75,26 @@ public class ExitBoss : MonoBehaviour
             }
         }
 
+
+
     }
 
     private void Tplauncher()
     {
         List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetServ();
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
+
         SceneManager.LoadScene(serv[UnityEngine.Random.Range(0, serv.Count)]);
         Debug.Log("TpDone");
+
+        // PlayerPrefs.GetInt("PlayerCurrentLife");
     }
 
     private void MakeInvisible()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
         InviIteration++;
     }
 

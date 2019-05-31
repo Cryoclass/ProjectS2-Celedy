@@ -18,7 +18,7 @@ public class Ya_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       CurrentHealth = PlayerPrefs.GetInt("PlayerCurrentLife");
     }
 
     // Update is called once per frame
@@ -63,10 +63,7 @@ public class Ya_Health : MonoBehaviour
             }
         }
 
-        if (CurrentHealth <= 0)
-        {
-            FindObjectOfType<GameOver>().EndGame();
-        }
+        
     }
 
     public void Take_hit()
@@ -75,6 +72,12 @@ public class Ya_Health : MonoBehaviour
         {
             CurrentHealth -= 1;
             invincibility = 1f;
+            PlayerPrefs.SetInt("PlayerCurrentLife", CurrentHealth);
+
+            if (CurrentHealth <= 0)
+            {
+                FindObjectOfType<GameOver>().EndGame();
+            }
         }
     }
 }

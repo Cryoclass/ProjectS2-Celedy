@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 422152739319547008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.857479, y: -23.944155, z: -4.696342}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 7088418323991787199}
   - {fileID: 8863560173843148483}
@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToFollow: {fileID: 0}
+  DoesHeal: 0
   speed: 5
+  CounterHl: 0
   bullet: {fileID: 257798314603557471, guid: 279f9023a460dbc48b1504682afbf3a3, type: 3}
   StartTimeBtwShot: 2
   ShootPoint: {fileID: 7810362582862400206}

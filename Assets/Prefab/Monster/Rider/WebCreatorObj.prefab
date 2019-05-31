@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Web: {fileID: 4246770879570719628, guid: bc446a34f40b91d4cb8fe0b28df21ff5, type: 3}
   rb: {fileID: 8640138133530834265}
-  speed: 40
+  speed: 80
 --- !u!50 &8640138133530834265
 Rigidbody2D:
   serializedVersion: 4

@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
+
+        PlayerPrefs.SetInt("PlayerCurrentLife", 10);
         SceneManager.LoadScene("Mouvement 1");
     }
 

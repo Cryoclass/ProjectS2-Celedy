@@ -138,7 +138,7 @@ public class RoomSpawner : MonoBehaviour
                 int[] TesteurInt = new int[2] { i, j };
                 foreach(int[] inting in ToSpawn)
                 {
-                    if (inting[0] == i && inting[1] == j)
+                    if (inting[0] == i && inting[1] == j && Monsters.Count != 0)
                     {
                         Debug.Log("Conditon verif");
                         Instantiate(Monsters[Random.Range(0, Monsters.Count)], Coord, transform.rotation, transform);

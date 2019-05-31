@@ -2,8 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StringFighter : MonoBehaviour
+public class StringFighter : Take_damage
 {
+    // part Boss
+    public int life;
+
+    public GameObject bullet;
+    public List<GameObject> FirePoints; // 0:Top, 1:Bot, 2:Right, 3:Left
+
+    public float Cooldown;
+    private float CD;
+
+
+
+    // Deplacement part  => Don't touch !!
     public GameObject ToRotate;
     public GameObject WebFirePoint;
     private float CDRotation;
@@ -43,11 +55,16 @@ public class StringFighter : MonoBehaviour
     {
         IsMoving = false;
         CdBeforeLaunch = TimeBtwLaunch;
-        TimeForNextWeb = 5 / Speed;
+        TimeForNextWeb = 6 / Speed;
         WebsReceived = true;
         SensOfActualWall = PortSens.Bot;
         CDRotation = 2;
         Folder = Instantiate(Folder, transform.position, transform.rotation);
+        if (Cooldown <= 0)
+        {
+            Cooldown = 1;
+        }
+        CD = Cooldown;
     }
 
     // Update is called once per frame
@@ -56,6 +73,7 @@ public class StringFighter : MonoBehaviour
         if(!IsMoving && CdBeforeLaunch <= 0 && WebsReceived)
         {
             WebCreatorLauched = Instantiate(WebCreatorObj, WebFirePoint.transform.position, ToRotate.transform.rotation, transform);
+            ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
             ToRotate.SetActive(false);
 
             WebsReceived = false;
@@ -83,6 +101,16 @@ public class StringFighter : MonoBehaviour
             }
         }
 
+        if(CD <= 0)
+        {
+            QuadriShoot();
+            CD = Cooldown;
+        }
+        else
+        {
+            CD -= 2* Time.deltaTime;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -92,33 +120,35 @@ public class StringFighter : MonoBehaviour
             destroythequeue();
             CDRotation = 2;
             SensOfActualWall = collision.gameObject.GetComponent<WallS>().sens;
-            rb.velocity = new Vector2(0, 0);
+            rb.velocity = new Vector3(0, 0, 0);
             IsMoving = false;
             ToRotate.SetActive(true);
 
             switch (SensOfActualWall)
             {
-                case PortSens.Bot:                    
+                case PortSens.Bot:
+                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
                     gameObject.transform.rotation = Quaternion.Euler(0,0,0);                    
                     break;
 
 
-                case PortSens.Left:                    
+                case PortSens.Left:
+                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, -90);
                     gameObject.transform.rotation = Quaternion.Euler(0, 0, -90);
                     break;
 
 
-                case PortSens.Right:                    
+                case PortSens.Right:
+                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
                     gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
                     break;
 
 
-                case PortSens.Top:                    
+                case PortSens.Top:
+                    ToRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
                     gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
                     break;
-            }
-
-            ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }            
             
         }
     }
@@ -153,5 +183,17 @@ public class StringFighter : MonoBehaviour
             Destroy(Webs.Dequeue());
         }
     }
-    
+
+    public override void InflictDamage(int i)
+    {
+        life -= i;
+    }
+
+    private void QuadriShoot()
+    {
+        Instantiate(bullet, FirePoints[0].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0,  0 - transform.rotation.z));
+        Instantiate(bullet, FirePoints[2].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0, -90 - transform.rotation.z));
+        Instantiate(bullet, FirePoints[1].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0,  180 - transform.rotation.z));
+        Instantiate(bullet, FirePoints[3].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0, 90 - transform.rotation.z));
+    }
 }

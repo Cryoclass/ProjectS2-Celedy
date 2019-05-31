@@ -115,7 +115,8 @@ public class Portal_Open : MonoBehaviour
             case PortSens.Left:
                 LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX - 1, CoordY);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Teleport((int)(-deplx * 1 / 2.5), 0);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport((float)(-deplx * 1 / 2.5), 0);
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport((float)(-deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)-deplx, 0);
                 try
                 {
@@ -131,7 +132,8 @@ public class Portal_Open : MonoBehaviour
             case PortSens.Bot:
                 LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX, CoordY - 1);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Teleport(0, (int)(-deply * 1 / 1.5));
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport(0, (int)(-deply * 1 / 1.5));
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport(0, (int)(-deply * 1 / 1.5));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)-deply);
                 try
                 {
@@ -147,7 +149,8 @@ public class Portal_Open : MonoBehaviour
             case PortSens.Top:
                 LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX, CoordY + 1);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Teleport(0, (int)(deply * 1 / 1.5f));
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport(0, (int)(deply * 1 / 1.5f));
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport(0, (int)(deply * 1 / 1.5f));
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport(0, (int)deply);
                 try
                 {
@@ -163,7 +166,8 @@ public class Portal_Open : MonoBehaviour
             case PortSens.Right:
                 LevelGenerator.GetComponent<LevelGen>().Instantiater(CoordX + 1, CoordY);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Teleport((int)(deplx * 1 / 2.5), 0);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport((int)(deplx * 1 / 2.5), 0);
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().Teleport((int)(deplx * 1 / 2.5), 0);
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().Teleport((int)deplx, 0);
                 try
                 {
@@ -178,13 +182,15 @@ public class Portal_Open : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log("TpDone");
     }
 
     private void MakeInvisible()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
+        }
         InviIteration++;
     }
 
