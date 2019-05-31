@@ -50,8 +50,8 @@ MonoBehaviour:
   Monsters:
   - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
   - {fileID: 570903891281261688, guid: 0249ab82c3301e848b2ed1e64e697e09, type: 3}
+  Rocks:
   - {fileID: 4554623354688616852, guid: 705bddfedf2982c47ab73072e24ff515, type: 3}
-  PNJ: []
   T_Wall: {fileID: 9169232276957742437, guid: b4543a586baf47c449cd3a4b8e3a3257, type: 3}
   B_Wall: {fileID: 5681697325060822745, guid: 93d1030d10bc4154e8717dce4f5ae0d0, type: 3}
   L_Wall: {fileID: 2013372414013420914, guid: cf7eee53771184e45a82fc39ce8cf77d, type: 3}
@@ -78,3 +78,5 @@ MonoBehaviour:
   RightEntry: 0
   NbMinEnemy: 0
   NbMaxenemy: 0
+  NbMinRocks: 0
+  NbMaxRocks: 5

@@ -15,7 +15,9 @@ public class OneRoom : MonoBehaviour
 
     public int NbMinEnemy;
     public int NbMaxenemy;
-    
+    public int NbMaxRocks;
+    public int NbMinRocks;
+    public bool IsFinalRoom;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,10 @@ public class OneRoom : MonoBehaviour
         Roomspawneur.GetComponent<RoomSpawner>().LeftEntry = this.LeftEntry;
         Roomspawneur.GetComponent<RoomSpawner>().NbMinEnemy = this.NbMinEnemy;
         Roomspawneur.GetComponent<RoomSpawner>().NbMaxenemy = this.NbMaxenemy;
+        Roomspawneur.GetComponent<RoomSpawner>().NbMaxRocks = this.NbMaxRocks;
+        Roomspawneur.GetComponent<RoomSpawner>().NbMinRocks = this.NbMinRocks;
+        Roomspawneur.GetComponent<RoomSpawner>().IsFinalRoom = this.IsFinalRoom;
+        
         Instantiate(Roomspawneur, transform.position, transform.rotation);
     }
 
