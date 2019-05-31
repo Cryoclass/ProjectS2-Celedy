@@ -9,7 +9,7 @@ public class MisterSlime : MonsterLife
     public GameObject normal_slime;
 
 
-    public void damaged(int i)
+    public new void damaged(int i)
     {
         Life -= i;
         if (Life < 0)

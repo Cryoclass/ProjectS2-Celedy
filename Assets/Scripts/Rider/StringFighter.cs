@@ -13,7 +13,7 @@ public class StringFighter : Take_damage
     public float Cooldown;
     private float CD;
 
-
+    public List<GameObject> AtHit;
 
     // Deplacement part  => Don't touch !!
     public GameObject ToRotate;
@@ -101,6 +101,7 @@ public class StringFighter : Take_damage
             }
         }
 
+        
         if(CD <= 0)
         {
             QuadriShoot();
@@ -110,6 +111,7 @@ public class StringFighter : Take_damage
         {
             CD -= 2* Time.deltaTime;
         }
+        
 
     }
 
@@ -150,6 +152,8 @@ public class StringFighter : Take_damage
                     break;
             }            
             
+
+
         }
     }
 
@@ -191,9 +195,18 @@ public class StringFighter : Take_damage
 
     private void QuadriShoot()
     {
-        Instantiate(bullet, FirePoints[0].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0,  0 - transform.rotation.z));
-        Instantiate(bullet, FirePoints[2].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0, -90 - transform.rotation.z));
-        Instantiate(bullet, FirePoints[1].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0,  180 - transform.rotation.z));
-        Instantiate(bullet, FirePoints[3].transform.position, Quaternion.Euler(transform.rotation.x + 0, transform.rotation.y + 0, 90 - transform.rotation.z));
+        Debug.Log(transform.eulerAngles.z);
+        Instantiate(bullet, FirePoints[0].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z));
+        Instantiate(bullet, FirePoints[2].transform.position, Quaternion.Euler(0, 0, -90 + transform.eulerAngles.z));
+        Instantiate(bullet, FirePoints[1].transform.position, Quaternion.Euler(0, 0, 180 + transform.eulerAngles.z));
+        Instantiate(bullet, FirePoints[3].transform.position, Quaternion.Euler(0, 0, 90 + transform.eulerAngles.z));
+    }
+
+    private void Shoot()
+    {
+        foreach (GameObject FirePoint in AtHit)
+        {
+           
+        }
     }
 }
