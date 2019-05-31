@@ -128,7 +128,7 @@ MonoBehaviour:
   damage: 0
   rotate: 0
   Expl: {fileID: 0}
-  FromEnemy: 0
+  FromEnemy: 1
 --- !u!95 &2504202103528845435
 Animator:
   serializedVersion: 3
