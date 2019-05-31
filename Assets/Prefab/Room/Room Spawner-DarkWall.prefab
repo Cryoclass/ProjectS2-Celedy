@@ -70,7 +70,7 @@ MonoBehaviour:
     type: 3}
   ExitEntry: {fileID: 519736225507065723, guid: 2688549510fd91b4a990e057eda74b8c,
     type: 3}
-  IsFinalRoom: 1
+  IsFinalRoom: 0
   TopEntry: 0
   BotEntry: 0
   LeftEntry: 0

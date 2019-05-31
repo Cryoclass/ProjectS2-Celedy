@@ -10,12 +10,11 @@ public class GameOver : MonoBehaviour
     public void EndGame()
     {
         GameOverUI.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
+        
     }
 }

@@ -130,12 +130,9 @@ public class RoomSpawner : MonoBehaviour
                 else
                 {
                     pos = Random.Range(0, len);
-                    if (PNJ.Count != 0 && Random.Range(0f,100f) > 99.9)
-                        Instantiate(PNJ[Random.Range(0,PNJ.Count)], Coord, transform.rotation);
                     Instantiate(Floors[pos], Coord, transform.rotation, transform);
                 }
                 Coord += new Vector3(SBW / 2, 0);
-                int[] TesteurInt = new int[2] { i, j };
                 foreach(int[] inting in ToSpawn)
                 {
                     if (inting[0] == i && inting[1] == j && Monsters.Count != 0)

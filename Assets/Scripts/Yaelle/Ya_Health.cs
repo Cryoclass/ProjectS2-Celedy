@@ -79,5 +79,6 @@ public class Ya_Health : MonoBehaviour
                 FindObjectOfType<GameOver>().EndGame();
             }
         }
+        
     }
 }
