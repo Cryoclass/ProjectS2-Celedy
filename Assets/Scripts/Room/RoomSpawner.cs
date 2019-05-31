@@ -11,8 +11,7 @@ public class RoomSpawner : MonoBehaviour
     public int Coordy;
 
     public List<GameObject> Monsters;
-    public List<GameObject> PNJ;
-
+    public List<GameObject> Rocks;
 
     public GameObject T_Wall;
     public GameObject B_Wall;
@@ -39,6 +38,10 @@ public class RoomSpawner : MonoBehaviour
     public int NbMinEnemy;
     public int NbMaxenemy;
     private int NbEnemy;
+    
+    public int NbMinRocks;
+    public int NbMaxRocks;
+    private int NbRocks;
 
     private Vector3 Coord;
 
@@ -49,18 +52,27 @@ public class RoomSpawner : MonoBehaviour
     private GameObject[] enemys;
     private List<GameObject> PortalList;
 
+    private List<int[]> RocksToSpawn;
     // Start is called before the first frame update
     void Start()
     {
+        RocksToSpawn = new List<int[]>();
         PossSpawnCreat();
         Debug.Log(PossibleSpawn.Count);
         ToSpawn = new List<int[]>();
         NbEnemy = Random.Range(NbMinEnemy, NbMaxenemy + 1);
+        NbRocks = Random.Range(NbMinRocks, NbMaxRocks + 1);
         int b;
         for (int h = 0; h < NbEnemy; h++)
         {
             b = Random.Range(0, PossibleSpawn.Count);
             ToSpawn.Add(PossibleSpawn[b]);
+            PossibleSpawn.RemoveAt(b);
+        }
+        for (int h = 0; h < NbRocks; h++)
+        {
+            b = Random.Range(0, PossibleSpawn.Count);
+            RocksToSpawn.Add(PossibleSpawn[b]);
             PossibleSpawn.RemoveAt(b);
         }
         Debug.Log(ToSpawn.Count);
@@ -139,6 +151,14 @@ public class RoomSpawner : MonoBehaviour
                     {
                         Debug.Log("Conditon verif");
                         Instantiate(Monsters[Random.Range(0, Monsters.Count)], Coord, transform.rotation, transform);
+                    }                    
+                }
+                foreach(int[] inting in RocksToSpawn)
+                {
+                    if (inting[0] == i && inting[1] == j && Rocks.Count != 0)
+                    {
+                        Debug.Log("Conditon verif");
+                        Instantiate(Rocks[Random.Range(0, Rocks.Count)], Coord, transform.rotation, transform);
                     }                    
                 }
             }

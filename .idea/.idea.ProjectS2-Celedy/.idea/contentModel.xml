@@ -4,14 +4,6 @@
     <e p="C:\Users\Edouard farrando\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Edouard farrando\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.1070062879.00" t="ExcludeRecursive" />
     <e p="C:\Users\Edouard farrando\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
-<<<<<<< HEAD
-=======
-    <e p="C:\Users\setth\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\setth\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.-36315174.00" t="ExcludeRecursive" />
-    <e p="C:\Users\setth\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
->>>>>>> 3b7684fad70c9b6ab0ac14d89a450592b249cf04
-=======
->>>>>>> parent of af7cf35... commit
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
@@ -30,6 +22,9 @@
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
+          </e>
+          <e p="Fairy" t="Include">
+            <e p="Move.cs" t="Include" />
           </e>
           <e p="Inventory" t="Include">
             <e p="Drake" t="Include">
@@ -90,6 +85,8 @@
             <e p="YaelleData.cs" t="Include" />
           </e>
           <e p="SmallMonster" t="Include">
+            <e p="MisterSlime.cs" t="Include" />
+            <e p="MisterSlimeLife.cs" t="Include" />
             <e p="SlimeAI.cs" t="Include" />
             <e p="SmallBatIa.cs" t="Include" />
           </e>
