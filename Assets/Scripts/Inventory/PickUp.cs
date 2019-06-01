@@ -25,6 +25,7 @@ public class PickUp : MonoBehaviour
                 {
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
+                    PlayerPrefs.SetInt("NbPotion", PlayerPrefs.GetInt("NbPotion") + 1);
                     Destroy(gameObject);
                     break;
                 }
