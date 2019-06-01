@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellArchetype : MonoBehaviour
+public class ShockWave : MonoBehaviour
 {
     public float speed;
     public float Duration;
@@ -11,13 +11,12 @@ public class SpellArchetype : MonoBehaviour
 
     public float rotate;
 
-    public GameObject Expl;
     public bool FromEnemy = false;
     private string collisiontag;
 
     void Start()
     {
-        rb.velocity = (transform.up + new Vector3(0f,0f)) * speed;
+        rb.velocity = (-transform.right- transform.up).normalized * speed;
         Invoke("DestroyProjectile", Duration);        
     }
 
