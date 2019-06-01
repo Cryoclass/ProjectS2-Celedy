@@ -959,7 +959,7 @@ MonoBehaviour:
   - {fileID: 3767565391041770064}
   - {fileID: 4451717574525243259}
   - {fileID: 2671227665546365083}
-  Cooldown: 2
+  Cooldown: 4
   AtHit: []
   ToRotate: {fileID: 3048359961020128650}
   WebFirePoint: {fileID: 6001029249731229023}

@@ -58,7 +58,6 @@ public class RoomSpawner : MonoBehaviour
     {
         RocksToSpawn = new List<int[]>();
         PossSpawnCreat();
-        Debug.Log(PossibleSpawn.Count);
         ToSpawn = new List<int[]>();
         NbEnemy = Random.Range(NbMinEnemy, NbMaxenemy + 1);
         NbRocks = Random.Range(NbMinRocks, NbMaxRocks + 1);
@@ -75,7 +74,6 @@ public class RoomSpawner : MonoBehaviour
             RocksToSpawn.Add(PossibleSpawn[b]);
             PossibleSpawn.RemoveAt(b);
         }
-        Debug.Log(ToSpawn.Count);
 
         PortalList = new List<GameObject>();
         Coord = transform.position;

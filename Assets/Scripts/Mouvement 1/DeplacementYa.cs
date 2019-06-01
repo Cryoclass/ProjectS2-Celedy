@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeplacementYa : MonoBehaviour
 {
-    
+    private Animator anim;
     private bool MoveLaunched = false;
     public GameObject Gereur;
     public Rigidbody2D rb;
@@ -12,6 +12,10 @@ public class DeplacementYa : MonoBehaviour
     
     public float CD = 0;
 
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
     private void Update()
     {
         if(MoveLaunched)
@@ -29,6 +33,41 @@ public class DeplacementYa : MonoBehaviour
                     Gereur.GetComponent<GereurMvt1>().Declencheur();
                 }
             }
+
+            if (rb.velocity.y < 0)
+            {
+                anim.SetBool("Walk_back", false);
+                anim.SetBool("Walk_Front", true);
+                anim.SetBool("Walk_Side", false);
+                transform.rotation = Quaternion.Euler(0,0,0);
+            }
+            else if (rb.velocity.y > 0)
+            {
+                anim.SetBool("Walk_back", true);
+                anim.SetBool("Walk_Front", false);
+                anim.SetBool("Walk_Side", false);
+                transform.rotation = Quaternion.Euler(0,0,0);
+            }
+            else if(rb.velocity.x > 0)
+            {
+                anim.SetBool("Walk_back", false);
+                anim.SetBool("Walk_Front", false);
+                anim.SetBool("Walk_Side", true);
+                transform.rotation = Quaternion.Euler(0,180,0);
+            }
+            else if(rb.velocity.x < 0)
+            {
+                anim.SetBool("Walk_back", false);
+                anim.SetBool("Walk_Front", false);
+                anim.SetBool("Walk_Side", true);
+                transform.rotation = Quaternion.Euler(0,0,0);
+            }
+            else
+            {
+                anim.SetBool("Walk_back", false);
+                anim.SetBool("Walk_Front", false);
+                anim.SetBool("Walk_Side", false);
+            }
         }
     }
 
@@ -40,6 +79,7 @@ public class DeplacementYa : MonoBehaviour
         Debug.Log(CD);
         rb.velocity = (transform.up * (y / CD) + (transform.right * (x / CD))) * 2;
     }
+    
     
    
 }

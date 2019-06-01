@@ -4,31 +4,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitBoss : MonoBehaviour
+public class PortalExitIntro : MonoBehaviour
 {
-
     public GameObject Laser;
+
     private int InviIteration;
-    private SpriteRenderer sprR;
+    private bool TpLaunched;
 
-    public Sprite PortalClose;
-    public Sprite PortalOpen;
-    public bool TpLaunched;
-
-    public GameObject LevelGenerator;
-
-    private bool isopen = false;
+    public bool isopen = false;
+    
     
 
-    public float countingCD;
+    public Sprite open;
+    public Sprite close;
+
+    private float countingCD;
 
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = PortalClose;
+        gameObject.GetComponent<SpriteRenderer>().sprite = close;
         TpLaunched = false;
-        LevelGenerator = GameObject.FindGameObjectWithTag("LevelGen");
     }
-    
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (InviIteration >= 3)
+            CancelInvoke("MakeInvisible");
+
+        if (countingCD >= 0)
+        {
+            countingCD -= Time.deltaTime;
+        }
+        else if (TpLaunched)
+        {
+            TpLaunched = false;
+            InviIteration = 0;
+        }
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -75,26 +89,21 @@ public class ExitBoss : MonoBehaviour
             }
         }
 
-
-
     }
 
     private void Tplauncher()
     {
-        List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetServ();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
-
-        SceneManager.LoadScene(serv[UnityEngine.Random.Range(0, serv.Count)]);
-
-        // PlayerPrefs.GetInt("PlayerCurrentLife");
+        SceneManager.LoadScene("Game1");
     }
 
     private void MakeInvisible()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
-
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+        {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
+        }
         InviIteration++;
     }
 
@@ -102,7 +111,7 @@ public class ExitBoss : MonoBehaviour
     {
         if (!isopen)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = PortalOpen;
+            gameObject.GetComponent<SpriteRenderer>().sprite = open;
             isopen = true;
         }
     }
@@ -110,7 +119,7 @@ public class ExitBoss : MonoBehaviour
     {
         if (isopen)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = PortalClose;
+            gameObject.GetComponent<SpriteRenderer>().sprite = close;
             isopen = false;
         }
     }

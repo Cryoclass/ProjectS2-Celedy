@@ -46,13 +46,17 @@ public class StringFighter : Take_damage
     private float TimeForNextWeb;
     private float ActualTimeForNextWeb;
 
+    private float TimeOfFlying;
 
-    public GameObject Folder;
+    private GameObject Folder;
     public GameObject Spike;
 
     // Start is called before the first frame update
     void Start()
     {
+        Folder = new GameObject("Folder crée par le jeu");
+        TimeOfFlying = 0;
+        Webs = new Queue<GameObject>();
         IsMoving = false;
         CdBeforeLaunch = TimeBtwLaunch;
         TimeForNextWeb = 6 / Speed;
@@ -65,6 +69,7 @@ public class StringFighter : Take_damage
             Cooldown = 1;
         }
         CD = Cooldown;
+        
     }
 
     // Update is called once per frame
@@ -112,6 +117,28 @@ public class StringFighter : Take_damage
             CD -= 2* Time.deltaTime;
         }
         
+        if (IsMoving)
+        {
+            TimeOfFlying += 2 * Time.deltaTime;
+            if (TimeOfFlying > 40)
+            {
+                transform.position = new Vector3(0, 0, 0);
+                TimeOfFlying = 0;
+                destroythequeue();
+                CDRotation = 2;
+                SensOfActualWall = PortSens.Top;
+                rb.velocity = new Vector3(0, 0, 0);
+                IsMoving = false;
+                ToRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
+                Shoot();
+
+                ToRotate.SetActive(true);
+                ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                Shoot();
+
+            }
+        }
 
     }
 
@@ -119,6 +146,7 @@ public class StringFighter : Take_damage
     {
         if (Webs.Count <= 5 && collision.tag == "Wall")
         {
+            TimeOfFlying = 0;
             destroythequeue();
             CDRotation = 2;
             SensOfActualWall = collision.gameObject.GetComponent<WallS>().sens;
@@ -130,7 +158,7 @@ public class StringFighter : Take_damage
             {
                 case PortSens.Bot:
                     ToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    gameObject.transform.rotation = Quaternion.Euler(0,0,0);                    
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
 
 
@@ -150,9 +178,9 @@ public class StringFighter : Take_damage
                     ToRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
                     gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
                     break;
-            }            
-            
+            }
 
+            Shoot();
 
         }
     }
@@ -191,22 +219,31 @@ public class StringFighter : Take_damage
     public override void InflictDamage(int i)
     {
         life -= i;
+        if(life <= 0)
+        {
+            destroythequeue();
+            Destroy(Folder);
+            Destroy(gameObject);
+        }
     }
 
     private void QuadriShoot()
     {
-        Debug.Log(transform.eulerAngles.z);
-        Instantiate(bullet, FirePoints[0].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z));
-        Instantiate(bullet, FirePoints[2].transform.position, Quaternion.Euler(0, 0, -90 + transform.eulerAngles.z));
-        Instantiate(bullet, FirePoints[1].transform.position, Quaternion.Euler(0, 0, 180 + transform.eulerAngles.z));
+        Instantiate(bullet, FirePoints[0].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z), Folder.transform);
+        Instantiate(bullet, FirePoints[2].transform.position, Quaternion.Euler(0, 0, -90 + transform.eulerAngles.z), Folder.transform);
+        Instantiate(bullet, FirePoints[1].transform.position, Quaternion.Euler(0, 0, 180 + transform.eulerAngles.z), Folder.transform);
         Instantiate(bullet, FirePoints[3].transform.position, Quaternion.Euler(0, 0, 90 + transform.eulerAngles.z));
     }
 
     private void Shoot()
     {
-        foreach (GameObject FirePoint in AtHit)
-        {
-           
-        }
+        Instantiate(bullet, AtHit[0].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z - 90), Folder.transform);
+        Instantiate(bullet, AtHit[1].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z - 60), Folder.transform);
+        Instantiate(bullet, AtHit[2].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z - 30), Folder.transform);
+        Instantiate(bullet, AtHit[3].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z), Folder.transform);
+        Instantiate(bullet, AtHit[4].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z + 30), Folder.transform);
+        Instantiate(bullet, AtHit[5].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z + 60), Folder.transform);
+        Instantiate(bullet, AtHit[6].transform.position, Quaternion.Euler(0, 0, transform.eulerAngles.z + 90), Folder.transform);
+
     }
 }

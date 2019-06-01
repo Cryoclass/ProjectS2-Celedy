@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ExitBoss : MonoBehaviour
+public class TPToLocation : MonoBehaviour
 {
 
     public GameObject Laser;
@@ -13,22 +11,21 @@ public class ExitBoss : MonoBehaviour
 
     public Sprite PortalClose;
     public Sprite PortalOpen;
-    public bool TpLaunched;
-
-    public GameObject LevelGenerator;
+    private bool TpLaunched;    
 
     private bool isopen = false;
-    
 
-    public float countingCD;
+    public float XToTp;
+    public float YToTp;
+
+    private float countingCD;
 
     void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = PortalClose;
         TpLaunched = false;
-        LevelGenerator = GameObject.FindGameObjectWithTag("LevelGen");
     }
-    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -81,10 +78,10 @@ public class ExitBoss : MonoBehaviour
 
     private void Tplauncher()
     {
-        List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetServ();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
-
-        SceneManager.LoadScene(serv[UnityEngine.Random.Range(0, serv.Count)]);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().SetPos(XToTp, YToTp);
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().SetPos(XToTp, YToTp);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(XToTp, YToTp);
 
         // PlayerPrefs.GetInt("PlayerCurrentLife");
     }
