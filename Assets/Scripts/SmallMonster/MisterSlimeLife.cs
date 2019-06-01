@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MisterSlimeLife: Take_damage
 {
@@ -9,6 +10,25 @@ public class MisterSlimeLife: Take_damage
     public GameObject normal_slime;
     public int split;
     public int NbSplit;
+
+    public GameObject Slider;
+
+    private void Start()
+    {
+        if (Slider != null)
+        {
+            Slider.GetComponent<Slider>().maxValue = Life;
+            Slider.GetComponent<Slider>().minValue = 0;
+        }
+    }
+
+    private void Update()
+    {
+        if (Slider != null)
+        {
+            Slider.GetComponent<Slider>().value = Life;
+        }
+    }
 
     public override void InflictDamage(int i)
     {
