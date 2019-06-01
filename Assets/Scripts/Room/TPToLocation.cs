@@ -76,7 +76,7 @@ public class TPToLocation : MonoBehaviour
 
     private void Tplauncher()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().SetPos(XToTp, YToTp);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().SetPos(XToTp, YToTp - 4);
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
             GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().SetPos(XToTp, YToTp);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(XToTp, YToTp);
