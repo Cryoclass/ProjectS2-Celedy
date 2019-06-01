@@ -118,8 +118,6 @@
         </e>
         <e p="TexteDial" t="Include">
           <e p="fairy.txt" t="Include" />
-          <e p="FatherAfter.txt" t="Include" />
-          <e p="FatherBefore.txt" t="Include" />
           <e p="Henri.txt" t="Include" />
           <e p="Monica.txt" t="Include" />
         </e>
