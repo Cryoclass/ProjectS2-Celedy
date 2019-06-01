@@ -201,15 +201,63 @@ public class RoomSpawner : MonoBehaviour
     private void Update()
     {
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        
         if (IsFinalRoom)
         {
-            if (enemys.Length == 0)
+            GameObject[] Bosss = GameObject.FindGameObjectsWithTag("Boss");
+            if (enemys.Length == 0 && Bosss.Length == 0)
             {
-                FinalPortal.GetComponent<ExitBoss>().OpenIt();
+                try
+                {
+                    FinalPortal.GetComponent<ExitBoss>().OpenIt();
+                }
+                catch (System.Exception)
+                {
+                }
+
+                try
+                {
+                    FinalPortal.GetComponent<TPToLocation>().OpenIt();
+                }
+                catch (System.Exception)
+                {
+                }
+
+                try
+                {
+                    FinalPortal.GetComponent<PortalExitIntro>().OpenIt();
+                }
+                catch (System.Exception)
+                {
+                }
+
             }
             else
             {
-                FinalPortal.GetComponent<ExitBoss>().CloseIt();
+                try
+                {
+                    FinalPortal.GetComponent<ExitBoss>().CloseIt();
+                }
+                catch (System.Exception)
+                {
+                }
+
+                try
+                {
+                    FinalPortal.GetComponent<TPToLocation>().CloseIt();
+                }
+                catch (System.Exception)
+                {
+                }
+
+                try
+                {
+                    FinalPortal.GetComponent<PortalExitIntro>().CloseIt();
+                }
+                catch (System.Exception)
+                {
+                }
+                
             }
         }
         else
