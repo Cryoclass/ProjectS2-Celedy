@@ -120,7 +120,7 @@ public class StringFighter : Take_damage
         if (IsMoving)
         {
             TimeOfFlying += 2 * Time.deltaTime;
-            if (TimeOfFlying > 40)
+            if (TimeOfFlying > 20)
             {
                 transform.position = new Vector3(0, 0, 0);
                 TimeOfFlying = 0;

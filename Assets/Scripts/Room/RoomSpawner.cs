@@ -53,9 +53,23 @@ public class RoomSpawner : MonoBehaviour
     private List<GameObject> PortalList;
 
     private List<int[]> RocksToSpawn;
+
+
+    private GameObject LevelGen = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        try
+        {
+            LevelGen = GameObject.FindGameObjectWithTag("LevelGen");
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
+
+
         RocksToSpawn = new List<int[]>();
         PossSpawnCreat();
         ToSpawn = new List<int[]>();
@@ -141,6 +155,12 @@ public class RoomSpawner : MonoBehaviour
                 {
                     pos = Random.Range(0, len);
                     Instantiate(Floors[pos], Coord, transform.rotation, transform);
+                    if(this.LevelGen != null && this.LevelGen.GetComponent<LevelGen>().Ally.Count != 0 && Random.Range(0f,100f)>= 99.5)
+                    {
+                        int ab = this.LevelGen.GetComponent<LevelGen>().GetIndexOfAlly();
+                        Instantiate(this.LevelGen.GetComponent<LevelGen>().Ally[ab], transform.position + new Vector3(SBW / 2 * Largeur / 2 + SBW / 2, -SBW * Hauteur / 2 / 2 - SBW / 2), transform.rotation);
+                        this.LevelGen.GetComponent<LevelGen>().DestroyAlly(ab);
+                    }
                 }
                 Coord += new Vector3(SBW / 2, 0);
                 foreach(int[] inting in ToSpawn)

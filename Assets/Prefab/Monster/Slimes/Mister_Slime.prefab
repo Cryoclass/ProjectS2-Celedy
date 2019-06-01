@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862149b432c194942bb14681bc8a46a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 1
+  Life: 200
   medium_slime: {fileID: 458643244796354968, guid: 2cf3421060990bb479fbea54a76dd2cc,
     type: 3}
   normal_slime: {fileID: 6582857570645521449, guid: d3062d2369c3e55498262e06d1e02dd2,
     type: 3}
   split: 3
+  NbSplit: 3
 --- !u!1001 &7933687128903640734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,6 +100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582857570645521452, guid: d3062d2369c3e55498262e06d1e02dd2,
+        type: 3}
+      propertyPath: speed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6365710849884101801, guid: d3062d2369c3e55498262e06d1e02dd2, type: 3}

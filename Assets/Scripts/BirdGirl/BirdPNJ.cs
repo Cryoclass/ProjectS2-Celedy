@@ -30,7 +30,7 @@ public class BirdPNJ : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.A) && CanSpeak)
             {                
-                ActivatingCanvas.GetComponent<DialogueManager>().Activate();
+                ActivatingCanvas.GetComponent<DialogueManagerBird>().Activate();
                 Time.timeScale = 0f;
             }
         }

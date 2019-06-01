@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Edouard farrando\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Edouard farrando\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.1070062879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Edouard farrando\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
+    <e p="C:\Users\setth\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\setth\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.-36315174.00" t="ExcludeRecursive" />
+    <e p="C:\Users\setth\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FatherAfter.txt" t="Include" />
+        <e p="FatherBefore.txt" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Big_squeletton" t="Include">
             <e p="B_C_shoot_with_mouse.cs" t="Include" />
@@ -21,6 +23,7 @@
           <e p="BossBatIA.cs" t="Include" />
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
+            <e p="DialogueManagerBird.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
           </e>
           <e p="Fairy" t="Include">
@@ -77,6 +80,7 @@
             <e p="MiniMap.cs" t="Include" />
             <e p="OneRoom.cs" t="Include" />
             <e p="Portal_Open.cs" t="Include" />
+            <e p="RedButton.cs" t="Include" />
             <e p="RoomScript.cs" t="Include" />
             <e p="RoomSpawner.cs" t="Include" />
             <e p="RoomSpawnerBoss.cs" t="Include" />

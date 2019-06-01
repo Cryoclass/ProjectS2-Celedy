@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RiderScene.unity
     guid: 0890e54e3c0d30f4992a1cca9304455f
+  - enabled: 0
+    path: Assets/Scenes/Phouphetlinthong.unity
+    guid: d800fceb7af67ff4f9b63a63d61a3cab
+  - enabled: 0
+    path: Assets/Scenes/Save test.unity
+    guid: 1f5abb27fbdaad14fab19b315a1887a8
   m_configObjects: {}
