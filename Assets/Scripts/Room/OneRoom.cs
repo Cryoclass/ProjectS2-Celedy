@@ -18,6 +18,9 @@ public class OneRoom : MonoBehaviour
     public int NbMaxRocks;
     public int NbMinRocks;
     public bool IsFinalRoom;
+
+    public GameObject SidesPortails;
+    public GameObject CenterPortail;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +33,9 @@ public class OneRoom : MonoBehaviour
         Roomspawneur.GetComponent<RoomSpawner>().NbMaxRocks = this.NbMaxRocks;
         Roomspawneur.GetComponent<RoomSpawner>().NbMinRocks = this.NbMinRocks;
         Roomspawneur.GetComponent<RoomSpawner>().IsFinalRoom = this.IsFinalRoom;
-        
-        Instantiate(Roomspawneur, transform.position, transform.rotation);
-    }
+        Roomspawneur.GetComponent<RoomSpawner>().EntryOpen = this.SidesPortails;
+        Roomspawneur.GetComponent<RoomSpawner>().ExitEntry = this.CenterPortail;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instantiate(Roomspawneur, transform.position, transform.rotation);
     }
 }

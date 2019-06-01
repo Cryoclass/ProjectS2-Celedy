@@ -50,6 +50,10 @@ public abstract class AbstractAlly : MonoBehaviour
         visible();
     }
 
-    
-    
+    public void SetPos(float x, float y)
+    {
+        transform.position = new Vector3(x, y, transform.position.z);
+    }
+
+
 }

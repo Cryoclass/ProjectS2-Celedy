@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240508622416723339}
-  m_LocalRotation: {x: -0, y: -0, z: 0.904267, w: 0.42696732}
+  m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: -11.961006, y: 3.0185704, z: -19.12094}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 6843583252905943457}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 129.45001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
 --- !u!1001 &6517980842748722020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,22 +61,22 @@ PrefabInstance:
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.912549
+      value: -0.86602545
       objectReference: {fileID: 0}
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.40896744
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
@@ -96,7 +96,12 @@ PrefabInstance:
     - target: {fileID: 328146768666811077, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -131.72
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 780004363210485159, guid: 6b9beefd1a5f5e843bfc1f45fcf813af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9beefd1a5f5e843bfc1f45fcf813af, type: 3}

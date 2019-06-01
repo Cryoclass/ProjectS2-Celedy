@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
 
         PlayerPrefs.SetInt("PlayerCurrentLife", 10);
-        SceneManager.LoadScene("Mouvement 1");
+        SceneManager.LoadScene("Intro");
     }
 
     public void QuitGame()
