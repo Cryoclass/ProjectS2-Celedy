@@ -8,6 +8,7 @@ public class MisterSlimeLife: Take_damage
     public GameObject medium_slime;
     public GameObject normal_slime;
     public int split;
+    public int NbSplit;
 
     public override void InflictDamage(int i)
     {
@@ -16,19 +17,16 @@ public class MisterSlimeLife: Take_damage
         {
             if (split == 3)
             {
-                Instantiate(medium_slime, transform.position, Quaternion.identity);
-                Instantiate(medium_slime, transform.position, Quaternion.identity);
-                Instantiate(medium_slime, transform.position, Quaternion.identity);
-                Instantiate(medium_slime, transform.position, Quaternion.identity);
+                for(int j = 0; j < NbSplit; j++)
+                    Instantiate(medium_slime, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 split -= 1;
             }
 
             if (split == 1)
             {
-                Instantiate(normal_slime, transform.position, Quaternion.identity);
-                Instantiate(normal_slime, transform.position, Quaternion.identity);
-                Instantiate(normal_slime, transform.position, Quaternion.identity);
+                for (int j = 0; j < NbSplit; j++)
+                    Instantiate(normal_slime, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 split -= 1;
             }

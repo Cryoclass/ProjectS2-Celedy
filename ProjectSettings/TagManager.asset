@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ya_Foot
+  - Portal
+  - Wall
+  - Enemy
+  - Bullet
+  - LevelGen
   layers:
   - Default
   - TransparentFX

@@ -223,4 +223,9 @@ public class Ya_Shoot : MonoBehaviour
     {
         this.Ally = ally;
     }
+
+    public void SetPos(float x, float y)
+    {
+        transform.position = new Vector3(x, y, transform.position.z);
+    }
 }
