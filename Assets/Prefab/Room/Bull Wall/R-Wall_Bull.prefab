@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2469785203759072081}
   - component: {fileID: 2275616477621297664}
+  - component: {fileID: 4739618538410834735}
   - component: {fileID: 4419803381455721052}
   m_Layer: 0
   m_Name: R-Wall_Bull
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 48324390790972804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50.11194, y: -20.455055, z: -0.024889143}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 4344805164186731945}
   m_Father: {fileID: 0}
@@ -82,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4739618538410834735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48324390790972804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103026c91b5d99047b8aef83cb2ffbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sens: 1
 --- !u!61 &4419803381455721052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -99,14 +113,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.43, y: 3.2407908}
+    oldSize: {x: 18.37143, y: 9.259403}
     newSize: {x: 20.579998, y: 10.319999}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 8}
+  m_Size: {x: 18.37143, y: 20}
   m_EdgeRadius: 0
 --- !u!1 &5880483665917127085
 GameObject:

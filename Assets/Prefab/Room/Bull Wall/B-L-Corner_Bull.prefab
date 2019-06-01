@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161516689105461279}
   - component: {fileID: 1148238665869690109}
-  - component: {fileID: 1287628543549264380}
+  - component: {fileID: 2242348642700180424}
   m_Layer: 0
   m_Name: B-L-Corner_Bull
   m_TagString: Wall
@@ -105,8 +105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537773001480467313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8534164, y: 1.8598392, z: -0.53265095}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 9104004382618634089}
   m_Father: {fileID: 0}
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1287628543549264380
+--- !u!61 &2242348642700180424
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,12 +178,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.43, y: 6.441572}
+    oldSize: {x: 18.37143, y: 18.404493}
     newSize: {x: 20.579998, y: 20.519999}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 5.14}
+  m_Size: {x: 18.37143, y: 18.404493}
   m_EdgeRadius: 0

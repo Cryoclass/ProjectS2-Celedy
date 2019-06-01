@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 
 public enum States
@@ -16,7 +16,7 @@ public class TorusIA : Take_damage
 {
     private Color Col;
     private PortSens lastWallSens;
-    private Animator anim;// position: 1 = face; 2 = dos ; 3 = side;
+    //private Animator anim;// position: 1 = face; 2 = dos ; 3 = side;
     SpriteRenderer[] ChidrenSprites;
 
     private Transform PlayerPos;
@@ -34,13 +34,19 @@ public class TorusIA : Take_damage
     public GameObject leftpoint;
     public GameObject rightpoint;
     public int Life;
+
+    public GameObject slider;
     // Start is called before the first frame update
     void Start()
     {
+        slider.GetComponent<Slider>().minValue = 0;
+        slider.GetComponent<Slider>().maxValue = Life;
+        slider.GetComponent<Slider>().value = Life;
+        
         ChidrenSprites = gameObject.GetComponentsInChildren<SpriteRenderer>();
         Col = ChidrenSprites[0].color;
         lastWallSens = PortSens.Null;
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
         GetTarget();
     }
@@ -78,12 +84,12 @@ public class TorusIA : Take_damage
         {
             if (-Target.x < Target.y)
             {
-                anim.SetInteger("Position",3);
+                //anim.SetInteger("Position",3);
                 transform.rotation = Quaternion.Euler(0f,0f,0f);
             }
             else
             {
-                anim.SetInteger("Position", 1);
+                //anim.SetInteger("Position", 1);
                 transform.rotation = Quaternion.Euler(0f,0,0f);
             }
         }
@@ -91,12 +97,12 @@ public class TorusIA : Take_damage
         {
             if (-Target.x < Target.y)
             {
-                anim.SetInteger("Position",3);
+                //anim.SetInteger("Position",3);
                 transform.rotation = Quaternion.Euler(0f,180f,0f);            
             }
             else
             {
-                anim.SetInteger("Position", 2);
+                //anim.SetInteger("Position", 2);
                 transform.rotation = Quaternion.Euler(0f,0f,0f);
             }
         }
@@ -108,7 +114,7 @@ public class TorusIA : Take_damage
         MakeMeWhite();
         state = States.Charging;
         rgb.velocity = Target * ChargeSpeed;
-        anim.SetBool("Charging",true);
+        //anim.SetBool("Charging",true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -140,9 +146,10 @@ public class TorusIA : Take_damage
                         ExplosionSides();
                     }
                     GetTarget();
-                    anim.SetBool("Shock",true);
+                    //anim.SetBool("Shock",true);
                     lastWallSens = other.GetComponent<WallS>().sens;
                     Life--;
+                    slider.GetComponent<Slider>().value = Life;
                     if(Life <= 0)
                         Destroy(gameObject);
                 }
@@ -158,6 +165,9 @@ public class TorusIA : Take_damage
 
     private void ExplosionRight()
     {
+        Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 0));
+        Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 30));
+        Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 60));
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 90));
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 120));
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 150));
@@ -165,7 +175,8 @@ public class TorusIA : Take_damage
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 210));
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 240));
         Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 270));
-        
+        Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 300));        
+        Instantiate(ShockWave, rightpoint.transform.position,Quaternion.Euler(0, 0, 330));        
         Instantiate(Crack,transform.position,transform.rotation);
     }
     private void ExplosionLeft()
@@ -222,8 +233,5 @@ public class TorusIA : Take_damage
         
         Instantiate(Crack,transform.position,transform.rotation);
     }
-    public override void InflictDamage(int i)
-    {
-        
-    }
+    public override void InflictDamage(int i){}
 }
