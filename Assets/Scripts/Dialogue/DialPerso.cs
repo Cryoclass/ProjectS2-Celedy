@@ -16,16 +16,14 @@ public class DialPerso : MonoBehaviour
 
     private void Start()
     {
-        Text1 = Button1.GetComponent<TextMeshProUGUI>();
-        Text2 = Button2.GetComponent<TextMeshProUGUI>();
-        Displayed = Speaker.GetComponent<TextMeshProUGUI>();
+
     }
 
     public void modify(string ToDisplay, string str1, string str2)
     {
-        Displayed.text = ToDisplay;
-        Text1.text = str1;
-        Text2.text = str2;
+        Speaker.GetComponent<TextMeshProUGUI>().text = ToDisplay;
+        Button1.GetComponent<TextMeshProUGUI>().text = str1;
+        Button2.GetComponent<TextMeshProUGUI>().text = str2;
     }
 
 }

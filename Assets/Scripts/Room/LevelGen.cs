@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class LevelGen : MonoBehaviour
 {
-    public List<string> ListServ;
+    private int NbOfSmallBossBeaten = 0;
+    private int NbOfBigBossBeaten = 0;
+
+    public List<string> ListLinkSmallBoss;
+    public List<string> ListLinkBigBoss;
+
+    public List<GameObject> Ally;
 
     public RoomScript[,] rooms;
     public int NbMaxRooms;
@@ -28,6 +34,7 @@ public class LevelGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         NbMaxRooms = Mathf.Min(11*11 - 1, NbMaxRooms);
 
         rooms = new RoomScript[11, 11];
@@ -321,8 +328,33 @@ public class LevelGen : MonoBehaviour
         }
     }
 
-    public List<string> GetServ()
+    public List<string> GetSmallBoss()
     {
-        return ListServ;
+        return ListLinkSmallBoss;
+    }
+
+    public List<string> GetBigBoss()
+    {
+        return ListLinkBigBoss;
+    }
+
+    public int GetNbOfBB()
+    {
+        return NbOfBigBossBeaten;
+    }
+
+    public int GetNbOfSB()
+    {
+        return NbOfSmallBossBeaten;
+    }
+
+    public int GetIndexOfAlly()
+    {
+        return (Random.Range(0, Ally.Count));
+    }
+
+    public void DestroyAlly(int index)
+    {
+        Ally.RemoveAt(index);
     }
 }

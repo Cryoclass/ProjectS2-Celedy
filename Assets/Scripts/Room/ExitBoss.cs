@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class ExitBoss : MonoBehaviour
 {
@@ -81,10 +80,21 @@ public class ExitBoss : MonoBehaviour
 
     private void Tplauncher()
     {
-        List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetServ();
+        if (LevelGenerator.GetComponent<LevelGen>().GetNbOfSB() >= 2)
+        {
+            List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetBigBoss();
+            SceneManager.LoadScene(serv[LevelGenerator.GetComponent<LevelGen>().GetNbOfBB()]);
+        }
+        else
+        {
+            List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetSmallBoss();
+            SceneManager.LoadScene(serv[Random.Range(0, serv.Count)]);
+        }
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
 
-        SceneManager.LoadScene(serv[UnityEngine.Random.Range(0, serv.Count)]);
+
+
+
 
         // PlayerPrefs.GetInt("PlayerCurrentLife");
     }

@@ -7,7 +7,7 @@ Je... euh.. (il semblerait que vous l'ayez vexée...) fin de dialogue
 JE HURLE PAS! + OoooOooooOhhHhHHHH!!!! + JE VAIS TE CALMER MOI!
 Il semblerait que les cris aient attirés des monstres... (Combat!)
 Il semblerait que les cris aient attirés des monstres... (Combat!)
-
-
+ + +
+ + + 
 (Votre cri d'animal gênerait n'importe qui... elle vous ignore) fin de dialogue
 C'EST CE QU'ON VA VOIR! (COMBAT ENGAGE!)

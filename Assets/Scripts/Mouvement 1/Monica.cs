@@ -81,17 +81,18 @@ public class Monica : MonoBehaviour
     {
         Spoken = false;
 
+        string Ph = "Salut + **Elle est si belle** \n Je peux faire quelque chose pour toi ? +Heeeeeuu... \n Quand tu aura retrouvé tes mots, reviens me parler + *End * ";
+
+
         i = 0;
         sentences = new List<string>();
 
-        using (StreamReader myReader = new StreamReader(link))
+
+        foreach (string a in Ph.Split('\n'))
         {
-            string RTE = myReader.ReadToEnd();
-            foreach (string a in RTE.Split('\n'))
-            {
-                sentences.Add(a);
-            }
+            sentences.Add(a);
         }
+
 
         WriteAnswer();
 
