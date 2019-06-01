@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     private Inventory inventory;
     private GameObject player;
     public GameObject itemButton;
+    public int i;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,11 @@ public class PickUp : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
+    {
+        InInventory(other);
+    }
+
+    public void InInventory(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -31,7 +37,6 @@ public class PickUp : MonoBehaviour
                 }
             }
         }
-        
     }
 
     public void HealthPotion()

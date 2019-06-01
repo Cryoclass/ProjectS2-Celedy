@@ -95,6 +95,7 @@ public class PortalExitIntro : MonoBehaviour
     private void Tplauncher()
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
+        PlayerPrefs.SetInt("PlayerCurrentLife", GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Health>().CurrentHealth);
         SceneManager.LoadScene(SceneToLoad);
     }
 
