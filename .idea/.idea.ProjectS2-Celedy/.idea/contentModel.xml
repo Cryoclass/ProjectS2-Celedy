@@ -58,8 +58,11 @@
           </e>
           <e p="Mouvement 1" t="Include">
             <e p="DeplacementYa.cs" t="Include" />
+            <e p="FatherSpeech.cs" t="Include" />
             <e p="GereurMvt1.cs" t="Include" />
+            <e p="Monica.cs" t="Include" />
             <e p="ParolesYa.cs" t="Include" />
+            <e p="PortalExitIntro.cs" t="Include" />
           </e>
           <e p="Rider" t="Include">
             <e p="SpikeGround.cs" t="Include" />
@@ -79,6 +82,7 @@
             <e p="RoomSpawner.cs" t="Include" />
             <e p="RoomSpawnerBoss.cs" t="Include" />
             <e p="Teleporteur.cs" t="Include" />
+            <e p="TPToLocation.cs" t="Include" />
             <e p="WallS.cs" t="Include" />
           </e>
           <e p="Save" t="Include">
@@ -110,7 +114,10 @@
         </e>
         <e p="TexteDial" t="Include">
           <e p="fairy.txt" t="Include" />
+          <e p="FatherAfter.txt" t="Include" />
+          <e p="FatherBefore.txt" t="Include" />
           <e p="Henri.txt" t="Include" />
+          <e p="Monica.txt" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

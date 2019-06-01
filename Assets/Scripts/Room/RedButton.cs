@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RedButton : MonoBehaviour
 {
-    private Ya_Health Yaelle;
+    private Ya_Health YaelleVie;
     private Animator anim;
     public bool isPress;
     public GameObject effect;
@@ -16,7 +16,8 @@ public class RedButton : MonoBehaviour
     {
         isPress = false;
         anim = gameObject.GetComponent<Animator>();
-        
+        YaelleVie = GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Health>();
+
     }
 
     private void Update()
@@ -40,6 +41,7 @@ public class RedButton : MonoBehaviour
             Debug.Log("Sauvegarde");
             anim.SetBool("isPress", isPress);
             IEffect = Instantiate(effect, transform.position, Quaternion.identity);
+            Saving.SavePlayerData(YaelleVie);
 
         }
     }

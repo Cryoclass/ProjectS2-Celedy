@@ -18,6 +18,7 @@ MonoBehaviour:
   normal_slime: {fileID: 6582857570645521449, guid: d3062d2369c3e55498262e06d1e02dd2,
     type: 3}
   split: 3
+  NbSplit: 3
 --- !u!1001 &7933687128903640734
 PrefabInstance:
   m_ObjectHideFlags: 0
