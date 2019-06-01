@@ -12,7 +12,7 @@ public static class Saving
         string path = Application.persistentDataPath + "/Yaelle.txt";
         
         FileStream stream = new FileStream(path, FileMode.Create); //créer un fichier de sauvegarde dans le chemin spécifié
-        YaelleData data = new YaelleData(Yaelle);
+            YaelleData data = new YaelleData(Yaelle);
         
         formatter.Serialize(stream, data); //écrit dans la sauvegarde les informations sur Yaelle
         stream.Close();

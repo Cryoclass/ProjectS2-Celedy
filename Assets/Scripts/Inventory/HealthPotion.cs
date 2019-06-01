@@ -18,6 +18,7 @@ public class HealthPotion : MonoBehaviour
     {
         
         player.GetComponent<Ya_Health>().CurrentHealth += 2;
+        PlayerPrefs.SetInt("PlayerCurrentLife", player.GetComponent<Ya_Health>().CurrentHealth);
         Destroy(gameObject);
     }
 }
