@@ -17,8 +17,7 @@ public class TPToLocation : MonoBehaviour
 
     public float XToTp;
     public float YToTp;
-
-    private float countingCD;
+    
 
     void Start()
     {
@@ -35,7 +34,6 @@ public class TPToLocation : MonoBehaviour
             InvokeRepeating("MakeInvisible", 0, 0.2f);
             if (!TpLaunched)
             {
-                countingCD = 2;
                 TpLaunched = true;
                 Invoke("Tplauncher", 1);
                 /*

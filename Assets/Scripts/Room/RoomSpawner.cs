@@ -282,7 +282,6 @@ public class RoomSpawner : MonoBehaviour
         PossibleSpawn.Add(new int[2] { 5, 4 });
         PossibleSpawn.Add(new int[2] { 6, 4 });
         PossibleSpawn.Add(new int[2] { 7, 4 });
-        PossibleSpawn.Add(new int[2] { 8, 4 });
         PossibleSpawn.Add(new int[2] { 9, 4 });
         PossibleSpawn.Add(new int[2] { 10, 4 });
         PossibleSpawn.Add(new int[2] { 11, 4 });

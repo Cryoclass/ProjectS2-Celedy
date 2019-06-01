@@ -6,9 +6,9 @@ public class Inventory : MonoBehaviour
 {
 
     public bool[] isFull;
-    public Collider2D other;
 
     public GameObject[] slots;
+    public GameObject itemButton;
 
 
 
@@ -16,9 +16,12 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         int a = PlayerPrefs.GetInt("NbPotion");
+        Debug.Log(PlayerPrefs.GetInt("NbPotion"));
+
         for(int i = 0; i < a; i++)
         {
-            GetComponent<PickUp>().InInventory(other);
+            isFull[i] = true;
+            Instantiate(itemButton, slots[i].transform, false);
         }
     }
 
