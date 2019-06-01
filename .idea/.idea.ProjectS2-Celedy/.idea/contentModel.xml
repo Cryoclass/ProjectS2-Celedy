@@ -97,6 +97,9 @@
             <e p="SpellArchetype.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
           </e>
+          <e p="Torus" t="Include">
+            <e p="TorusIA.cs" t="Include" />
+          </e>
           <e p="Yaelle" t="Include">
             <e p="Ya_Health.cs" t="Include" />
             <e p="Ya_Invisible.cs" t="Include" />
