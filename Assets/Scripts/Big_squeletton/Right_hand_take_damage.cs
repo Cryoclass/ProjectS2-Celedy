@@ -16,4 +16,12 @@ public class Right_hand_take_damage : Take_damage
             gameObject.GetComponentInParent<B_C_shoot_with_mouse>().Left_hand_take_damage(i);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
+        }
+    }
+
 }

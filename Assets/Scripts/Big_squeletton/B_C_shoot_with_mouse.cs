@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class B_C_shoot_with_mouse : Take_damage
 {
@@ -18,6 +19,15 @@ public class B_C_shoot_with_mouse : Take_damage
 
     private GameObject ActualFireBall;
     private GameObject Player;
+
+
+    //Slider
+    public GameObject HeadSlider;
+    public GameObject RHandSlider;
+    public GameObject LHandSlider;
+
+
+
 
     private bool Last_chaves_souris = false;
     public int life = 10000;
@@ -58,6 +68,19 @@ public class B_C_shoot_with_mouse : Take_damage
         previous_life = life;
         max_life = life;
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        LHandSlider.GetComponent<Slider>().maxValue = left_hand_life;
+        RHandSlider.GetComponent<Slider>().maxValue = right_hand_life;
+        HeadSlider.GetComponent<Slider>().maxValue = max_life;
+
+        LHandSlider.GetComponent<Slider>().minValue = 0;
+        RHandSlider.GetComponent<Slider>().minValue = 0;
+        HeadSlider.GetComponent<Slider>().minValue = 0;
+
+
+        HeadSlider.GetComponent<Slider>().value = life;
+        LHandSlider.GetComponent<Slider>().value = left_hand_life;
+        RHandSlider.GetComponent<Slider>().value = right_hand_life;
     }
 
     private void Update()
@@ -152,15 +175,18 @@ public class B_C_shoot_with_mouse : Take_damage
     public void Left_hand_take_damage(int damage)
     {
         left_hand_life -= damage;
+        LHandSlider.GetComponent<Slider>().value = left_hand_life;
     }
     public void Right_hand_take_damage(int damage)
     {
         right_hand_life -= damage;
+        RHandSlider.GetComponent<Slider>().value = right_hand_life;
     }
 
     public override void InflictDamage(int i)
     {
         life -= i;
+        HeadSlider.GetComponent<Slider>().value = life;
     }
 
     private void ThowLaser(GameObject hand_from, float duration)
@@ -227,16 +253,20 @@ public class B_C_shoot_with_mouse : Take_damage
 
     private void ShootFireBall()
     {
-        if (ActualFireBall.transform.localScale.x <= 2 || ActualFireBall.transform.localScale.y <= 2)
+        if(ActualFireBall!= null)
         {
-            Destroy(ActualFireBall);
-            CancelInvoke("ShootFireBall");
+            if (ActualFireBall.transform.localScale.x <= 2 || ActualFireBall.transform.localScale.y <= 2)
+            {
+                Destroy(ActualFireBall);
+                CancelInvoke("ShootFireBall");
+            }
+            VectOfShoot = Player.transform.position - PointShootInMouseOpen.transform.position;
+            float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
+            ActualFireBall.transform.localScale -= new Vector3(0.4f, 0.4f);
+            current_little_fireBall = Instantiate(FireBall, PointShootInMouseOpen.transform.position, Quaternion.Euler(0f, 0f, rotZ - 90), transform);
+            current_little_fireBall.GetComponent<SpellArchetype>().FromEnemy = true;
         }
-        VectOfShoot = Player.transform.position - PointShootInMouseOpen.transform.position;
-        float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
-        ActualFireBall.transform.localScale -= new Vector3(0.4f,0.4f);
-        current_little_fireBall = Instantiate(FireBall, PointShootInMouseOpen.transform.position,Quaternion.Euler(0f, 0f, rotZ - 90),transform);
-        current_little_fireBall.GetComponent<SpellArchetype>().FromEnemy = true;
+        
     }
 
     private Vector3 VectOfShoot { get; set; }
@@ -249,7 +279,7 @@ public class B_C_shoot_with_mouse : Take_damage
             InvokeRepeating("ShootFireBall",1,0.4f);
             GrowingBall.GetComponentInChildren<ParticleSystem>().Stop();
         }
-        ActualFireBall.transform.localScale += new Vector3(0.04f,0.04f);
+        if(ActualFireBall != null) ActualFireBall.transform.localScale += new Vector3(0.04f,0.04f);
     }
 
     private void DecreaseFireTimer()
@@ -273,5 +303,11 @@ public class B_C_shoot_with_mouse : Take_damage
             ThowLaser(right_hand,14.6f);
         }
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Ya_Health>().Take_hit();
+        }
+    }
 }

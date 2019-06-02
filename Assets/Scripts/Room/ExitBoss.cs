@@ -83,6 +83,7 @@ public class ExitBoss : MonoBehaviour
         if (LevelGenerator.GetComponent<LevelGen>().GetNbOfSB() >= 2)
         {
             List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetBigBoss();
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().InSquelletteRoom = (serv[LevelGenerator.GetComponent<LevelGen>().GetNbOfBB()] == "BossRoomSquelette");
             SceneManager.LoadScene(serv[LevelGenerator.GetComponent<LevelGen>().GetNbOfBB()]);
         }
         else

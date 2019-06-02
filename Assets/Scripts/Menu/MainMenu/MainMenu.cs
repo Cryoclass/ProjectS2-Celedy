@@ -24,9 +24,14 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("PlayerCurrentLife", PlayerPrefs.GetInt("PlayerCurrentLifeSaved"));
             PlayerPrefs.SetInt("NbPotion", PlayerPrefs.GetInt("NbPotionSaved"));
             PlayerPrefs.SetInt("Ally", PlayerPrefs.GetInt("AllySaved"));
-            
-            // Remplacer Intro par scene de transition une fois créé
-            SceneManager.LoadScene("Intro");
+            if (PlayerPrefs.GetInt("SmallBossBeaten") == 0)
+            {
+                SceneManager.LoadScene("Intro");
+            }
+            else
+            {
+                SceneManager.LoadScene("Transition Scene");
+            }
         }
         else
         {

@@ -35,6 +35,11 @@ public class LevelGen : MonoBehaviour
     void Start()
     {
 
+        NbOfSmallBossBeaten = PlayerPrefs.GetInt("SmallBossBeaten");
+        NbOfBigBossBeaten = PlayerPrefs.GetInt("BigBossBeaten");
+        
+
+
         NbMaxRooms = Mathf.Min(11*11 - 1, NbMaxRooms);
 
         rooms = new RoomScript[11, 11];
