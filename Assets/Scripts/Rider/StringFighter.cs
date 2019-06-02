@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StringFighter : Take_damage
 {
@@ -51,9 +52,14 @@ public class StringFighter : Take_damage
     private GameObject Folder;
     public GameObject Spike;
 
+    public GameObject Slider;
+
     // Start is called before the first frame update
     void Start()
     {
+        Slider.GetComponent<Slider>().minValue = 0;
+        Slider.GetComponent<Slider>().maxValue = life;
+
         Folder = new GameObject("Folder crée par le jeu");
         TimeOfFlying = 0;
         Webs = new Queue<GameObject>();
@@ -74,7 +80,12 @@ public class StringFighter : Take_damage
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+
+        Slider.GetComponent<Slider>().value = life;
+
+
+
         if(!IsMoving && CdBeforeLaunch <= 0 && WebsReceived)
         {
             WebCreatorLauched = Instantiate(WebCreatorObj, WebFirePoint.transform.position, ToRotate.transform.rotation, transform);
