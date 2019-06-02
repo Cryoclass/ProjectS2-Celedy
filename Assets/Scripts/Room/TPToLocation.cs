@@ -82,6 +82,11 @@ public class TPToLocation : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().SetPos(XToTp, YToTp);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(XToTp, YToTp);
 
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().visible();
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().visible();
+
         // PlayerPrefs.GetInt("PlayerCurrentLife");
     }
 

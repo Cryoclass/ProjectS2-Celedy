@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LevelGen : MonoBehaviour
 {
-    private int NbOfSmallBossBeaten = 0;
-    private int NbOfBigBossBeaten = 0;
+    private int NbOfSmallBossBeaten;
+    private int NbOfBigBossBeaten;
 
     public List<string> ListLinkSmallBoss;
     public List<string> ListLinkBigBoss;
@@ -17,6 +17,10 @@ public class LevelGen : MonoBehaviour
     public List<int[]> ActualR;
     public float spacedx;
     public float spacedy;
+
+    public int NbMaxRock;
+    public int NbMinRock;
+
 
     public int NbMinEnemy;
     public int NbMaxEnemy;
@@ -30,6 +34,10 @@ public class LevelGen : MonoBehaviour
     public GameObject Minimap;
 
     private List<int[]> CoordNeigh;
+
+    public GameObject PortalSide;
+    public GameObject PortalCenter;
+
 
     // Start is called before the first frame update
     void Start()
@@ -177,6 +185,18 @@ public class LevelGen : MonoBehaviour
 
         visited[5, 5] = 1;
 
+
+                          
+        
+        ASpawn.GetComponent<RoomSpawner>().IsFinalRoom = false;
+        ASpawn.GetComponent<RoomSpawner>().ExitEntry = PortalCenter;
+        ASpawn.GetComponent<RoomSpawner>().EntryOpen = PortalSide;
+
+
+        ASpawn.GetComponent<RoomSpawner>().NbMaxRocks = NbMaxRock;
+        ASpawn.GetComponent<RoomSpawner>().NbMinRocks = NbMinRock;
+
+
         ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = 0;
         ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = 0;
 
@@ -192,6 +212,8 @@ public class LevelGen : MonoBehaviour
 
         ASpawn.GetComponent<RoomSpawner>().NbMaxenemy = NbMaxEnemy;
         ASpawn.GetComponent<RoomSpawner>().NbMinEnemy = NbMinEnemy;
+
+
 
     }
 

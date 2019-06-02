@@ -150,8 +150,11 @@ public class TorusIA : Take_damage
                     lastWallSens = other.GetComponent<WallS>().sens;
                     Life--;
                     slider.GetComponent<Slider>().value = Life;
-                    if(Life <= 0)
-                        Destroy(gameObject);
+                        if (Life <= 0)
+                        {
+                            Destroy(gameObject);
+                            PlayerPrefs.SetInt("SmallBossBeaten", PlayerPrefs.GetInt("SmallBossBeaten") + 1);
+                        }
                 }
                 break;
             }

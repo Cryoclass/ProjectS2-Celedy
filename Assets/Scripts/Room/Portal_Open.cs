@@ -37,7 +37,6 @@ public class Portal_Open : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = close;
         TpLaunched = false;
         LevelGenerator = GameObject.FindGameObjectWithTag("LevelGen");
         deplx = LevelGenerator.GetComponent<LevelGen>().spacedx;
@@ -188,6 +187,7 @@ public class Portal_Open : MonoBehaviour
     private void MakeInvisible()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Invisible>().invisible();
+
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally.GetComponent<AbstractAlly>().invisible();
@@ -202,6 +202,11 @@ public class Portal_Open : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = open;
             isopen = true;
         }
+    }
+    public void Force_Open()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = open;
+        isopen = true;
     }
     public void CloseIt()
     {

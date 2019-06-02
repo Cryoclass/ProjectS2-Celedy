@@ -13,8 +13,8 @@ public class Blue_Ball : MonoBehaviour
     private int ShootDirection; // 1 = Right ; 2 = Left ; 3 = Up ; 4 = Down
     private float TestAngle;
 
-    public float StoppingRange;
-    public float RetreatRange;
+    private float StoppingRange;
+    private float RetreatRange;
 
     private float CD;
     public float ReloadTime;
@@ -25,15 +25,21 @@ public class Blue_Ball : MonoBehaviour
 	private Vector3 LastLaserPos;
 	private int NbLaserLeft;
 	private Vector3 Direction;
+    public float SBLaser;
     private float Distance;
+    private GameObject LastLaser;
+    public float stoppingDistance;
+    public float retreatDistance;
+    public float randStop;
+    public float randRetreat;
 
-	public GameObject Laser;
+    public GameObject Laser;
     // Start is called before the first frame update
     void Start()
     {
+        RetreatRange = Random.Range(retreatDistance, randRetreat);
+        StoppingRange = Random.Range(stoppingDistance, randStop);
         Target = GameObject.FindGameObjectWithTag("Player");
-        StoppingRange = StoppingRange * StoppingRange;
-        RetreatRange = RetreatRange * RetreatRange;
     }
 
     // Update is called once per frame
@@ -56,12 +62,16 @@ public class Blue_Ball : MonoBehaviour
             {
                 if(CD <= 0 && transform.position.y <= Target.transform.position.y)
                 {
-                    Instantiate(Bullet, transform.position + new Vector3(0, 7), Quaternion.Euler(0, 0, 0));
+                    LastLaserPos = transform.position;
+                    Direction = new Vector3(0, 1);
+                    InvokeRepeating("Laser_attack", 0f, 0.1f);
                     CD = ReloadTime;
                 }
                 else if(CD <= 0)
                 {
-                    Instantiate(Bullet, transform.position + new Vector3(0, -7), Quaternion.Euler(0, 0, -180));
+                    LastLaserPos = transform.position;
+                    Direction = new Vector3(0, -1);
+                    InvokeRepeating("Laser_attack", 0f, 0.1f);
                     CD = ReloadTime;
                 }
             }
@@ -80,12 +90,16 @@ public class Blue_Ball : MonoBehaviour
             {
                 if (CD <= 0 && transform.position.x <= Target.transform.position.x)
                 {
-                    Instantiate(Bullet, transform.position + new Vector3(5, 0), Quaternion.Euler(0, 0, -90));
+                    LastLaserPos = transform.position + new Vector3(0, -5);
+                    Direction = new Vector3(1, 0);
+                    InvokeRepeating("Laser_attack", 0f, 0.1f);
                     CD = ReloadTime;
                 }
                 else if (CD <= 0)
                 {
-                    Instantiate(Bullet, transform.position + new Vector3(-5, 0), Quaternion.Euler(0, 0, 90));
+                    LastLaserPos = transform.position + new Vector3(0, -5);
+                    Direction = new Vector3(-1, 0);
+                    InvokeRepeating("Laser_attack", 0f, 0.1f);
                     CD = ReloadTime;
                 }
             }
@@ -108,13 +122,24 @@ public class Blue_Ball : MonoBehaviour
 	
 	private void Laser_attack()
 	{
-		if(NbLaserLeft <= 0)
-			CancelInvoke("Laserattack")
-		else
-		{
-			LastLaserPos += Direction;
-			Instanciate(Laser, LastLaserPos)
-			NbLaserLeft --;
-		}
+        if (NbLaserLeft <= 0)
+        {
+            NbLaserLeft = 8;
+            CancelInvoke("Laser_attack");
+        }
+        else
+        {
+            LastLaserPos += Direction * SBLaser;
+            LastLaser = Instantiate(Laser, LastLaserPos, Quaternion.Euler(0f, 0f, 0f));
+            LastLaser.GetComponent<Laser_Script>().DedIn(1.5f);
+            NbLaserLeft--;
+        }
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.GetComponent<Ya_Health>().Take_hit();
+        }
+    }
 }

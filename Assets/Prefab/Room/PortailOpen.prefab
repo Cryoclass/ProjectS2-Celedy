@@ -194,7 +194,7 @@ MonoBehaviour:
   TpLaunched: 0
   deplx: 0
   deply: 0
-  isopen: 0
+  isopen: 1
   CoordX: 0
   CoordY: 0
   LevelGenerator: {fileID: 0}

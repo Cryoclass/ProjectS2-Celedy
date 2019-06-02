@@ -156,6 +156,8 @@ public class B_C_shoot_with_mouse : Take_damage
 
     private void Kill()
     {
+        PlayerPrefs.SetInt("SmallBossBeaten", 0);
+        PlayerPrefs.SetInt("BigBossBeaten", PlayerPrefs.GetInt("BigBossBeaten") + 1);
         is_dying = true;
         Destroy(gameObject);
     }

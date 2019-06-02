@@ -50,6 +50,8 @@ MonoBehaviour:
   Monsters:
   - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
   - {fileID: 570903891281261688, guid: 0249ab82c3301e848b2ed1e64e697e09, type: 3}
+  - {fileID: 8342798181621963519, guid: 820604979b9cf6842bfd79c37143f28c, type: 3}
+  - {fileID: 8045238061759531250, guid: 2e6590edc191970438ff5edbf8eb354c, type: 3}
   Rocks:
   - {fileID: 4554623354688616852, guid: 705bddfedf2982c47ab73072e24ff515, type: 3}
   T_Wall: {fileID: 9169232276957742437, guid: b4543a586baf47c449cd3a4b8e3a3257, type: 3}
