@@ -11,7 +11,15 @@ public class SaveData : MonoBehaviour
         PlayerPrefs.SetInt("PlayerCurrentLifeSaved", PlayerPrefs.GetInt("PlayerCurrentLife"));
         PlayerPrefs.SetInt("NbPotionSaved", PlayerPrefs.GetInt("NbPotion"));
         PlayerPrefs.SetInt("AllySaved", PlayerPrefs.GetInt("Ally"));
-        PlayerPrefs.SetInt("BigBossBeaten", PlayerPrefs.GetInt(""));
-        PlayerPrefs.SetInt("SmallBossBeaten", PlayerPrefs.GetInt(""));
+
+        if(PlayerPrefs.GetInt("SmallBossBeaten") >= 2)
+        {
+            PlayerPrefs.SetInt("BigBossBeaten", PlayerPrefs.GetInt("BigBossBeaten") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("SmallBossBeaten", PlayerPrefs.GetInt("SmallBossBeaten") + 1);
+        }
+        
     }
 }
