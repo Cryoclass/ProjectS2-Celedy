@@ -26,13 +26,13 @@ public class DialogueManagerFairy : MonoBehaviour
                          "\n JE SUIS PAS UNE PETITE FILLE!+ Euh ? + Euh ? " +
                          "\n Je...euh.. (il semblerait que vous l'ayez vexée...) *End!* " +
                          "\n JE HURLE PAS! + OoooOooooOhhHhHHHH!!!! + JE VAIS TE CALMER MOI! " +
-                         "\n Il semblerait que les cris aient attirés des monstres... *New Ally* " +
-                         "\n Il semblerait que les cris aient attirés des monstres... *New Ally* " +
                          "\n + + " +
+                         "\n Il semblerait que les cris aient attirés des monstres... *New Ally* " +
+                         "\n Il semblerait que les cris aient attirés des monstres... *New Ally* " +
                          "\n + + " +
                          "\n (Votre cri d'animal gênerait n'importe qui...elle vous ignore) + *End !* + *End !* " +
                          "\n + + " +
-                         "\n + +" +
+                         "\n + + " +
                          "\n C'EST CE QU'ON VA VOIR! (Il semblerait que vos cris aient attirés des monstres...) + *New Ally* + *New Ally*";
 
         i = 0;
@@ -77,7 +77,12 @@ public class DialogueManagerFairy : MonoBehaviour
                 foreach (GameObject mo in Monstres)
                 {
                     Debug.Log("camarchepas");
-                    Instantiate(mo, transform.position + new Vector3(0, 20), Quaternion.Euler(0, 0, 0));
+                    Instantiate(mo, ThePNJ.transform.position + new Vector3(5, 0, 0), Quaternion.identity);
+                }
+                foreach (GameObject mo in Monstres)
+                {
+                    Debug.Log("camarchepas");
+                    Instantiate(mo, ThePNJ.transform.position + new Vector3(100, 0, 0), Quaternion.identity);
                 }
                 Debug.Log("camarchmieu");
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
