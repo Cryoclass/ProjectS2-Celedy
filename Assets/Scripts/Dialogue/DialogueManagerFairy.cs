@@ -79,6 +79,7 @@ public class DialogueManagerFairy : MonoBehaviour
                     Debug.Log("camarchepas");
                     Instantiate(mo, transform.position + new Vector3(0, 20), Quaternion.Euler(0, 0, 0));
                 }
+                Debug.Log("camarchmieu");
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
                 
                 
