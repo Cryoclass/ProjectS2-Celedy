@@ -19,11 +19,13 @@
             <e p="BirdPBJAlly.cs" t="Include" />
             <e p="BirdPBJEnemy.cs" t="Include" />
             <e p="BirdPNJ.cs" t="Include" />
+            <e p="SpeakFairy.cs" t="Include" />
           </e>
           <e p="BossBatIA.cs" t="Include" />
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialogueManagerBird.cs" t="Include" />
+            <e p="DialogueManagerFairy.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
           </e>
           <e p="Fairy" t="Include">
@@ -89,6 +91,7 @@
             <e p="WallS.cs" t="Include" />
           </e>
           <e p="Save" t="Include">
+            <e p="SaveData.cs" t="Include" />
             <e p="Saving.cs" t="Include" />
             <e p="YaelleData.cs" t="Include" />
           </e>

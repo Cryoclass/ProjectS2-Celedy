@@ -34,7 +34,7 @@ public class SlimeAI : MonoBehaviour
 
     private void Update()
     {
-        transform.position += direction * speed;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
 

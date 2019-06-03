@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DialogueManagerFairy : MonoBehaviour
@@ -76,15 +77,10 @@ public class DialogueManagerFairy : MonoBehaviour
         {
             if (splited[1] == " *New Ally* ")
             {
-                foreach (GameObject mo in Monstres)
+                for (int j = 0; j < Monstres.Count; j++)
                 {
-                    Debug.Log("camarchepas");
-                    Instantiate(mo, ThePNJ.transform.position + new Vector3(5, 0, 0), Quaternion.identity);
-                }
-                foreach (GameObject mo in Monstres)
-                {
-                    Debug.Log("camarchepas");
-                    Instantiate(mo, ThePNJ.transform.position + new Vector3(100, 0, 0), Quaternion.identity);
+                    Instantiate(Monstres[j], ThePNJ.transform.position + new Vector3(j*20 + 40, 0), Quaternion.identity);
+
                 }
                 Debug.Log("camarchmieu");
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
