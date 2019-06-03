@@ -94,11 +94,13 @@ public class DialogueManagerFairy : MonoBehaviour
             else if (splited[1] == " *End!* ")
             {
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(false);
+                canvas.SetActive(false);
             }
             
             else
             {
                 ThePNJ.GetComponent<SpeakFairy>().SetCanSpeak(false);
+                canvas.SetActive(false);
             }
             
             Time.timeScale = 1f;
