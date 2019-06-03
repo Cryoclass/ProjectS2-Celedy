@@ -422,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000019073, y: 0.00000095367}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
   m_SizeDelta: {x: 0, y: 0.0000076294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115482352
@@ -4235,10 +4235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InSquelletteRoom: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  MinX: -50
+  MaxX: 50
+  MinY: -200
+  MaxY: -25
 --- !u!1 &2051316671
 GameObject:
   m_ObjectHideFlags: 0

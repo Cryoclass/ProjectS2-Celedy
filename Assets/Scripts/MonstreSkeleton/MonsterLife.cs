@@ -13,12 +13,18 @@ public class MonsterLife : MonoBehaviour
         if (Life < 0)
         {
             Debug.Log("0pv");
-
-            if (GameObject.FindWithTag("AllyFairy") != null)
+            try
             {
-                ally = GameObject.FindGameObjectWithTag("AllyFairy");
-                ally.GetComponent<Move>().Healing();
+                if (GameObject.FindWithTag("AllyFairy") != null)
+                {
+                    ally = GameObject.FindGameObjectWithTag("AllyFairy");
+                    ally.GetComponent<Move>().Healing();
+                }
             }
+            catch (System.Exception)
+            {
+            }
+            
 
             Destroy(gameObject);
             

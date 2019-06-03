@@ -77,6 +77,7 @@ public class Ya_Health : MonoBehaviour
             if (CurrentHealth <= 0)
             {
                 FindObjectOfType<GameOver>().EndGame();
+                Destroy(gameObject);
             }
         }
         
