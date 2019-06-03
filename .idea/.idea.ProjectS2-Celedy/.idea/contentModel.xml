@@ -22,6 +22,7 @@
             <e p="SpeakFairy.cs" t="Include" />
           </e>
           <e p="BossBatIA.cs" t="Include" />
+          <e p="ChargeScene.cs" t="Include" />
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialogueManagerBird.cs" t="Include" />

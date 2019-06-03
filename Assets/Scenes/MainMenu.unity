@@ -4235,10 +4235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InSquelletteRoom: 0
-  MinX: -35
-  MaxX: 35
-  MinY: -60
-  MaxY: -10
+  MinX: -30
+  MaxX: 30
+  MinY: -90
+  MaxY: -15
 --- !u!1 &2051316671
 GameObject:
   m_ObjectHideFlags: 0

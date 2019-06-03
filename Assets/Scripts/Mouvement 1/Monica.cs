@@ -123,7 +123,7 @@ public class Monica : MonoBehaviour
             canvas.SetActive(false);
 
         }
-        else if (PlayerPrefs.GetInt("BigBossBeaten") == 3)
+        else if (PlayerPrefs.GetInt("BigBossBeaten") >= 2)
         {
             Spoken = false;
 

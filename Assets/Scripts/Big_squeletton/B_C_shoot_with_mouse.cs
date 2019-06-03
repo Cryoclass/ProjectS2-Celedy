@@ -262,7 +262,7 @@ public class B_C_shoot_with_mouse : Take_damage
             }
             VectOfShoot = Player.transform.position - PointShootInMouseOpen.transform.position;
             float rotZ = Mathf.Atan2(VectOfShoot.y, VectOfShoot.x) * Mathf.Rad2Deg;
-            ActualFireBall.transform.localScale -= new Vector3(0.4f, 0.4f);
+            ActualFireBall.transform.localScale -= new Vector3(0.3f, 0.3f);
             current_little_fireBall = Instantiate(FireBall, PointShootInMouseOpen.transform.position, Quaternion.Euler(0f, 0f, rotZ - 90), transform);
             current_little_fireBall.GetComponent<SpellArchetype>().FromEnemy = true;
         }
@@ -279,7 +279,7 @@ public class B_C_shoot_with_mouse : Take_damage
             InvokeRepeating("ShootFireBall",1,0.4f);
             GrowingBall.GetComponentInChildren<ParticleSystem>().Stop();
         }
-        if(ActualFireBall != null) ActualFireBall.transform.localScale += new Vector3(0.04f,0.04f);
+        if(ActualFireBall != null) ActualFireBall.transform.localScale += new Vector3(0.01f,0.01f);
     }
 
     private void DecreaseFireTimer()

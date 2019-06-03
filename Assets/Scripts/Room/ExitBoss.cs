@@ -88,7 +88,12 @@ public class ExitBoss : MonoBehaviour
             Debug.Log("Gros boss");
             List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetBigBoss();
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().InSquelletteRoom = PlayerPrefs.GetInt("BigBossBeaten") == 0;
-            SceneManager.LoadScene(serv[PlayerPrefs.GetInt("BigBossBeaten")]);
+            int a = PlayerPrefs.GetInt("BigBossBeaten");
+            if (a >= 2)
+            {
+                a = 1;
+            }
+            SceneManager.LoadScene(serv[a]);
         }
         else
         {
