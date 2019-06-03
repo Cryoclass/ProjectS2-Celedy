@@ -43,14 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3306a71e0017aeb4a8282ccee358900e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Largeur: 15
+  Largeur: 19
   Hauteur: 9
   Coordx: 0
   Coordy: 0
   Monsters:
   - {fileID: 3700665327944631814, guid: 67facfab198ec324d92cc9988dd782f4, type: 3}
-  PNJ:
-  - {fileID: 7105961386824579666, guid: dcbc24ad39c1a66418faaa575afc6d88, type: 3}
+  Rocks:
+  - {fileID: 4554623354688616852, guid: 705bddfedf2982c47ab73072e24ff515, type: 3}
   T_Wall: {fileID: 5491498211498701252, guid: f79829397041c5e4eb20ead53f7d9130, type: 3}
   B_Wall: {fileID: 5278739040590101267, guid: 5ef221c22c570164088b405afe9ff358, type: 3}
   L_Wall: {fileID: 5155817227616355908, guid: 42014c62ea70a0a40a97445b96cfa2fe, type: 3}
@@ -69,14 +69,15 @@ MonoBehaviour:
   - {fileID: 630342189332523718, guid: ed92381ebe2878f4d9e2f53dfd98f202, type: 3}
   - {fileID: 2237049129957308421, guid: 1df52e7d1402def45858fae5369f9217, type: 3}
   - {fileID: 6615581887457183227, guid: d32d7cf7968d1bb4dbce1d9abd4d2ffd, type: 3}
-  EntryOpen: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
+  EntryOpen: {fileID: 0}
+  ExitEntry: {fileID: 6671301486730255776, guid: 6c3578581daca2c419c27a90af1e0fce,
     type: 3}
-  ExitEntry: {fileID: 519736225507065723, guid: 2688549510fd91b4a990e057eda74b8c,
-    type: 3}
-  IsFinalRoom: 0
+  IsFinalRoom: 1
   TopEntry: 0
   BotEntry: 0
   LeftEntry: 0
   RightEntry: 0
   NbMinEnemy: 0
   NbMaxenemy: 0
+  NbMinRocks: 1
+  NbMaxRocks: 5

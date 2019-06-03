@@ -626,7 +626,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1094812419298378482, guid: df286d3f434c1df4ca6521db31502fd6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -862,7 +862,7 @@ Transform:
   m_GameObject: {fileID: 8078201453020642593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.18390638, y: -1.6740824, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 810396963695945787}
   - {fileID: 7050940651984336712}
@@ -913,7 +913,7 @@ MonoBehaviour:
   Crack: {fileID: 6818292628306992680, guid: 56d7e0ed42b352948aa16e7adf0567e5, type: 3}
   leftpoint: {fileID: 4576963030225587502}
   rightpoint: {fileID: 7636157304591861130}
-  Life: 50
+  Life: 20
   slider: {fileID: 7571837262102407612}
 --- !u!50 &5359935371196515687
 Rigidbody2D:

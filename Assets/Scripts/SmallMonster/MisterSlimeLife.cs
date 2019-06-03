@@ -41,6 +41,7 @@ public class MisterSlimeLife: Take_damage
                     Instantiate(medium_slime, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 split -= 1;
+                PlayerPrefs.SetInt("SmallBossBeaten", PlayerPrefs.GetInt("SmallBossBeaten") + 1);
             }
 
             if (split == 1)

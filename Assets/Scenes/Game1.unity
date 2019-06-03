@@ -358,7 +358,12 @@ PrefabInstance:
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: ListLinkSmallBoss.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkBigBoss.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
@@ -379,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: NbMaxRooms
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
@@ -395,8 +400,45 @@ PrefabInstance:
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: ListLinkSmallBoss.Array.data[0]
+      value: MisterSlimeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkSmallBoss.Array.data[1]
+      value: TaurusScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkBigBoss.Array.data[0]
+      value: BossRoomSquelette
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkBigBoss.Array.data[1]
       value: RiderScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkBigBoss.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: NbMaxRock
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: PortalSide
+      value: 
+      objectReference: {fileID: 4556677493263272758, guid: ae5ebe10884881e4ca04a2ecc3d1a8c5,
+        type: 3}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: PortalCenter
+      value: 
+      objectReference: {fileID: 519736225507065723, guid: 2688549510fd91b4a990e057eda74b8c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6929ef860c0ac34fa1f9f9b33f04994, type: 3}
 --- !u!1001 &2006622791668831908

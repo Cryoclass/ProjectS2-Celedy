@@ -196,6 +196,12 @@ public class RoomSpawner : MonoBehaviour
         }
         Coord += new Vector3(SBW * 1 / 4, 0);
         Instantiate(B_R_Corner, Coord, transform.rotation, transform);
+
+        foreach (GameObject portal in PortalList)
+        {
+            portal.GetComponent<Portal_Open>().Force_Open();
+        }
+
     }
 
     private void Update()

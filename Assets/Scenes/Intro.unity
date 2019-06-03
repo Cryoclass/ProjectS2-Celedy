@@ -316,8 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Roomspawneur: {fileID: 2551912640309075875, guid: f6ebd9851e8b4874d8bdaf170d87ece0,
     type: 3}
-  Largeur: 0
-  Hauteur: 0
+  Largeur: 19
+  Hauteur: 9
   TopEntry: 0
   BotEntry: 0
   LeftEntry: 0
@@ -409,6 +409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627376790791670863, guid: 8df261a912422cf47b6c015db3c01be7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8df261a912422cf47b6c015db3c01be7, type: 3}

@@ -24,6 +24,10 @@ public class OneRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Roomspawneur.GetComponent<RoomSpawner>().Hauteur = Hauteur;
+        Roomspawneur.GetComponent<RoomSpawner>().Largeur = Largeur;
+
         Roomspawneur.GetComponent<RoomSpawner>().TopEntry = this.TopEntry;
         Roomspawneur.GetComponent<RoomSpawner>().BotEntry = this.BotEntry;
         Roomspawneur.GetComponent<RoomSpawner>().RightEntry = this.RightEntry;
