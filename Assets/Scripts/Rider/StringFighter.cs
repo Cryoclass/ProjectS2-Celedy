@@ -232,8 +232,6 @@ public class StringFighter : Take_damage
         life -= i;
         if(life <= 0)
         {
-            PlayerPrefs.SetInt("SmallBossBeaten",0);
-            PlayerPrefs.SetInt("BigBossBeaten", PlayerPrefs.GetInt("BigBossBeaten") + 1);
             destroythequeue();
             Destroy(Folder);
             Destroy(gameObject);

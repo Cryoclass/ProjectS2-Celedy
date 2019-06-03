@@ -716,9 +716,9 @@ MonoBehaviour:
   RateDrop: 0
   SBLaser: 9.5
   stoppingDistance: 5000
-  retreatDistance: 2000
+  retreatDistance: 2500
   randStop: 7500
-  randRetreat: 2500
+  randRetreat: 3000
   Laser: {fileID: 5119304566850922715, guid: 40d53d893169139468300882dadac102, type: 3}
 --- !u!58 &447673987522828751
 CircleCollider2D:
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118bc47fb622e7b44979dcaa3b75c58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 175
+  Life: 100
   ally: {fileID: 0}
 --- !u!50 &500151343033494969
 Rigidbody2D:

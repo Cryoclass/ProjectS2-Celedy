@@ -76,6 +76,7 @@ public class TPToLocation : MonoBehaviour
 
     private void Tplauncher()
     {
+        CancelInvoke("MakeInvisible");
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().InSquelletteRoom = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().SetPos(XToTp, YToTp - 4);
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Ya_Shoot>().Ally != null)

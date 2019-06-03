@@ -46,7 +46,6 @@ public class Blue_Ball : MonoBehaviour
     void Update()
     {
         Distance = Mathf.Pow((Target.transform.position.x - transform.position.x), 2) + Mathf.Pow((Target.transform.position.y - transform.position.y), 2);
-        Debug.Log(Distance);
         if ( Distance > StoppingRange)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, speed * Time.deltaTime);
@@ -134,7 +133,7 @@ public class Blue_Ball : MonoBehaviour
 
         if (NbLaserLeft <= 0)
         {
-            NbLaserLeft = 8;
+            NbLaserLeft = 16;
             CancelInvoke("Laser_attack");
         }
         else

@@ -72,6 +72,29 @@ public class DialogueManagerFairy : MonoBehaviour
                 canvas.SetActive(false);
                 Time.timeScale = 1f;
             }
+            if (i > 1)
+            {
+                if (sentences[(i - i % 2) / 2].Split('+')[1] == " *New Ally* ")
+                {
+                    for (int j = 0; j < Monstres.Count; j++)
+                    {
+                        Instantiate(Monstres[j], ThePNJ.transform.position + new Vector3(j * 20 + 40, 0), Quaternion.identity);
+
+                    }
+                    Debug.Log("camarchmieu");
+                    ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
+                    canvas.SetActive(false);
+                    Time.timeScale = 1f;
+                }
+                else if (sentences[(i - i % 2) / 2].Split('+')[1] == " *End!* ")
+                {
+                    Debug.Log(" zisiz zi end");
+                    ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(false);
+                    canvas.SetActive(false);
+                    Time.timeScale = 1f;
+                }
+            }
+                             
         }
         else
         {
@@ -84,11 +107,10 @@ public class DialogueManagerFairy : MonoBehaviour
                 }
                 Debug.Log("camarchmieu");
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
-                
-                
             }
             else if (splited[1] == " *End!* ")
             {
+                Debug.Log(" zisiz zi end");
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(false);
                 canvas.SetActive(false);
             }

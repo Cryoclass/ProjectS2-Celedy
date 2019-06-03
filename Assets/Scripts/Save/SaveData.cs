@@ -15,6 +15,7 @@ public class SaveData : MonoBehaviour
         if(PlayerPrefs.GetInt("SmallBossBeaten") >= 2)
         {
             PlayerPrefs.SetInt("BigBossBeaten", PlayerPrefs.GetInt("BigBossBeaten") + 1);
+            PlayerPrefs.SetInt("SmallBossBeaten", 0);
         }
         else
         {

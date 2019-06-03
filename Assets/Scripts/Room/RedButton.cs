@@ -22,7 +22,7 @@ public class RedButton : MonoBehaviour
 
     private void Update()
     {
-        if (isPress == true)
+        if (isPress)
         {
             timer -= Time.deltaTime;
         }
@@ -35,13 +35,14 @@ public class RedButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !isPress)
         {
             isPress = true;
             Debug.Log("Sauvegarde");
             anim.SetBool("isPress", isPress);
             IEffect = Instantiate(effect, transform.position, Quaternion.identity);
-            Saving.SavePlayerData(YaelleVie);
+            GetComponent<SaveData>().SavingData();
+
 
         }
     }

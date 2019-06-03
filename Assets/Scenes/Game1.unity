@@ -400,12 +400,12 @@ PrefabInstance:
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: ListLinkSmallBoss.Array.data[0]
-      value: MisterSlimeScene
+      value: TaurusScene
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
       propertyPath: ListLinkSmallBoss.Array.data[1]
-      value: TaurusScene
+      value: MisterSlimeScene
       objectReference: {fileID: 0}
     - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
         type: 3}
@@ -439,6 +439,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519736225507065723, guid: 2688549510fd91b4a990e057eda74b8c,
         type: 3}
+    - target: {fileID: 4673275395547887057, guid: c6929ef860c0ac34fa1f9f9b33f04994,
+        type: 3}
+      propertyPath: ListLinkSmallBoss.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6929ef860c0ac34fa1f9f9b33f04994, type: 3}
 --- !u!1001 &2006622791668831908

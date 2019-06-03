@@ -153,7 +153,6 @@ public class TorusIA : Take_damage
                         if (Life <= 0)
                         {
                             Destroy(gameObject);
-                            PlayerPrefs.SetInt("SmallBossBeaten", PlayerPrefs.GetInt("SmallBossBeaten") + 1);
                         }
                 }
                 break;
