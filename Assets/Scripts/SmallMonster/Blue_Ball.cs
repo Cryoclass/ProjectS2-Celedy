@@ -108,13 +108,13 @@ public class Blue_Ball : MonoBehaviour
 	
 	private void Laser_attack()
 	{
-		if(NbLaserLeft <= 0)
-			CancelInvoke("Laserattack")
-		else
-		{
-			LastLaserPos += Direction;
-			Instanciate(Laser, LastLaserPos)
-			NbLaserLeft --;
-		}
+	    if (NbLaserLeft <= 0)
+	        CancelInvoke("Laserattack");
+	    else
+	    {
+	        LastLaserPos += Direction;
+	        //Instantiate(Laser, LastLaserPos);
+	        NbLaserLeft--;
+	    }
 	}
 }
