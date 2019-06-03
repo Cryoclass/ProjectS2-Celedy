@@ -5,8 +5,11 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public GameObject ToFollow;
+
     public float Toolong;
+
     public int CounterHl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,7 @@ public class Move : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, ToFollow.transform.position) > Toolong)
         {
-            transform.position = Vector2.MoveTowards(transform.position, ToFollow.transform.position, 30);
+            transform.position = Vector2.MoveTowards(transform.position, ToFollow.transform.position, 30 * Time.deltaTime);
         }
     }
 
