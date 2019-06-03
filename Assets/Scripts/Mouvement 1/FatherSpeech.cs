@@ -30,8 +30,8 @@ public class FatherSpeech : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("BigBossBeaten") == 0)
         {
-            LinkAfter = "Tu t'es fait recale ? bah, ca arrive + Mais, tu m'avais dit que ... \n Je t'avais dit d'essayer !pas d'y arriver + Mais, je la trouvais migonne ... \n Ce fut drole pour moi, mais a toi, il reste une solution + C'est quoi papa ? \n Passe par ce portail, et tente de ne pas succomber + Il y a quoi dans ce portail \n Du mystere, et surtout, tes plus grandes peurs. + Mais ca me servira a quoi? \n Peut etre que avec quelques cicatrices, elle t'appreciera plus ?! + *End* ";
-            LinkBefore = "Regarde toi, fils, et regarde la elle ! + Mais ... quoi papa ? \n Qu'attends tu ? Fonce ! + Tu es sur ? \n Pose pas de questions gamin, embraye et accelère + *End * ";
+            LinkAfter = "Tu t'es fait recale ? bah, ça arrive + Mais, tu m'avais dit que ... \n Je t'avais dit d'essayer ! pas d'y arriver + Mais, je la trouvais mignonne ... \n Ce fût drôle pour moi, mais pour toi, il reste une solution + C'est quoi papa ? \n Passe par ce portail, et tente de ne pas succomber + Il y a quoi dans ce portail \n Du mystère, et surtout, tes plus grandes peurs. + Mais ça me servira a quoi? \n Peut-être qu'avec quelques cicatrices, elle t'appréciera plus ?! + Je, je, ... Tu crois ? \n Un peu que je le crois ! Au fait, si on t'embête utilise les touches Q, S, D, Z pour te défendre + Mais de quoi parles-tu papa ? \n Et un dernier conseil, si ta vie est basse et que tu as de quoi te restaurer appuie sur E + Je ne comprend rien tout ... \n Allez, ne dis plus un mot passe par ce portail + *End* ";
+            LinkBefore = "Regarde toi, fils, et regarde la elle ! + Mais ... quoi papa ? \n Qu'attends tu ? Fonce ! + Tu es sûr ? \n Pose pas de questions gamin, embraye et accelère + *End * ";
         }
         else if (PlayerPrefs.GetInt("BigBossBeaten") == 1)
         {

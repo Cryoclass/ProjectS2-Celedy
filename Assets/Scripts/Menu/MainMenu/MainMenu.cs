@@ -78,6 +78,6 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("BigBossBeaten", 0);
         PlayerPrefs.SetInt("SmallBossBeaten", 0);
         
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("VeryIntro");
     }
 }
