@@ -126,9 +126,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Is_Shooting_Laser
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Must_open-mouse
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102892985889335996}
   m_Solo: 0
