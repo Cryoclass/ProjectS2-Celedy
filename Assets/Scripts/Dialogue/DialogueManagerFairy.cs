@@ -62,7 +62,7 @@ public class DialogueManagerFairy : MonoBehaviour
             {
                 foreach (GameObject mo in Monstres)
                 {
-                    Debug.Log("samarchepa");
+                    Debug.Log("camarchepas");
                     Instantiate(mo, transform.position + new Vector3(0, 20), Quaternion.Euler(0, 0, 0));
                 }
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
@@ -78,6 +78,7 @@ public class DialogueManagerFairy : MonoBehaviour
             {
                 ThePNJ.GetComponent<SpeakFairy>().SetCanSpeak(false);
             }
+            Debug.Log("Hop");
             canvas.SetActive(false);
             Time.timeScale = 1f;
         }
