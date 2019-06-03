@@ -32,6 +32,7 @@ public class DialogueManagerFairy : MonoBehaviour
                          "\n + + " +
                          "\n (Votre cri d'animal gênerait n'importe qui...elle vous ignore) + *End !* + *End !* " +
                          "\n + + " +
+                         "\n + +" +
                          "\n C'EST CE QU'ON VA VOIR! (Il semblerait que vos cris aient attirés des monstres...) + *New Ally* + *New Ally*";
 
         i = 0;
