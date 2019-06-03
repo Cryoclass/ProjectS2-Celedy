@@ -60,6 +60,7 @@ public class DialogueManagerFairy : MonoBehaviour
             {
                 foreach (GameObject mo in Monstres)
                 {
+                    Debug.Log("samarchepa");
                     Instantiate(mo, transform.position + new Vector3(0, 20), Quaternion.Euler(0, 0, 0));
                 }
                 ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
