@@ -78,8 +78,7 @@ public class DialogueManagerFairy : MonoBehaviour
             {
                 ThePNJ.GetComponent<SpeakFairy>().SetCanSpeak(false);
             }
-            Debug.Log("Hop");
-            canvas.SetActive(false);
+            
             Time.timeScale = 1f;
         }
 
