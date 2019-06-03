@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Edouard farrando\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Edouard farrando\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.1070062879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Edouard farrando\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
+    <e p="C:\Users\SoPhi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\SoPhi\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectS2-Celedy.-1146286535.00" t="ExcludeRecursive" />
+    <e p="C:\Users\SoPhi\OneDrive\Documents\GitHub\ProjectS2-Celedy" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="FatherAfter.txt" t="Include" />
@@ -19,11 +19,13 @@
             <e p="BirdPBJAlly.cs" t="Include" />
             <e p="BirdPBJEnemy.cs" t="Include" />
             <e p="BirdPNJ.cs" t="Include" />
+            <e p="SpeakFairy.cs" t="Include" />
           </e>
           <e p="BossBatIA.cs" t="Include" />
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialogueManagerBird.cs" t="Include" />
+            <e p="DialogueManagerFairy.cs" t="Include" />
             <e p="DialPerso.cs" t="Include" />
           </e>
           <e p="Fairy" t="Include">
@@ -93,6 +95,7 @@
             <e p="YaelleData.cs" t="Include" />
           </e>
           <e p="SmallMonster" t="Include">
+            <e p="Blue_Ball.cs" t="Include" />
             <e p="MisterSlime.cs" t="Include" />
             <e p="MisterSlimeLife.cs" t="Include" />
             <e p="SlimeAI.cs" t="Include" />

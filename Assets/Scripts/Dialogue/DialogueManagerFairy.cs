@@ -58,11 +58,13 @@ public class DialogueManagerFairy : MonoBehaviour
         {
             if (splited[1] == " *New Ally* ")
             {
-                ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
                 foreach (GameObject mo in Monstres)
                 {
                     Instantiate(mo, transform.position + new Vector3(0, 20), Quaternion.Euler(0, 0, 0));
                 }
+                ThePNJ.GetComponent<SpeakFairy>().DialogueSucceed(true);
+                
+                
             }
             else if (splited[1] == " *End!* ")
             {
