@@ -97,9 +97,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,7 +107,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6c40edf0a421854e932327c8079b74a
+      spriteID: 11f985bab30b23c43be060d3b6720e57
       internalID: -6510055739059265124
       vertices: []
       indices: 
@@ -117,10 +117,10 @@ TextureImporter:
       name: Red_Button_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 640
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,7 +128,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2d9d93e49472de409521cd0b1f8550a
+      spriteID: 907c84c50f0311049aec83925be222d7
       internalID: 3707147471156028442
       vertices: []
       indices: 
@@ -140,8 +140,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,7 +149,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4ddca8cda37a1546a9e85728230f5c3
+      spriteID: cfecf7d1537a1d44d9a3bdf1c3446a70
       internalID: -29223753252089410
       vertices: []
       indices: 
