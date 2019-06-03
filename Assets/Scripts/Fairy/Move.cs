@@ -32,9 +32,11 @@ public class Move : MonoBehaviour
 
     public void Healing()
     {
+        Debug.Log("compte ça");
         CounterHl += 1;
         if (CounterHl >= 5)
         {
+            Debug.Log("Heal");
             ToFollow.GetComponent<Ya_Health>().CurrentHealth += 1;
             CounterHl = 0;
         }
