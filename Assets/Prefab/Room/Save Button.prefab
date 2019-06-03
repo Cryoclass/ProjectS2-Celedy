@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7972980603798920293}
   - component: {fileID: 7972980603798920294}
   - component: {fileID: 7972980603798920295}
+  - component: {fileID: 940236309392971263}
   m_Layer: 0
   m_Name: Save Button
   m_TagString: Untagged
@@ -133,3 +134,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &940236309392971263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972980603798920296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec76d81ad0a91d946882ad2f8857d8ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
