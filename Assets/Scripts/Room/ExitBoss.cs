@@ -87,14 +87,16 @@ public class ExitBoss : MonoBehaviour
         {
             Debug.Log("Gros boss");
             List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetBigBoss();
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().InSquelletteRoom = (serv[PlayerPrefs.GetInt("BigBossBeaten")] == "BossRoomSquelette");
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().InSquelletteRoom = PlayerPrefs.GetInt("BigBossBeaten") == 0;
             SceneManager.LoadScene(serv[PlayerPrefs.GetInt("BigBossBeaten")]);
         }
         else
         {
             Debug.Log("Petit boss");
             List<string> serv = LevelGenerator.GetComponent<LevelGen>().GetSmallBoss();
-            SceneManager.LoadScene(serv[Random.Range(0, serv.Count)]);
+            int a = Random.Range(0, serv.Count);
+            Debug.Log(a);
+            SceneManager.LoadScene(serv[a]);
         }
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCam>().SetPos(0, 0);
 

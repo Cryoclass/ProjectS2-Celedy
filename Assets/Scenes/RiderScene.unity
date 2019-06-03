@@ -751,7 +751,7 @@ MonoBehaviour:
   NbMinRocks: 0
   IsFinalRoom: 1
   SidesPortails: {fileID: 0}
-  CenterPortail: {fileID: 1627376790791670860, guid: 8df261a912422cf47b6c015db3c01be7,
+  CenterPortail: {fileID: 455076968367028827, guid: 2f522567d480d3243a02404022c91e3e,
     type: 3}
 --- !u!4 &1980803737
 Transform:
