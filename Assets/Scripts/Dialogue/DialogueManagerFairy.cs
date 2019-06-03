@@ -45,11 +45,13 @@ public class DialogueManagerFairy : MonoBehaviour
         if (i < sentences.Count)
         {
             splited = sentences[i].Split('+');
+            Debug.Log(splited);
 
             WithModify.GetComponent<DialPerso>().modify(splited[0], splited[1], splited[2]);
 
             if (splited[0] == " ' ")
             {
+                Debug.Log("cassé?");
                 canvas.SetActive(false);
                 Time.timeScale = 1f;
             }
